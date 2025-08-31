@@ -290,6 +290,7 @@ script = ExtResource("10_2y2ob")
 player = NodePath("../..")
 reticle_lines = [NodePath("Lines/Left"), NodePath("Lines/Right"), NodePath("Lines/Top"), NodePath("Lines/Bottom")]
 reticle_line_color = Color(0.891262, 0.000251483, 0.00013929, 1)
+reticle_distance = 1.8
 dot_color = Color(0.784314, 0, 0, 1)
 
 [node name="Lines" type="CenterContainer" parent="PlayerUI/Reticle"]
