@@ -12,7 +12,7 @@ extends Node3D
 
 @export_group("Camera Rotation")
 # Sensitivity settings
-@export var mouse_sensitivity: float = 0.005 # Usually very small number ex: 0.002
+@export var mouse_sensitivity: float = 0.002 # Usually very small number ex: 0.002
 @export_range(0.0, 90.0, 1.0) var max_vertical_angle: float = 57.0 # Upside limit
 @export_range(0.0, 90.0, 1.0) var min_vertical_angle: float = 67.0 # Downside limit
 ## Vertical Camera Rotation Limits in PUBG Mobile: Approximately +60 to +85 degrees

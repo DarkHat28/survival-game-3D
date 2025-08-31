@@ -25,11 +25,12 @@ material = SubResource("StandardMaterial3D_2y2ob")
 radius = 0.25
 height = 1.7
 
-[node name="PlayerChart" type="CharacterBody3D" node_paths=PackedStringArray("state_chart")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("state_chart")]
 script = ExtResource("1_e35kc")
 state_chart = NodePath("StateChart")
 
 [node name="StateChartDebugger" parent="." instance=ExtResource("2_cinok")]
+visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_bottom = 0.0
@@ -55,7 +56,7 @@ mesh = SubResource("CapsuleMesh_cinok")
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_24s2i")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 1.8, 0)
+transform = Transform3D(0.999848, 0, 0.0174524, 0, 1, 0, -0.0174524, 0, 0.999848, 0.25, 1.8, 0)
 player = NodePath("..")
 
 [node name="StateLabel" type="Label" parent="."]
@@ -72,8 +73,6 @@ grow_vertical = 0
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 20
 vertical_alignment = 2
-
-[node name="PlayerStateChart" type="Node" parent="."]
 
 [node name="StateChart" type="Node" parent="."]
 script = ExtResource("4_cinok")
@@ -279,7 +278,7 @@ one_shot = true
 
 [node name="PlayerUI" type="CanvasLayer" parent="."]
 
-[node name="Reticle" type="Control" parent="PlayerUI"]
+[node name="Reticle" type="Control" parent="PlayerUI" node_paths=PackedStringArray("player", "reticle_lines")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -288,20 +287,39 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("10_2y2ob")
+player = NodePath("../..")
+reticle_lines = [NodePath("Lines/Left"), NodePath("Lines/Right"), NodePath("Lines/Top"), NodePath("Lines/Bottom")]
+reticle_line_color = Color(0.891262, 0.000251483, 0.00013929, 1)
+dot_color = Color(0.784314, 0, 0, 1)
 
-[node name="CenterContainer" type="CenterContainer" parent="PlayerUI/Reticle"]
+[node name="Lines" type="CenterContainer" parent="PlayerUI/Reticle"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Left" type="Line2D" parent="PlayerUI/Reticle/Lines"]
+points = PackedVector2Array(-5, 0, -25, 0)
+closed = true
+width = 2.0
+
+[node name="Right" type="Line2D" parent="PlayerUI/Reticle/Lines"]
+points = PackedVector2Array(5, 0, 25, 0)
+closed = true
+width = 2.0
+
+[node name="Top" type="Line2D" parent="PlayerUI/Reticle/Lines"]
+points = PackedVector2Array(0, -5, 0, -25)
+width = 2.0
+
+[node name="Bottom" type="Line2D" parent="PlayerUI/Reticle/Lines"]
+points = PackedVector2Array(0, 5, 0, 25)
+closed = true
+width = 2.0
 
 [connection signal="state_physics_processing" from="StateChart/Actions/Locomotion/IdleState" to="." method="_on_idle_state_physics_processing"]
 [connection signal="state_physics_processing" from="StateChart/Actions/Locomotion/WalkState" to="." method="_on_walk_state_physics_processing"]
