@@ -1,0 +1,83 @@
+class_name PlayerCamera
+extends Node3D
+
+#region Variables
+@export var player: CharacterBody3D
+
+@onready var spring_arm: SpringArm3D = %SpringArm
+@onready var tps_camera: Camera3D = %TPSCamera
+@onready var fps_camera: Camera3D = %FPSCamera
+@onready var active_camera: Camera3D = tps_camera
+
+
+@export_group("Camera Rotation")
+# Sensitivity settings
+@export var mouse_sensitivity: float = 0.005 # Usually very small number ex: 0.002
+@export_range(0.0, 90.0, 1.0) var max_vertical_angle: float = 57.0 # Upside limit
+@export_range(0.0, 90.0, 1.0) var min_vertical_angle: float = 67.0 # Downside limit
+## Vertical Camera Rotation Limits in PUBG Mobile: Approximately +60 to +85 degrees
+## The total vertical rotation range is about 120° to 170°, depending on the situation and the camera mode (e.g., TPP vs. FPP).
+@export_group("Spring Arm Settings")
+@export var min_spring_length: float = 1.5
+@export var max_spring_length: float = 4.0
+@export_range(0.0, 1.0, 0.1) var spring_arm_length_step: float = 0.2
+
+# Script Inbuilt variables
+var mouse_rotation: Vector2 = Vector2.ZERO
+var vertical_rotation: float = 0.0
+var can_player_rotate: bool = true
+#endregion
+
+func _ready() -> void:
+	# Make sure mouse is captured
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	spring_arm.spring_length = 2.5
+
+func _input(event: InputEvent) -> void:
+	# Mouse look
+	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		mouse_rotation = event.relative * mouse_sensitivity
+		rotate_camera()
+	_grab_mouse()
+	_switch_camera()
+	update_spring_arm_length()
+
+func _process(_delta):
+	# Smoothly rotate the camera
+	if mouse_rotation.length() > 0:
+		rotate_camera()
+		mouse_rotation = Vector2.ZERO
+
+func rotate_camera():
+	# Rotate the player horizontally
+	player.rotate_y(-mouse_rotation.x)
+	# Update vertical rotation and clamp it
+	vertical_rotation = clamp(vertical_rotation - mouse_rotation.y, deg_to_rad(-min_vertical_angle), deg_to_rad(max_vertical_angle))
+	rotation.x = vertical_rotation # Apply the vertical rotation to the camera's X-axis (pitch)
+
+func update_spring_arm_length() -> void:
+	if active_camera == tps_camera:
+		if Input.is_action_pressed("wheel_up"): # Zoom-In
+			if spring_arm.spring_length > min_spring_length:
+				spring_arm.spring_length -= spring_arm_length_step
+		if Input.is_action_pressed("wheel_down"): # Zoom-Out
+			if spring_arm.spring_length < max_spring_length:
+				spring_arm.spring_length += spring_arm_length_step
+
+func _grab_mouse() -> void:
+	# Toggle mouse capture
+	if Input.is_action_just_pressed("toggle_mouse_capture"):
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+func _switch_camera() -> void:
+	if Input.is_action_just_pressed("toggle_camera"):
+		if active_camera == fps_camera:
+			active_camera = tps_camera
+		else:
+			active_camera = fps_camera
+		# Now set current Camera based on camera switch.
+		fps_camera.current = (active_camera == fps_camera)
+		tps_camera.current = (active_camera == tps_camera)

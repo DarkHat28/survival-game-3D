@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxrpbjeplmn66"]
+
+[ext_resource type="Script" uid="uid://dxp7j33hy6h3m" path="res://Scripts/Characters/Player/Generic/player.gd" id="1_4ffj5"]
+[ext_resource type="Script" uid="uid://tuqu3fhakh4x" path="res://Scripts/Characters/Camera/camera.gd" id="2_rx582"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rut33"]
+radius = 0.25
+height = 1.7
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_o58j0"]
+radius = 0.2
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("player_avatar", "camera_logic", "camera", "state_label", "standing_collision_shape")]
+script = ExtResource("1_4ffj5")
+player_avatar = NodePath("")
+camera_logic = NodePath("CameraLogic")
+camera = NodePath("CameraLogic/TPSPivot/SpringArm/TPSCamera")
+state_label = NodePath("StaeLabel")
+standing_collision_shape = NodePath("StandingCollisionShape")
+base_speed = 3.0
+sprint_speed = 4.5
+
+[node name="StandingCollisionShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851877, 0)
+shape = SubResource("CapsuleShape3D_rut33")
+
+[node name="PlayerAvatar" type="Node3D" parent="."]
+
+[node name="CameraLogic" type="Node3D" parent="." node_paths=PackedStringArray("player_skin", "spring_arm", "tps_camera", "fps_camera", "free_look_timer")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+script = ExtResource("2_rx582")
+player_skin = NodePath("..")
+spring_arm = NodePath("TPSPivot/SpringArm")
+tps_camera = NodePath("TPSPivot/SpringArm/TPSCamera")
+fps_camera = NodePath("FPSPivot/FPSCamera")
+free_look_timer = NodePath("FreeLookTimer")
+min_vertical_angle = -1.0472
+
+[node name="TPSPivot" type="Node3D" parent="CameraLogic"]
+
+[node name="SpringArm" type="SpringArm3D" parent="CameraLogic/TPSPivot"]
+transform = Transform3D(0.994485, 0.0235741, -0.102192, -1.38778e-16, 0.974409, 0.224781, 0.104876, -0.223541, 0.969036, 0, 0, 0)
+shape = SubResource("SphereShape3D_o58j0")
+
+[node name="TPSCamera" type="Camera3D" parent="CameraLogic/TPSPivot/SpringArm"]
+current = true
+
+[node name="FPSPivot" type="Node3D" parent="CameraLogic"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.179877, 0)
+
+[node name="FPSCamera" type="Camera3D" parent="CameraLogic/FPSPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+
+[node name="FreeLookTimer" type="Timer" parent="CameraLogic"]
+wait_time = 0.2
+one_shot = true
+ignore_time_scale = true
+
+[node name="StaeLabel" type="Label" parent="."]
+self_modulate = Color(1, 0.396078, 1, 1)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -145.0
+offset_right = 227.0
+offset_bottom = -25.0
+grow_vertical = 0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 2
+
+[node name="Head" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68111, 0)
+
+[connection signal="timeout" from="CameraLogic/FreeLookTimer" to="CameraLogic" method="_on_free_look_timer_timeout"]

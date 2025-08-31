@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvsasw1oa4wma"]
+
+[ext_resource type="PackedScene" uid="uid://chsammfl83b5r" path="res://Scenes/Entities/Player/human_bot.tscn" id="2_7t2ix"]
+[ext_resource type="Script" uid="uid://c50bgpp1v3evi" path="res://Scenes/Tests/camera_rig.gd" id="5_21mdn"]
+
+[sub_resource type="GDScript" id="GDScript_j8r5d"]
+script/source = "extends CharacterBody3D
+"
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rut33"]
+radius = 0.281934
+height = 1.87602
+
+[node name="TestPlayer" type="CharacterBody3D"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+script = SubResource("GDScript_j8r5d")
+
+[node name="GodetteSkin" parent="." instance=ExtResource("2_7t2ix")]
+unique_name_in_owner = true
+
+[node name="FullCollisionShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.946051, 0)
+shape = SubResource("CapsuleShape3D_rut33")
+debug_color = Color(0.859393, 0.000688077, 0.877192, 0.42)
+
+[node name="StaeLabel" type="Label" parent="."]
+self_modulate = Color(1, 0.396078, 1, 1)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -145.0
+offset_right = 227.0
+offset_bottom = -25.0
+grow_vertical = 0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 2
+
+[node name="CameraRig" type="Node3D" parent="." node_paths=PackedStringArray("player", "cam")]
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 2.5, -1.25)
+script = ExtResource("5_21mdn")
+player = NodePath("..")
+cam = NodePath("Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, -2.98023e-08, 0, 2.98023e-08, 1.25, 0, 0, 0)
+current = true

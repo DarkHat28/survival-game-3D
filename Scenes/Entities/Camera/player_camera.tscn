@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://brbyva2n23ux0"]
+
+[ext_resource type="Script" uid="uid://tuqu3fhakh4x" path="res://Scripts/Characters/Camera/camera.gd" id="1_g5kic"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_o58j0"]
+radius = 0.2
+
+[node name="CameraLogic" type="Node3D"]
+script = ExtResource("1_g5kic")
+max_spring_length = 3.0
+
+[node name="TPSPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.231851, 0)
+
+[node name="SpringArm" type="SpringArm3D" parent="TPSPivot"]
+unique_name_in_owner = true
+shape = SubResource("SphereShape3D_o58j0")
+spring_length = 3.0
+
+[node name="TPSCamera" type="Camera3D" parent="TPSPivot/SpringArm"]
+unique_name_in_owner = true
+current = true
+
+[node name="FPSPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.231851, 0)
+
+[node name="FPSCamera" type="Camera3D" parent="FPSPivot"]
+unique_name_in_owner = true
