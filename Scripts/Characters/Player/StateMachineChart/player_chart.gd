@@ -129,7 +129,6 @@ func _on_jump_state_physics_processing(delta: float) -> void:
 	apply_gravity(delta)
 
 func _on_fall_state_physics_processing(delta: float) -> void:
-	stop_horizontal_velocity(delta)
 	apply_gravity(delta)
 
 #endregion
