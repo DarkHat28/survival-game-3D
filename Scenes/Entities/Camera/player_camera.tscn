@@ -20,6 +20,7 @@ spring_length = 3.0
 [node name="TPSCamera" type="Camera3D" parent="TPSPivot/SpringArm"]
 unique_name_in_owner = true
 current = true
+fov = 85.0
 
 [node name="FPSPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.231851, 0)

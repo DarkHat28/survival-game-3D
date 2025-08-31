@@ -1,23 +1,22 @@
-[gd_scene load_steps=12 format=4 uid="uid://desatcndqofug"]
+[gd_scene load_steps=13 format=4 uid="uid://desatcndqofug"]
 
+[ext_resource type="Texture2D" uid="uid://m6c0f43kr8nf" path="res://Assets/Textures/Tiles/texture_13.png" id="1_eq1yq"]
+[ext_resource type="Texture2D" uid="uid://c1wrlh30qjqej" path="res://Assets/Textures/Tiles/texture_03.png" id="1_mjkmo"]
 [ext_resource type="PackedScene" uid="uid://cjn5x2ke8mg3g" path="res://Scenes/Entities/Player/player_chart.tscn" id="2_eq1yq"]
-[ext_resource type="Texture2D" uid="uid://dr5vwhd0xsbtn" path="res://Assets/Textures/GodotPalette.png" id="3_mjkmo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jakeb"]
-albedo_texture = ExtResource("3_mjkmo")
-uv1_scale = Vector3(2.5, 2.5, 2.5)
+albedo_color = Color(0.753984, 0.753984, 0.753984, 1)
+albedo_texture = ExtResource("1_mjkmo")
+uv1_scale = Vector3(1.74, 1.74, 1.74)
 uv1_triplanar = true
-uv1_world_triplanar = true
 
 [sub_resource type="PrismMesh" id="PrismMesh_mjkmo"]
 left_to_right = 1.0
 size = Vector3(1, 1.58, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ilc4j"]
-albedo_texture = ExtResource("3_mjkmo")
-uv1_scale = Vector3(2, 2, 2)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjkmo"]
+albedo_texture = ExtResource("1_eq1yq")
 uv1_triplanar = true
-uv1_world_triplanar = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_chwc0"]
 _surfaces = [{
@@ -45,6 +44,7 @@ sky_material = SubResource("ProceduralSkyMaterial_mjkmo")
 background_mode = 2
 sky = SubResource("Sky_jakeb")
 ambient_light_color = Color(0.498039, 0.498039, 0.498039, 1)
+reflected_light_source = 2
 tonemap_mode = 2
 glow_enabled = true
 
@@ -59,7 +59,7 @@ material_override = SubResource("StandardMaterial3D_jakeb")
 mesh = SubResource("PrismMesh_mjkmo")
 
 [node name="Platform" type="MeshInstance3D" parent="PlatformWorld"]
-material_override = SubResource("StandardMaterial3D_ilc4j")
+material_override = SubResource("StandardMaterial3D_mjkmo")
 mesh = SubResource("ArrayMesh_chwc0")
 skeleton = NodePath("../..")
 

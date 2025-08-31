@@ -40,7 +40,7 @@ func _input(event: InputEvent) -> void:
 		rotate_camera()
 	_grab_mouse()
 	_switch_camera()
-	update_spring_arm_length()
+	update_spring_arm()
 
 func _process(_delta):
 	# Smoothly rotate the camera
@@ -55,7 +55,7 @@ func rotate_camera():
 	vertical_rotation = clamp(vertical_rotation - mouse_rotation.y, deg_to_rad(-min_vertical_angle), deg_to_rad(max_vertical_angle))
 	rotation.x = vertical_rotation # Apply the vertical rotation to the camera's X-axis (pitch)
 
-func update_spring_arm_length() -> void:
+func update_spring_arm() -> void:
 	if active_camera == tps_camera:
 		if Input.is_action_pressed("wheel_up"): # Zoom-In
 			if spring_arm.spring_length > min_spring_length:

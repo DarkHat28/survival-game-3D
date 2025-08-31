@@ -1,7 +1,7 @@
-class_name PlayerChart
+class_name Player
 extends CharacterBody3D
 
-## TODO: Implement Reticle and make it Dynamic to responsive
+## TODO: 
 ## TODO: 
 
 #region Entire Code
@@ -84,10 +84,9 @@ func apply_gravity(delta: float) -> void:
 
 func update_state_label() -> void:
 	if state_label:
-		state_label.text = "On Wall: " + str(is_on_wall()) + ("\nVelocity X: " + str(round(velocity.x))\
-		+ "  Velocity Z: " + str(round(velocity.z))\
-		+ "\nVelocity Y: " + str(round(velocity.y))\
-		+ "\nCan Dash: " + str(can_dash))
+		state_label.text = "Can Dash: " + str(can_dash) +\
+		"\nOn Wall: " + str(is_on_wall()) #+\
+		#""
 #endregion
 
 
@@ -131,24 +130,10 @@ func _on_jump_state_physics_processing(delta: float) -> void:
 func _on_fall_state_physics_processing(delta: float) -> void:
 	apply_gravity(delta)
 
-#endregion
-
-
-func _on_dash_duration_timer_timeout() -> void:
-	# Dash finished, start cooldown
-	dash_cooldown_timer.start()
-	can_dash = false
-
-
-func _on_dash_cool_down_timer_timeout() -> void:
-	# Dash cooldown finished
-	can_dash = true
-
-
+# Dash Logic
 func _on_dash_state_entered() -> void:
 	# Transition delay time from %DashToIdle.delay-in_seconds (this is our dash duration)
 	dash_time = float(%DashToIdle.delay_in_seconds)
-	
 	# Calculate required speed to cover the desired distance in the given duration
 	dash_speed = dash_distance / dash_time
 	
@@ -157,3 +142,10 @@ func _on_dash_state_entered() -> void:
 	velocity.x = dash_direction.x * dash_speed
 	velocity.z = dash_direction.z * dash_speed
 	velocity.y = 0  # No gravity effect during dash
+
+func _on_dash_state_exited() -> void:
+	can_dash = false
+	dash_cooldown_timer.start()
+
+func _on_dash_cooldown_timer_timeout() -> void:
+	can_dash = true

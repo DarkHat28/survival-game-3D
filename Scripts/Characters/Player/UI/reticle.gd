@@ -2,6 +2,7 @@ extends Control
 
 # Node
 @export var player: CharacterBody3D
+@onready var player_camera: PlayerCamera = %PlayerCamera
 
 # Reticle
 @export var reticle_lines: Array[Line2D]

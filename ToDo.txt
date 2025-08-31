@@ -2,9 +2,9 @@
 
 
 ### Wishlist ###
-1] Complete Camera Logic
+1] advance Camera Logic
 2] State Machine for Locomotion
 
 ### ERRORS ###
-	1] Movement & Rotation := When moving and looking up or down by 50degree+ then player moves in wrong direction
-	2] Movement & Rotation := When is_free_looking velocity of player isnt changing... meaning i cant stop if moving or i cant move if stopped
+	1]
+	2]
