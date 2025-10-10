@@ -1,10 +1,10 @@
-##### TO-DO #####
+			##### TO-DO LIST #####
 
 
-### Wishlist ###
-1] advance Camera Logic
-2] State Machine for Locomotion
+			### Wishlist ###
+	* ADD CHARACTER AND ITS ANIMATION
+	* 
 
-### ERRORS ###
-	1]
-	2]
+			### ERRORS ###
+	*
+	*
