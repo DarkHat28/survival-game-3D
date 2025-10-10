@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Survival Game 3D"
+config/name="GIC4"
 config/tags=PackedStringArray("editing...", "local", "p_c", "survival")
 run/main_scene="uid://desatcndqofug"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://bykte7xjb1ppk"
 
 [autoload]

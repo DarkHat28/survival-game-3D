@@ -1,8 +1,7 @@
 class_name Player
 extends CharacterBody3D
 
-## TODO: 
-## TODO: 
+## TODO:  ADD CHARACTER AND ITS ANIMATION
 
 #region Entire Code
 #region Variables
@@ -21,7 +20,7 @@ extends CharacterBody3D
 
 @export_group("Dash")
 @export var dash_speed: float = 10.0 # How fast the dash should be (in seconds)
-@export var dash_distance: float = 4.0  # How far the dash should travel (in meteres)
+@export var dash_distance: float = 3.0  # How far the dash should travel (in meteres)
 @export var dash_time: float = 0.2
 
 @export_group("Jump")
@@ -32,8 +31,10 @@ extends CharacterBody3D
 @onready var jump_velocity: float = (2.0 * jump_height) / jump_time_to_peak * -1
 @onready var jump_gravity: float = (2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)
 @onready var fall_gravity: float = (2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)
-#@onready var wall_slide_gravity: float = fall_gravity / 10
+# @onready var wall_slide_gravity: float = fall_gravity / 10
 # source: https://youtu.be/IOe1aGY6hXA?feature=shared
+
+
 
 # Inbuilt Variables
 var input_dir: Vector2
