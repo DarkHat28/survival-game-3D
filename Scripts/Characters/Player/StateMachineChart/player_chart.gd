@@ -130,6 +130,8 @@ func _on_jump_state_physics_processing(delta: float) -> void:
 
 func _on_fall_state_physics_processing(delta: float) -> void:
 	apply_gravity(delta)
+	#if is_on_wall():
+	start_horizontal_velocity(delta)
 
 # Dash Logic
 func _on_dash_state_entered() -> void:

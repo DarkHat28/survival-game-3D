@@ -7,7 +7,14 @@ radius = 0.2
 
 [node name="CameraLogic" type="Node3D"]
 script = ExtResource("1_g5kic")
+can_switch = true
 max_spring_length = 3.0
+
+[node name="FPSPivot" type="Node3D" parent="."]
+
+[node name="FPSCamera" type="Camera3D" parent="FPSPivot"]
+unique_name_in_owner = true
+current = true
 
 [node name="TPSPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.231851, 0)
@@ -19,11 +26,4 @@ spring_length = 3.0
 
 [node name="TPSCamera" type="Camera3D" parent="TPSPivot/SpringArm"]
 unique_name_in_owner = true
-current = true
 fov = 85.0
-
-[node name="FPSPivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.231851, 0)
-
-[node name="FPSCamera" type="Camera3D" parent="FPSPivot"]
-unique_name_in_owner = true

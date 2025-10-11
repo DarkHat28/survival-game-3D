@@ -2,12 +2,19 @@ class_name PlayerCamera
 extends Node3D
 
 #region Variables
+@export_category("Player Reference")
 @export var player: CharacterBody3D
 
+@export_category("Camera View")
+@export var can_switch: bool
+enum CameraMode { F_P_S,T_P_S }
+@export var camera_mode: CameraMode = CameraMode.F_P_S
+
+
 @onready var spring_arm: SpringArm3D = %SpringArm
-@onready var tps_camera: Camera3D = %TPSCamera
 @onready var fps_camera: Camera3D = %FPSCamera
-@onready var active_camera: Camera3D = tps_camera
+@onready var tps_camera: Camera3D = %TPSCamera
+@onready var active_camera: Camera3D
 
 
 @export_group("Camera Rotation")
@@ -30,8 +37,9 @@ var can_player_rotate: bool = true
 
 func _ready() -> void:
 	# Make sure mouse is captured
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	_camera_mode()
 	spring_arm.spring_length = 2.5
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event: InputEvent) -> void:
 	# Mouse look
@@ -47,6 +55,14 @@ func _process(_delta):
 	if mouse_rotation.length() > 0:
 		rotate_camera()
 		mouse_rotation = Vector2.ZERO
+
+func _camera_mode() -> void:
+	match camera_mode:
+		CameraMode.F_P_S:
+			active_camera = fps_camera
+		CameraMode.T_P_S:
+			active_camera = tps_camera
+
 
 func rotate_camera():
 	# Rotate the player horizontally
@@ -73,7 +89,7 @@ func _grab_mouse() -> void:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _switch_camera() -> void:
-	if Input.is_action_just_pressed("toggle_camera"):
+	if Input.is_action_just_pressed("toggle_camera") and can_switch == true:
 		if active_camera == fps_camera:
 			active_camera = tps_camera
 		else:
