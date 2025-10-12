@@ -24,9 +24,10 @@ extends CharacterBody3D
 @export var dash_time: float = 0.2
 
 @export_group("Jump")
-@export var jump_height : float = 2.25
-@export var jump_time_to_peak : float = 0.4
-@export var jump_time_to_descent : float = 0.3
+@export var garvity_off: bool = false
+@export var jump_height: float = 2.25
+@export var jump_time_to_peak: float = 0.4
+@export var jump_time_to_descent: float = 0.3
 # Calculated 
 @onready var jump_velocity: float = (2.0 * jump_height) / jump_time_to_peak * -1
 @onready var jump_gravity: float = (2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)
@@ -62,7 +63,7 @@ func _input(_event: InputEvent) -> void:
 	input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	# Rotate input relative to camera orientation
 	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
+
 
 #region Helper Functions
 func start_horizontal_velocity(delta: float, speed: float = walk_speed) -> void: # Start moving
