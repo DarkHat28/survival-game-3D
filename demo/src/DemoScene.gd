@@ -19,5 +19,3 @@ func _ready():
 			sky3d.owner = self
 			sky3d.current_time = 10
 			sky3d.enable_editor_time = false
-			
-		

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdtsrunuma56f"]
+
+[ext_resource type="Terrain3DMaterial" uid="uid://c2kt32xg2785" path="res://Scenes/Terrains/TerrainResources/world_material.res" id="1_bnwya"]
+[ext_resource type="PackedScene" uid="uid://domhm87hbhbg1" path="res://demo/components/Player.tscn" id="1_hqvd5"]
+[ext_resource type="Terrain3DAssets" uid="uid://bepa7ln75b67n" path="res://Scenes/Terrains/TerrainResources/world_asset.tres" id="2_i21ku"]
+
+[node name="World" type="Node3D"]
+
+[node name="Terrain" type="Terrain3D" parent="."]
+data_directory = "res://Scenes/Terrains"
+material = ExtResource("1_bnwya")
+assets = ExtResource("2_i21ku")
+show_checkered = true
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("1_hqvd5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
