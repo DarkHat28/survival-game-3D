@@ -1,0 +1,79 @@
+[gd_resource type="Terrain3DAssets" load_steps=17 format=3 uid="uid://4rsqvby3vuc2"]
+
+[ext_resource type="Texture2D" uid="uid://ddprscrpsofah" path="res://Scenes/Terrains/Textures/ground037_alb_ht.png" id="1_ndjrs"]
+[ext_resource type="PackedScene" uid="uid://be6nrf0b8j4l0" path="res://Scenes/Terrains/models/RockA.tscn" id="2_88gm4"]
+[ext_resource type="PackedScene" uid="uid://bwvtgwartxt0g" path="res://Scenes/Terrains/models/RockB.tscn" id="2_q6fw5"]
+[ext_resource type="Texture2D" uid="uid://c1ots7w6i0i1q" path="res://Scenes/Terrains/Textures/ground037_nrm_rgh.png" id="2_tv61o"]
+[ext_resource type="PackedScene" uid="uid://lsvs8a7urkca" path="res://Scenes/Terrains/models/RockC.tscn" id="3_1mtmi"]
+[ext_resource type="Texture2D" uid="uid://c88j3oj0lf6om" path="res://Scenes/Terrains/Textures/rock023_alb_ht.png" id="3_sb1cp"]
+[ext_resource type="Texture2D" uid="uid://c307hdmos4gtm" path="res://Scenes/Terrains/Textures/rock023_nrm_rgh.png" id="4_j6v5l"]
+[ext_resource type="PackedScene" uid="uid://vvayjv3rbx1d" path="res://Scenes/Terrains/models/Tunnel.tscn" id="4_jlnd7"]
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_fdghi"]
+name = "RockA"
+scene_file = ExtResource("2_88gm4")
+density = 0.036441512
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_wqvjw"]
+name = "RockB"
+id = 1
+scene_file = ExtResource("2_q6fw5")
+density = 0.029499011
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_7i6c2"]
+name = "RockC"
+id = 2
+scene_file = ExtResource("3_1mtmi")
+density = 0.014639318
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_85dj7"]
+name = "Tunnel"
+id = 3
+scene_file = ExtResource("4_jlnd7")
+density = 0.01
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hesok"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_jt1e5"]
+id = 4
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_hesok")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_sb1cp"]
+name = "ground037_alb_ht"
+albedo_texture = ExtResource("1_ndjrs")
+normal_texture = ExtResource("2_tv61o")
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_472ec"]
+name = "rock023_alb_ht"
+id = 1
+albedo_texture = ExtResource("3_sb1cp")
+normal_texture = ExtResource("4_j6v5l")
+
+[resource]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_fdghi"), SubResource("Terrain3DMeshAsset_wqvjw"), SubResource("Terrain3DMeshAsset_7i6c2"), SubResource("Terrain3DMeshAsset_85dj7"), SubResource("Terrain3DMeshAsset_jt1e5")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_sb1cp"), SubResource("Terrain3DTextureAsset_472ec")])
