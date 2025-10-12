@@ -83,4 +83,4 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 4.4276285, 0, -3.6738095)
 visible = false
 
 [node name="Player2" parent="." instance=ExtResource("2_eq1yq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6321077, 0)

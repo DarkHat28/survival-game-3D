@@ -1,4 +1,4 @@
-@tool
+#@tool
 extends Node
 
 @onready var terrain: Terrain3D = find_child("Terrain3D")

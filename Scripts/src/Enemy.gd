@@ -3,7 +3,7 @@ extends CharacterBody3D
 const RETARGET_COOLDOWN: float = 1.0
 
 @export var MOVE_SPEED: float = 10.0
-@export var target: Node3D
+@export var target: CharacterBody3D
 
 @onready var nav_agent: NavigationAgent3D = %NavigationAgent
 
@@ -39,7 +39,7 @@ func _physics_process(p_delta: float) -> void:
 		velocity.x = velocity_xz.x
 		velocity.z = velocity_xz.z
 	
-	velocity.y -= 40 * p_delta
+	velocity.y -= 10 * p_delta
 	
 	if nav_agent.avoidance_enabled:
 		nav_agent.set_velocity(velocity)
