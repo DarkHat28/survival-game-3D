@@ -73,6 +73,8 @@ name = "rock023_alb_ht"
 id = 1
 albedo_texture = ExtResource("3_sb1cp")
 normal_texture = ExtResource("4_j6v5l")
+uv_scale = 0.801
+detiling_rotation = 0.79
 
 [resource]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_fdghi"), SubResource("Terrain3DMeshAsset_wqvjw"), SubResource("Terrain3DMeshAsset_7i6c2"), SubResource("Terrain3DMeshAsset_85dj7"), SubResource("Terrain3DMeshAsset_jt1e5")])

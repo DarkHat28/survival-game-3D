@@ -45,7 +45,8 @@ expand_margin_bottom = 10.0
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("state_chart")]
 script = ExtResource("1_e35kc")
 state_chart = NodePath("StateChart")
-sprint_speed = 7.0
+walk_speed = 10.0
+sprint_speed = 20.0
 garvity_off = true
 
 [node name="StandingCollisionShape" type="CollisionShape3D" parent="."]

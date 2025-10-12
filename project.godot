@@ -14,7 +14,7 @@ config/name="GIC4"
 config/tags=PackedStringArray("editing...", "local", "p_c", "survival")
 run/main_scene="uid://x34e4v60vdmy"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="uid://bykte7xjb1ppk"
+config/icon="uid://csilyj3m83c3a"
 
 [autoload]
 

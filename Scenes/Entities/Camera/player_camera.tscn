@@ -14,6 +14,7 @@ max_spring_length = 3.0
 
 [node name="FPSCamera" type="Camera3D" parent="FPSPivot"]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 0, 0)
 current = true
 
 [node name="TPSPivot" type="Node3D" parent="."]
