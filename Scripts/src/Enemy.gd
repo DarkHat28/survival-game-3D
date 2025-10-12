@@ -5,13 +5,14 @@ const RETARGET_COOLDOWN: float = 1.0
 @export var MOVE_SPEED: float = 10.0
 @export var target: Node3D
 
-@onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
+@onready var nav_agent: NavigationAgent3D = %NavigationAgent
 
 var _retarget_timer: float = 1.0
 
 
 func _ready() -> void:
-	nav_agent.velocity_computed.connect(_on_velocity_computed)
+	#nav_agent.velocity_computed.connect(_on_velocity_computed)
+	pass
 
 
 func _process(p_delta: float) -> void:
@@ -43,7 +44,8 @@ func _physics_process(p_delta: float) -> void:
 	if nav_agent.avoidance_enabled:
 		nav_agent.set_velocity(velocity)
 	else:
-		_on_velocity_computed(velocity)
+		_on_navigation_agent_velocity_computed(velocity)
+		#_on_velocity_computed(velocity)
 
 	# Ensure enemy doesn't fall through terrain when collision absent
 	if get_parent().terrain:
@@ -51,8 +53,12 @@ func _physics_process(p_delta: float) -> void:
 		if not is_nan(height):
 			global_position.y = maxf(global_position.y, height)
 
-
-func _on_velocity_computed(p_safe_velocity: Vector3) -> void:
-	velocity.x = p_safe_velocity.x
-	velocity.z = p_safe_velocity.z
+func _on_navigation_agent_velocity_computed(safe_velocity: Vector3) -> void:
+	velocity.x = safe_velocity.x
+	velocity.z = safe_velocity.z
 	move_and_slide()
+
+#func _on_velocity_computed(p_safe_velocity: Vector3) -> void:
+	#velocity.x = p_safe_velocity.x
+	#velocity.z = p_safe_velocity.z
+	#move_and_slide()
