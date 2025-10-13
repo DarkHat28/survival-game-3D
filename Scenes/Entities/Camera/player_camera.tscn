@@ -31,6 +31,8 @@ unique_name_in_owner = true
 fov = 85.0
 
 [node name="FlameThrowerPosition" type="Marker3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(0.14391747, 0.03645718, 0.021415936, -0.030124094, 0.1417227, -0.038822856, -0.029669981, 0.03294767, 0.14329739, 0.50561106, -0.5, -0.55376565)
 
 [node name="FlameThrowerBlue" parent="FlameThrowerPosition" instance=ExtResource("2_cutip")]
+visible = false

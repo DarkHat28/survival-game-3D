@@ -11,8 +11,8 @@ top_radius = 1.0
 bottom_radius = 0.7
 height = 0.01
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2woo0"]
-albedo_color = Color(0.86490524, 0.8906221, 0.5582313, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cao0p"]
+albedo_color = Color(0.4419587, 0.3956442, 0.04452738, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aeimp"]
 resource_name = "lambert1"
@@ -101,7 +101,7 @@ script = ExtResource("1_cao0p")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11273122, -0.25940657, -0.22031623)
 mesh = SubResource("CylinderMesh_cao0p")
-surface_material_override/0 = SubResource("StandardMaterial3D_2woo0")
+surface_material_override/0 = SubResource("StandardMaterial3D_cao0p")
 
 [node name="Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, -1.6858739e-09, -0.01, 0, 0.01, -1.6858739e-09, 0, 0, 0)

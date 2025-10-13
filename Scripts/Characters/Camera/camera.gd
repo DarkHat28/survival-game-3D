@@ -16,6 +16,16 @@ enum CameraMode { F_P_S,T_P_S }
 @onready var tps_camera: Camera3D = %TPSCamera
 @onready var active_camera: Camera3D
 
+## FlameThrowerSkins
+const FLAME_THROWER_BLUE = preload("uid://bt38bt2epaoct") # "res://Scenes/Weapons/flame_thrower_blue.tscn"
+const FLAME_THROWER_GOLDEN = preload("uid://naeeiv52mtr0") # "res://Scenes/Weapons/flame_thrower_golden.tscn"
+const FLAME_THROWER_GREY = preload("uid://cesc7xsio46t8") # "res://Scenes/Weapons/flame_thrower_grey.tscn"
+const FLAME_THROWER_PINK = preload("uid://c1q5a2i3bd2lc") # "res://Scenes/Weapons/flame_thrower_pink.tscn"
+
+
+
+@export var current_flame_thrower: PackedScene = FLAME_THROWER_BLUE
+
 
 @export_group("Camera Rotation")
 # Sensitivity settings
@@ -40,6 +50,10 @@ func _ready() -> void:
 	_camera_mode()
 	spring_arm.spring_length = 2.5
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	# Instantiate Flame Thrower
+	var flame_thrower: Node3D = current_flame_thrower.instantiate()
+	%FlameThrowerPosition.add_child(flame_thrower)
 
 func _input(event: InputEvent) -> void:
 	# Mouse look
