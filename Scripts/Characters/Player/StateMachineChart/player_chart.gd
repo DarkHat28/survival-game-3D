@@ -12,8 +12,8 @@ extends CharacterBody3D
 #@export var animation_player: AnimationPlayer
 
 @export_group("Movement")
-@export var walk_speed := 3.5
-@export var sprint_speed := 6.0
+@export var walk_speed: float = 4.0
+@export var sprint_speed: float = 8.0
 @export var acceleration: float = 30.0
 @export var friction: float = 50.0
 @export var lerp_player_rotation: float = 180.0
@@ -46,6 +46,7 @@ var last_direction: Vector3
 var can_dash: bool = true
 #endregion
 
+## state_chart.get_active_state() == "JumpState" # How to check current State
 func _ready() -> void: pass
 
 
@@ -87,8 +88,8 @@ func apply_gravity(delta: float) -> void:
 func update_state_label() -> void:
 	if state_label:
 		state_label.text = "Can Dash: " + str(can_dash) +\
-		"\nOn Wall: " + str(is_on_wall()) #+\
-		#""
+		"\nOn Wall: " + str(is_on_wall()) +\
+		"\nVelocity: " + str(velocity)
 #endregion
 
 
@@ -132,12 +133,13 @@ func _on_jump_state_state_entered() -> void:
 	velocity.y = -jump_velocity
 
 func _on_jump_state_physics_processing(delta: float) -> void:
+	start_horizontal_velocity(delta)
 	apply_gravity(delta)
 
 func _on_fall_state_physics_processing(delta: float) -> void:
 	apply_gravity(delta)
 	#if is_on_wall():
-	start_horizontal_velocity(delta)
+	#start_horizontal_velocity(delta)
 
 # Dash Logic
 func _on_dash_state_entered() -> void:
