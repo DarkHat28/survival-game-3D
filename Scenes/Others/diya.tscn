@@ -1,8 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://dcpxv8d7ociku"]
+[gd_scene load_steps=19 format=4 uid="uid://dcpxv8d7ociku"]
 
 [ext_resource type="Texture2D" uid="uid://btqgem6n2ar58" path="res://Assets/3D Model/Props/diya/textures/lambert1_baseColor.png" id="1_57uah"]
 [ext_resource type="Script" uid="uid://cmhqaso5f0hal" path="res://Scripts/Others/diya.gd" id="1_cao0p"]
 [ext_resource type="Texture2D" uid="uid://cqdio6kmgf7oe" path="res://Assets/3D Model/Props/diya/textures/lambert1_normal.png" id="2_cao0p"]
+[ext_resource type="Texture2D" uid="uid://c3wys0ghf6t1j" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_4.png" id="4_oo8ql"]
+[ext_resource type="Texture2D" uid="uid://4yslsdb1ers" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_5.png" id="5_74vdd"]
+[ext_resource type="PackedScene" uid="uid://cjn5x2ke8mg3g" path="res://Scenes/Entities/Player/player_chart.tscn" id="6_74vdd"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_cao0p"]
 lightmap_size_hint = Vector2i(33, 14)
@@ -94,21 +97,73 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8rsf2")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_74vdd"]
+atlas = ExtResource("4_oo8ql")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qcy3"]
+resource_name = "pilotlight.012"
+transparency = 4
+cull_mode = 2
+albedo_color = Color(0.71975076, 0.35113, 0, 1)
+albedo_texture = SubResource("AtlasTexture_74vdd")
+emission_enabled = true
+emission_energy_multiplier = 10.0
+emission_texture = ExtResource("5_74vdd")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8qfwt"]
+_surfaces = [{
+"aabb": AABB(-0.047288, -72.99097, -4.0745316, 4.836177, 5.3540497, 6.056305),
+"format": 34896613377,
+"index_count": 144,
+"index_data": PackedByteArray("AAASABMAAgATABIAAgASAAEAEwACAAQAAQASABQAAAAUABIAAQAUAAMABQADABQAEwAEABUAFQAAABMABQAUABYAAAAWABQABQAWABcAFgAAABcABQAXAAcACAAHABcAGAAVAAQAGAAAABUAGAAEAAYAGQAXAAAAAAAYABkACAAXABkABgAZABgABgAIABkACQAaABsAGwAaAAoAGwAKAAsADQAbAAsAHAAKABoAGgAJABwAHAAMAAoADQAdABsAHQAJABsADwAdAA0ADwAeAB0ACQAdAB4AEQAeAA8AHwAJAB4AEQAfAB4ADAAcACAAHAAJACAADAAgAA4AEAAOACAAEQAhAB8AEQAQACEACQAfACEAEAAgACEAIQAgAAkA"),
+"lods": [0.34722298, PackedByteArray("AAASABMAAgATABIAAgASAAEAEwACAAQAAQASABQAAAAUABIAAQAUAAMABQADABQAEwAEABUAFQAAABMABQAUABYAAAAWABQABQAWABcAFgAAABcABQAXAAcACAAHABcAGAAVAAQAGAAAABUAGAAEAAYAGQAXAAAAAAAYABkACAAXABkABgAZABgABgAIABkACQAKAAsACgAJAAwADQAJAAsADAAJAA4ACQANAA8AEAAOAAkAEQAJAA8ACQARABAA"), 0.68310213, PackedByteArray("AAABAAIAAAADAAEABAAAAAIAAAAFAAMABgAAAAQABQAAAAcAAAAGAAgACAAHAAAACQAKAAsACgAJAAwADQAJAAsADAAJAA4ACQANAA8AEAAOAAkAEQAJAA8ACQARABAA")],
+"name": "Lighter",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 34,
+"vertex_data": PackedByteArray("AAAAAP//AAAr/SjOFRcAAMLppsjyBgAA//+m4PYmAAAi0VnTAAAAAJXwS/VGLQAAuMH+51AGAAD11///VCYAAIzEfPoxFgAAs1H1UjWrAACk48rmwgUAABveM+4GCAAAfOzy4kAIAAAf39f0ug0AAHXz7OQMDgAAF+bS9oYTAAB49JDrwBMAAO/u+vIEFgAAseHmnB1AAAAjxhWVNCkAALPlJremVgAAL6NFpFgfAADSz3PUnV8AAN6spOPAVQAATo2TwU8oAABRkdLb2D4AAL7GS8nhHQAA477R0xkhAABM09bDbCEAAFTAPt0xKQAAOMoN4GsxAADG1pja9jQAADDdpcamKQAAod4S0L4xAAA=")
+}]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3ermk"]
+resource_name = "Lighter"
+_surfaces = [{
+"aabb": AABB(-0.047288, -72.99097, -4.0745316, 4.836177, 5.3540497, 6.056305),
+"attribute_data": PackedByteArray("TICN9aT4AADxAwAAWtkAAD4nAADYsgAAi0oAAL2OAAALbQAATICN9T4nAACLSgAA8QMAAAttAACk+AAAvY4AAFrZAADYsgAApPhCOPEDQjha2UI4PidCONiyQji9jkI4i0pCOAttQjg+J0I4i0pCOPEDQjgLbUI4vY5CONiyQjik+EI4WtlCOA=="),
+"format": 34896613399,
+"index_count": 144,
+"index_data": PackedByteArray("AAASABMAAgATABIAAgASAAEAEwACAAQAAQASABQAAAAUABIAAQAUAAMABQADABQAEwAEABUAFQAAABMABQAUABYAAAAWABQABQAWABcAFgAAABcABQAXAAcACAAHABcAGAAVAAQAGAAAABUAGAAEAAYAGQAXAAAAAAAYABkACAAXABkABgAZABgABgAIABkACQAaABsAGwAaAAoAGwAKAAsADQAbAAsAHAAKABoAGgAJABwAHAAMAAoADQAdABsAHQAJABsADwAdAA0ADwAeAB0ACQAdAB4AEQAeAA8AHwAJAB4AEQAfAB4ADAAcACAAHAAJACAADAAgAA4AEAAOACAAEQAhAB8AEQAQACEACQAfACEAEAAgACEAIQAgAAkA"),
+"lods": [0.34722298, PackedByteArray("AAASABMAAgATABIAAgASAAEAEwACAAQAAQASABQAAAAUABIAAQAUAAMABQADABQAEwAEABUAFQAAABMABQAUABYAAAAWABQABQAWABcAFgAAABcABQAXAAcACAAHABcAGAAVAAQAGAAAABUAGAAEAAYAGQAXAAAAAAAYABkACAAXABkABgAZABgABgAIABkACQAKAAsACgAJAAwADQAJAAsADAAJAA4ACQANAA8AEAAOAAkAEQAJAA8ACQARABAA"), 0.68310213, PackedByteArray("AAABAAIAAAADAAEABAAAAAIAAAAFAAMABgAAAAQABQAAAAcAAAAGAAgACAAHAAAACQAKAAsACgAJAAwADQAJAAsADAAJAA4ACQANAA8AEAAOAAkAEQAJAA8ACQARABAA")],
+"material": SubResource("StandardMaterial3D_2qcy3"),
+"name": "pilotlight.012",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 34,
+"vertex_data": PackedByteArray("AAAAAP//G6Mr/SjOFRcVH8LppsjyBpvq//+m4PYmhLsi0VnTAABM+ZXwS/VGLbCuuMH+51AGsd711///VCZfs4zEfPoxFhnGs1H1UjWrZlik48rmwgUH+BveM+4GCMzcfOzy4kAIrusf39f0ug2Cw3Xz7OQMDvkiF+bS9oYTJ7B49JDrwBMvuu/u+vIEFuWrseHmnB1AWCYjxhWVNCnB7LPlJremVi25L6NFpFgf8/bSz3PUnV+Wqd6spOPAVW+tTo2TwU8oN9tRkdLb2D5Xwb7GS8nhHfP2477R0xkhNttM09bDbCFQI1TAPt0xKVjBOMoN4GsxcK3G1pja9jSXqTDdpcamKVYmod4S0L4xLbkwO3rCLAJVSJ9uoS/gnNtIAbK64lu8hmo9tlLTDschnca8FL05N4fZUbSQ4163ctV1b0syJ7xXwDYBTEi2xLGfqJltScq5kGtJAGJIInCENLaW80lAtkPkUreQbITCF6JUuEHXkLtvw0C2Q+RUuELXVBGVqJC7bcOFwhaiU7ePbEoAYki5lvNJ")
+}]
+shadow_mesh = SubResource("ArrayMesh_8qfwt")
+
 [node name="Diya" type="Node3D"]
 script = ExtResource("1_cao0p")
 
 [node name="Oil" type="MeshInstance3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11273122, -0.25940657, -0.22031623)
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, -0.164, -0.1)
 mesh = SubResource("CylinderMesh_cao0p")
 surface_material_override/0 = SubResource("StandardMaterial3D_cao0p")
 
 [node name="Body" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.01, 0, 0, 0, -1.6858739e-09, -0.01, 0, 0.01, -1.6858739e-09, 0, 0, 0)
+transform = Transform3D(0.005, 0, 0, 0, -2.1855694e-10, -0.005, 0, 0.005, -2.1855694e-10, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ot0ie")
 skeleton = NodePath("")
 
 [node name="Thread" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.01, 0, 0, 0, -1.6858739e-09, -0.01, 0, 0.01, -1.6858739e-09, 0, 0, 0)
+transform = Transform3D(0.005, 0, 0, 0, -2.1855694e-10, -0.005, 0, 0.005, -2.1855694e-10, 0, 0, 0)
 mesh = SubResource("ArrayMesh_dqdvb")
 skeleton = NodePath("")
+
+[node name="Flame" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.06129353, -0.020272434, -0.076368384, -0.07695622, -0.006594166, 0.0635158, -0.017912067, 0.09770131, -0.011559108, -1.3823482, 0.107177496, 5.8127375)
+mesh = SubResource("ArrayMesh_3ermk")
+
+[node name="Player" parent="." instance=ExtResource("6_74vdd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23265204, -1.7970247)
