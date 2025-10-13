@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody3D
 
-## TODO:  ADD CHARACTER AND ITS ANIMATION
+## TODO:  ADD GUN AND ITS ANIMATION
 
 #region Entire Code
 #region Variables
@@ -110,7 +110,10 @@ func handle_transition() -> void:
 		state_chart.send_event("dashing")
 	
 	if not is_on_floor():
-		state_chart.send_event("in_air")
+		if velocity.y < 0.0:
+			state_chart.send_event("falling")
+		else:
+			state_chart.send_event("in_air")
 	else:
 		state_chart.send_event("on_ground")
 
@@ -125,8 +128,10 @@ func _on_walk_state_physics_processing(delta: float) -> void:
 func _on_sprint_state_processing(delta: float) -> void:
 	start_horizontal_velocity(delta, sprint_speed)
 
-func _on_jump_state_physics_processing(delta: float) -> void:
+func _on_jump_state_state_entered() -> void:
 	velocity.y = -jump_velocity
+
+func _on_jump_state_physics_processing(delta: float) -> void:
 	apply_gravity(delta)
 
 func _on_fall_state_physics_processing(delta: float) -> void:

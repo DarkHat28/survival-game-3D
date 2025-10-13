@@ -54,7 +54,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851877, 0)
 shape = SubResource("CapsuleShape3D_rut33")
 
 [node name="PlayerAvatar" type="Node3D" parent="."]
-visible = false
 
 [node name="HeadPosition" type="Marker3D" parent="PlayerAvatar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68111, 0)
@@ -199,7 +198,7 @@ metadata/_custom_type_script = "uid://cytafq8i1y8qm"
 [node name="ToFall" type="Node" parent="StateChart/Actions/Locomotion/JumpState"]
 script = ExtResource("8_iod2j")
 to = NodePath("../../FallState")
-event = &"in_air"
+event = &"falling"
 delay_in_seconds = "0.0"
 metadata/_custom_type_script = "uid://cf1nsco3w0mf6"
 
@@ -262,18 +261,6 @@ metadata/_custom_type_script = "uid://cytafq8i1y8qm"
 [node name="Throwing" type="Node" parent="StateChart/Actions/Attack"]
 script = ExtResource("7_2y2ob")
 metadata/_custom_type_script = "uid://cytafq8i1y8qm"
-
-[node name="StateChartDebugger" parent="." instance=ExtResource("2_cinok")]
-visible = false
-anchors_preset = 1
-anchor_left = 1.0
-anchor_bottom = 0.0
-offset_left = -427.0
-offset_bottom = 387.0
-grow_horizontal = 0
-grow_vertical = 1
-initial_node_to_watch = NodePath("../StateChart")
-ignore_events = true
 
 [node name="StateLabel" type="Label" parent="."]
 unique_name_in_owner = true
@@ -346,9 +333,23 @@ width = 2.0
 
 [node name="Raycasts" type="Node3D" parent="."]
 
+[node name="UIAndDebug" type="CanvasLayer" parent="."]
+
+[node name="StateChartDebugger" parent="UIAndDebug" instance=ExtResource("2_cinok")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -427.0
+offset_bottom = 387.0
+grow_horizontal = 0
+grow_vertical = 1
+initial_node_to_watch = NodePath("../../StateChart")
+ignore_events = true
+
 [connection signal="state_physics_processing" from="StateChart/Actions/Locomotion/IdleState" to="." method="_on_idle_state_physics_processing"]
 [connection signal="state_physics_processing" from="StateChart/Actions/Locomotion/WalkState" to="." method="_on_walk_state_physics_processing"]
 [connection signal="state_processing" from="StateChart/Actions/Locomotion/SprintState" to="." method="_on_sprint_state_processing"]
+[connection signal="state_entered" from="StateChart/Actions/Locomotion/JumpState" to="." method="_on_jump_state_state_entered"]
 [connection signal="state_physics_processing" from="StateChart/Actions/Locomotion/JumpState" to="." method="_on_jump_state_physics_processing"]
 [connection signal="state_physics_processing" from="StateChart/Actions/Locomotion/FallState" to="." method="_on_fall_state_physics_processing"]
 [connection signal="state_entered" from="StateChart/Actions/Locomotion/DashState" to="." method="_on_dash_state_entered"]
