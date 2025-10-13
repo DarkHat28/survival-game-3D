@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmkqw3hve8uy4"
-path.s3tc="res://.godot/imported/flamethrower_0.jpg-54b9e5857d6c2fae6bc3014b02658561.s3tc.ctex"
+uid="uid://bo7dm4x1r2axg"
+path.s3tc="res://.godot/imported/flamethrower_6.jpg-d7728c1144afc9e4dd8e0d9f5ca545c9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d1bc9b7805154b77a6da8baafeddeb9d"
+"md5": "5c50ab4d7dc234b4027f01e2b6379dd1"
 }
 
 [deps]
 
-source_file="res://Assets/3D Model/Weapons/FlameThrowers/Mesh/flamethrower_0.jpg"
-dest_files=["res://.godot/imported/flamethrower_0.jpg-54b9e5857d6c2fae6bc3014b02658561.s3tc.ctex"]
+source_file="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_6.jpg"
+dest_files=["res://.godot/imported/flamethrower_6.jpg-d7728c1144afc9e4dd8e0d9f5ca545c9.s3tc.ctex"]
 
 [params]
 

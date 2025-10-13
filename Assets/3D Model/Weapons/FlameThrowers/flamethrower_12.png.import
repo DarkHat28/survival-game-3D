@@ -2,34 +2,35 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgxl5kix5sdyh"
-path="res://.godot/imported/flamethrower_9.png-863018247d8c9cf4db6fa97f60795760.ctex"
+uid="uid://b3qogej156r8v"
+path.s3tc="res://.godot/imported/flamethrower_12.png-de7d3939500105671905b0feb2912780.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
-"md5": "8cecdd30b38cb21230d299036194d002"
+"md5": "51d522b7a34e171ce50d6cd3b26c4cb5"
 }
 
 [deps]
 
-source_file="res://Assets/3D Model/Weapons/FlameThrowers/Mesh/flamethrower_9.png"
-dest_files=["res://.godot/imported/flamethrower_9.png-863018247d8c9cf4db6fa97f60795760.ctex"]
+source_file="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_12.png"
+dest_files=["res://.godot/imported/flamethrower_12.png-de7d3939500105671905b0feb2912780.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://Assets/3D Model/Weapons/FlameThrowers/Mesh/flamethrower_12.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

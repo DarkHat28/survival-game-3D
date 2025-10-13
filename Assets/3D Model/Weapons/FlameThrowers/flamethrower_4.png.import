@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1j2alnpefppl"
-path.s3tc="res://.godot/imported/flamethrower_1.png-844697af408f07399656094b16538940.s3tc.ctex"
+uid="uid://c3wys0ghf6t1j"
+path.s3tc="res://.godot/imported/flamethrower_4.png-90ca5428727b5d5f4e52e83f650943a2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e418d0c5e83be1af52b8aaac9c3786a0"
+"md5": "b5272ec29ff6f317f7199aa058660ece"
 }
 
 [deps]
 
-source_file="res://Assets/3D Model/Weapons/FlameThrowers/Mesh/flamethrower_1.png"
-dest_files=["res://.godot/imported/flamethrower_1.png-844697af408f07399656094b16538940.s3tc.ctex"]
+source_file="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_4.png"
+dest_files=["res://.godot/imported/flamethrower_4.png-90ca5428727b5d5f4e52e83f650943a2.s3tc.ctex"]
 
 [params]
 
@@ -29,8 +29,8 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=8
-roughness/src_normal="res://Assets/3D Model/Weapons/FlameThrowers/Mesh/flamethrower_2.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

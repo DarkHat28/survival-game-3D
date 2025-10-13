@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=4 uid="uid://cesc7xsio46t8"]
 
-[ext_resource type="Texture2D" uid="uid://cxrnsvfk264rk" path="res://Assets/3D Model/Weapons/FlameThrowers/Mesh/flamethrower_15.jpg" id="1_1618g"]
-[ext_resource type="Texture2D" uid="uid://cqwi4sa6ishrp" path="res://Assets/3D Model/Weapons/FlameThrowers/Mesh/flamethrower_7.png" id="2_k7ob7"]
-[ext_resource type="Texture2D" uid="uid://dxdm6rsf6gfwj" path="res://Assets/3D Model/Weapons/FlameThrowers/Mesh/flamethrower_16.jpg" id="3_0mfm1"]
-[ext_resource type="Texture2D" uid="uid://deoj1hhxllgo1" path="res://Assets/3D Model/Weapons/FlameThrowers/Mesh/flamethrower_8.png" id="4_fu5gw"]
-[ext_resource type="Texture2D" uid="uid://c3wys0ghf6t1j" path="res://Assets/3D Model/Weapons/FlameThrowers/Mesh/flamethrower_4.png" id="5_0jktl"]
-[ext_resource type="Texture2D" uid="uid://4yslsdb1ers" path="res://Assets/3D Model/Weapons/FlameThrowers/Mesh/flamethrower_5.png" id="6_1vkwc"]
+[ext_resource type="Texture2D" uid="uid://cxrnsvfk264rk" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_15.jpg" id="1_1618g"]
+[ext_resource type="Texture2D" uid="uid://cqwi4sa6ishrp" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_7.png" id="2_k7ob7"]
+[ext_resource type="Texture2D" uid="uid://dxdm6rsf6gfwj" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_16.jpg" id="3_0mfm1"]
+[ext_resource type="Texture2D" uid="uid://deoj1hhxllgo1" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_8.png" id="4_fu5gw"]
+[ext_resource type="Texture2D" uid="uid://c3wys0ghf6t1j" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_4.png" id="5_0jktl"]
+[ext_resource type="Texture2D" uid="uid://4yslsdb1ers" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_5.png" id="6_1vkwc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf0f3"]
 resource_name = "c_flamethrower.014"

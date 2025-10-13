@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://domhm87hbhbg1"]
 
 [ext_resource type="Script" uid="uid://b56go3s2p3dsi" path="res://Scripts/src/Player.gd" id="1_nm1yx"]
-[ext_resource type="Script" uid="uid://drk3xcboticcm" path="res://Scripts/src/CameraManager.gd" id="2_loos7"]
+[ext_resource type="Script" uid="uid://drk3xcboticcm" path="res://Scripts/Characters/Camera/CameraManager.gd" id="2_loos7"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_smq6u"]
 
