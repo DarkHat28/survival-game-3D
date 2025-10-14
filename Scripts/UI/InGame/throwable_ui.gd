@@ -36,10 +36,12 @@ func update_texture() -> void:
 	match current_grenade:
 		GrenadeType.FRAG:
 			grenade_icon.icon = frag_grenade.icon
+			grenade_icon.text = frag_grenade.text
 			frag_grenade.disabled = true
 			motolov_cocktail.disabled = false
 		
 		GrenadeType.MOLOTOV:
 			grenade_icon.icon = motolov_cocktail.icon
+			grenade_icon.text = motolov_cocktail.text
 			frag_grenade.disabled = false
 			motolov_cocktail.disabled = true
