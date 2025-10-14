@@ -15,7 +15,8 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 0), PackedInt32Arr
 [node name="Environment" parent="." instance=ExtResource("3_coh1d")]
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_cs75k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.9618, 31.310444, -113.66325)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.962, 0, -113.663)
+axis_lock_linear_y = true
 target = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("6_lawvb")]

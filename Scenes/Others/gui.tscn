@@ -9,64 +9,75 @@
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource("1_p6w5o")
 
-[node name="Equiped" type="Sprite2D" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_top = 0.597
+anchor_right = 0.32200003
+anchor_bottom = 1.0
+offset_top = 429.24
+offset_right = -614.24005
+grow_vertical = 0
+
+[node name="Equiped" type="Sprite2D" parent="Control"]
 modulate = Color(1, 1, 1, 0.74509805)
-position = Vector2(187, 900)
+position = Vector2(187, -220)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_3lhpj")
 
-[node name="Grenade" type="Sprite2D" parent="Equiped"]
+[node name="Grenade" type="Sprite2D" parent="Control/Equiped"]
 position = Vector2(-2, -4)
 scale = Vector2(0.19921875, 0.21484375)
 texture = ExtResource("3_e0jsi")
 
-[node name="MolotovCocktail" type="Sprite2D" parent="Equiped"]
+[node name="MolotovCocktail" type="Sprite2D" parent="Control/Equiped"]
 visible = false
 position = Vector2(2, 0)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_t0ufy")
 
-[node name="Throwables Inventory" type="Node2D" parent="."]
+[node name="Throwables Inventory" type="Node2D" parent="Control"]
+position = Vector2(0, -1120)
 
-[node name="T" type="Sprite2D" parent="Throwables Inventory"]
+[node name="T" type="Sprite2D" parent="Control/Throwables Inventory"]
 position = Vector2(188, 918)
 rotation = 0.7853982
 scale = Vector2(0.55, 0.55)
 texture = ExtResource("5_avivp")
 
-[node name="Grenade2" type="Sprite2D" parent="Throwables Inventory/T"]
+[node name="Grenade2" type="Sprite2D" parent="Control/Throwables Inventory/T"]
 position = Vector2(-142.87378, -141.52051)
 rotation = -0.78382117
 scale = Vector2(0.12, 0.13)
 texture = ExtResource("3_e0jsi")
 
-[node name="R" type="Sprite2D" parent="Throwables Inventory"]
+[node name="R" type="Sprite2D" parent="Control/Throwables Inventory"]
 position = Vector2(169, 901)
 rotation = 0.7853982
 scale = Vector2(0.55, 0.55)
 texture = ExtResource("5_avivp")
 flip_h = true
 
-[node name="MolotovCocktail2" type="Sprite2D" parent="Throwables Inventory/R"]
+[node name="MolotovCocktail2" type="Sprite2D" parent="Control/Throwables Inventory/R"]
 position = Vector2(141.42102, -138.84961)
 rotation = -0.7853982
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("4_t0ufy")
 
-[node name="B" type="Sprite2D" parent="Throwables Inventory"]
+[node name="B" type="Sprite2D" parent="Control/Throwables Inventory"]
 position = Vector2(190, 881)
 rotation = 2.3561945
 scale = Vector2(0.55, 0.55)
 texture = ExtResource("5_avivp")
 flip_h = true
 
-[node name="L" type="Sprite2D" parent="Throwables Inventory"]
+[node name="L" type="Sprite2D" parent="Control/Throwables Inventory"]
 position = Vector2(205, 903.00006)
 rotation = -0.7853982
 scale = Vector2(0.55, 0.55)
 texture = ExtResource("5_avivp")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 1299.0
 offset_top = 21.0
 offset_right = 1917.0
