@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+
 var items :Array = ["grenade","molotov","none", "none"] #T,R,B,L
 
 var selecting :bool = false
@@ -8,13 +9,12 @@ var choosed_item:int = 0
 var ind :=0
 
 
-
 func _process(_delta):
-	$"Throwables Inventory".visible= selecting
+	$"Throwables Inventory".visible = selecting
 	Global.can_rotate_cam = !selecting
-	$Label.text = "choosed item: "+str(items[choosed_item])
+	$Label.text = "choosed item: " + str(items[choosed_item])
 	for i in range(4):
-		if(i==ind):
+		if(i == ind):
 			$"Throwables Inventory".get_child(i).scale = 0.6 * Vector2(1,1)
 		else:
 			$"Throwables Inventory".get_child(i).scale = 0.55 * Vector2(1,1)

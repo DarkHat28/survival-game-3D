@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://sv77v1ax2yuj"]
+
+[ext_resource type="Script" uid="uid://dyxo1i22grncu" path="res://Scripts/UI/InGame/throwable_ui.gd" id="1_1ng00"]
+[ext_resource type="Texture2D" uid="uid://cp78iw42ugqpu" path="res://Assets/Icons/poison.png" id="2_3hubk"]
+[ext_resource type="Texture2D" uid="uid://bq63qji1qiao" path="res://Assets/Icons/elixir.png" id="3_ytler"]
+[ext_resource type="Texture2D" uid="uid://dv6ejy32sa0jb" path="res://Assets/Icons/magic-book.png" id="4_ytler"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ytler"]
+
+[node name="ThrowableUI" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ng00")
+
+[node name="Grid" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GrenadeList" type="VBoxContainer" parent="Grid"]
+layout_mode = 2
+
+[node name="FragGrenade" type="TextureButton" parent="Grid/GrenadeList"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("2_3hubk")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Motolov" type="TextureButton" parent="Grid/GrenadeList"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("3_ytler")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Separator" type="HSeparator" parent="Grid"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ytler")
+
+[node name="GrenadeIcon" type="TextureButton" parent="Grid"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("4_ytler")
+stretch_mode = 6
+
+[connection signal="pressed" from="Grid/GrenadeList/FragGrenade" to="." method="_on_frag_grenade_pressed"]
+[connection signal="pressed" from="Grid/GrenadeList/Motolov" to="." method="_on_motolov_pressed"]
+[connection signal="pressed" from="Grid/GrenadeIcon" to="." method="_on_grenade_icon_pressed"]
