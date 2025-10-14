@@ -21,25 +21,25 @@ func toggle_list():
 func _on_grenade_icon_pressed():
 	toggle_list()
 
-func _on_motolov_cocktail_pressed() -> void:
-	current_grenade = GrenadeType.MOLOTOV
-
-
 func _on_frag_grenade_pressed():
 	current_grenade = GrenadeType.FRAG
+	toggle_list()
+	update_texture()
 
+func _on_motolov_cocktail_pressed() -> void:
+	current_grenade = GrenadeType.MOLOTOV
+	toggle_list()
+	update_texture()
 
 
 func update_texture() -> void:
 	match current_grenade:
 		GrenadeType.FRAG:
-			print("Frag Texture")
 			grenade_icon.icon = frag_grenade.icon
-			frag_grenade.disabled = false
-			motolov_cocktail.disabled = true
+			frag_grenade.disabled = true
+			motolov_cocktail.disabled = false
 		
 		GrenadeType.MOLOTOV:
-			print("Motolov Texture")
 			grenade_icon.icon = motolov_cocktail.icon
 			frag_grenade.disabled = true
 			motolov_cocktail.disabled = false
