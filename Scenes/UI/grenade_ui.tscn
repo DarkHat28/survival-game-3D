@@ -1,30 +1,30 @@
 [gd_scene load_steps=6 format=3 uid="uid://der1tdfpfs1by"]
 
-[ext_resource type="Script" uid="uid://bg362223glhqr" path="res://Scripts/src/gui.gd" id="1_p6w5o"]
-[ext_resource type="Texture2D" uid="uid://dlqgotrdgxo0u" path="res://Assets/Icons/image-removebg-preview(6).png" id="2_3lhpj"]
-[ext_resource type="Texture2D" uid="uid://b3yr18skwyy70" path="res://Assets/Icons/grenade.png" id="3_e0jsi"]
-[ext_resource type="Texture2D" uid="uid://cqqkpkmw8nlsr" path="res://Assets/Icons/molotov-cocktail.png" id="4_t0ufy"]
-[ext_resource type="Texture2D" uid="uid://bmeqbpwr6kt6g" path="res://Assets/Icons/image-removebg-preview(5).png" id="5_avivp"]
+[ext_resource type="Script" uid="uid://bg362223glhqr" path="res://Scripts/src/gui.gd" id="1_q6niw"]
+[ext_resource type="Texture2D" uid="uid://dlqgotrdgxo0u" path="res://Assets/Icons/image-removebg-preview(6).png" id="2_tnxrf"]
+[ext_resource type="Texture2D" uid="uid://b3yr18skwyy70" path="res://Assets/Icons/grenade.png" id="3_bc7j5"]
+[ext_resource type="Texture2D" uid="uid://cqqkpkmw8nlsr" path="res://Assets/Icons/molotov-cocktail.png" id="4_4whbt"]
+[ext_resource type="Texture2D" uid="uid://bmeqbpwr6kt6g" path="res://Assets/Icons/MiddleCircle.png" id="5_c13ab"]
 
 [node name="GUI" type="CanvasLayer"]
-script = ExtResource("1_p6w5o")
+script = ExtResource("1_q6niw")
 
 [node name="Equiped" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.74509805)
 position = Vector2(187, 900)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_3lhpj")
+texture = ExtResource("2_tnxrf")
 
 [node name="Grenade" type="Sprite2D" parent="Equiped"]
 position = Vector2(-2, -4)
 scale = Vector2(0.19921875, 0.21484375)
-texture = ExtResource("3_e0jsi")
+texture = ExtResource("3_bc7j5")
 
 [node name="MolotovCocktail" type="Sprite2D" parent="Equiped"]
 visible = false
 position = Vector2(2, 0)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_t0ufy")
+texture = ExtResource("4_4whbt")
 
 [node name="Throwables Inventory" type="Node2D" parent="."]
 
@@ -32,39 +32,39 @@ texture = ExtResource("4_t0ufy")
 position = Vector2(188, 918)
 rotation = 0.7853982
 scale = Vector2(0.55, 0.55)
-texture = ExtResource("5_avivp")
+texture = ExtResource("5_c13ab")
 
 [node name="Grenade2" type="Sprite2D" parent="Throwables Inventory/T"]
 position = Vector2(-142.87378, -141.52051)
 rotation = -0.78382117
 scale = Vector2(0.12, 0.13)
-texture = ExtResource("3_e0jsi")
+texture = ExtResource("3_bc7j5")
 
 [node name="R" type="Sprite2D" parent="Throwables Inventory"]
 position = Vector2(169, 901)
 rotation = 0.7853982
 scale = Vector2(0.55, 0.55)
-texture = ExtResource("5_avivp")
+texture = ExtResource("5_c13ab")
 flip_h = true
 
 [node name="MolotovCocktail2" type="Sprite2D" parent="Throwables Inventory/R"]
 position = Vector2(141.42102, -138.84961)
 rotation = -0.7853982
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("4_t0ufy")
+texture = ExtResource("4_4whbt")
 
 [node name="B" type="Sprite2D" parent="Throwables Inventory"]
 position = Vector2(190, 881)
 rotation = 2.3561945
 scale = Vector2(0.55, 0.55)
-texture = ExtResource("5_avivp")
+texture = ExtResource("5_c13ab")
 flip_h = true
 
 [node name="L" type="Sprite2D" parent="Throwables Inventory"]
 position = Vector2(205, 903.00006)
 rotation = -0.7853982
 scale = Vector2(0.55, 0.55)
-texture = ExtResource("5_avivp")
+texture = ExtResource("5_c13ab")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 1299.0

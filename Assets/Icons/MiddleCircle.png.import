@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crdsb4dxr28ug"
-path="res://.godot/imported/wizard-hat (1).png-0880d4e1d5746de4723dbaec6b07b8bb.ctex"
+uid="uid://bmeqbpwr6kt6g"
+path="res://.godot/imported/MiddleCircle.png-ee64568963d0d2a6b9010b5b126f14a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/wizard-hat (1).png"
-dest_files=["res://.godot/imported/wizard-hat (1).png-0880d4e1d5746de4723dbaec6b07b8bb.ctex"]
+source_file="res://Assets/Icons/MiddleCircle.png"
+dest_files=["res://.godot/imported/MiddleCircle.png-ee64568963d0d2a6b9010b5b126f14a3.ctex"]
 
 [params]
 

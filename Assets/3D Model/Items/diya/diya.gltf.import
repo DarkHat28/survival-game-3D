@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c23ttijirousw"
-path="res://.godot/imported/scene.gltf-8262df50073f2a9e8f9fceba9aa410d0.scn"
+path="res://.godot/imported/diya.gltf-35161d62f227a63dffbbdc5ea8ae14df.scn"
 
 [deps]
 
-source_file="res://Assets/3D Model/Props/diya/scene.gltf"
-dest_files=["res://.godot/imported/scene.gltf-8262df50073f2a9e8f9fceba9aa410d0.scn"]
+source_file="res://Assets/3D Model/Items/diya/diya.gltf"
+dest_files=["res://.godot/imported/diya.gltf-35161d62f227a63dffbbdc5ea8ae14df.scn"]
 
 [params]
 

@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcumvtt8bb6n7"]
-
-[ext_resource type="PackedScene" uid="uid://c2woneu7gx8xg" path="res://Assets/3D Model/Characters/YellowHumanBot/YellowBot.glb" id="1_y1ogy"]
-
-[node name="YellowBotState" instance=ExtResource("1_y1ogy")]
