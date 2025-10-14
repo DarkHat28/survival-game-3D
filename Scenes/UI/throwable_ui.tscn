@@ -143,19 +143,11 @@ mouse_filter = 2
 theme_override_constants/separation = 5
 theme_override_styles/separator = SubResource("StyleBoxLine_3hubk")
 
-[node name="GrenadeIcon" type="Button" parent="Control/Container/Column"]
+[node name="GrenadeIcon" type="TextureRect" parent="Control/Container/Column"]
 custom_minimum_size = Vector2(50, 100)
 layout_mode = 2
 size_flags_vertical = 0
 mouse_filter = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_3hubk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_scapr")
-theme_override_styles/hover = SubResource("StyleBoxFlat_3hubk")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_3hubk")
-theme_override_styles/focus = SubResource("StyleBoxFlat_3hubk")
-icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
 
 [node name="GrenadeIcon" type="Button" parent="Control"]
 unique_name_in_owner = true
@@ -173,6 +165,7 @@ offset_bottom = -5.0
 grow_horizontal = 0
 grow_vertical = 0
 size_flags_vertical = 8
+focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_3hubk")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_scapr")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3hubk")
