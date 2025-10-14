@@ -14,6 +14,16 @@ func _ready():
 	container.visible = false
 	update_texture()
 
+func _unhandled_key_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("grenade_1"):
+		_on_frag_grenade_pressed()
+		toggle_list()
+		
+	if Input.is_action_just_pressed("grenade_2"):
+		_on_motolov_cocktail_pressed()
+		toggle_list()
+
+
 func toggle_list():
 	container.visible = !container.visible
 

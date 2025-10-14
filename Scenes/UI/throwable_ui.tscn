@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://sv77v1ax2yuj"]
+[gd_scene load_steps=16 format=3 uid="uid://sv77v1ax2yuj"]
 
 [ext_resource type="Script" uid="uid://dyxo1i22grncu" path="res://Scripts/UI/InGame/throwable_ui.gd" id="1_1ng00"]
 [ext_resource type="Texture2D" uid="uid://b3yr18skwyy70" path="res://Assets/Icons/grenade.png" id="2_3hubk"]
@@ -38,6 +38,35 @@ corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_scapr"]
 bg_color = Color(0.30507714, 0.30507714, 0.30507714, 0.8)
+
+[sub_resource type="InputEventKey" id="InputEventKey_ytler"]
+device = -1
+pressed = true
+keycode = 49
+unicode = 49
+
+[sub_resource type="InputEventKey" id="InputEventKey_2rja6"]
+device = -1
+pressed = true
+keycode = 4194439
+unicode = 49
+
+[sub_resource type="Shortcut" id="Shortcut_scapr"]
+events = [SubResource("InputEventKey_ytler"), SubResource("InputEventKey_2rja6")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_xc177"]
+device = -1
+pressed = true
+keycode = 50
+unicode = 50
+
+[sub_resource type="InputEventKey" id="InputEventKey_d3ea7"]
+device = -1
+pressed = true
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_l4enk"]
+events = [SubResource("InputEventKey_xc177"), SubResource("InputEventKey_d3ea7")]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_3hubk"]
 color = Color(0, 0, 0, 0.3)
@@ -113,6 +142,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3hubk")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_3hubk")
 theme_override_styles/focus = SubResource("StyleBoxFlat_3hubk")
 button_mask = 3
+shortcut = SubResource("Shortcut_scapr")
 text = "5"
 icon = ExtResource("2_3hubk")
 icon_alignment = 1
@@ -130,6 +160,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_3hubk")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3hubk")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_3hubk")
 theme_override_styles/focus = SubResource("StyleBoxFlat_3hubk")
+shortcut = SubResource("Shortcut_l4enk")
 text = "2"
 icon = ExtResource("3_ytler")
 icon_alignment = 1
