@@ -6,7 +6,7 @@ extends Node3D
 @export var player: CharacterBody3D
 
 @export_category("Camera View")
-@export var can_switch: bool
+@export var can_switch_camera: bool = false
 enum CameraMode { F_P_S,T_P_S }
 @export var camera_mode: CameraMode = CameraMode.F_P_S
 
@@ -103,7 +103,7 @@ func _grab_mouse() -> void:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _switch_camera() -> void:
-	if Input.is_action_just_pressed("toggle_camera") and can_switch == true:
+	if Input.is_action_just_pressed("toggle_camera") and can_switch_camera == true:
 		if active_camera == fps_camera:
 			active_camera = tps_camera
 		else:

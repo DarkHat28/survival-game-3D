@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=4 uid="uid://desatcndqofug"]
+[gd_scene load_steps=13 format=4 uid="uid://desatcndqofug"]
 
-[ext_resource type="Texture2D" uid="uid://m6c0f43kr8nf" path="res://Assets/Textures/Tiles/texture_13.png" id="1_eq1yq"]
 [ext_resource type="Texture2D" uid="uid://c1wrlh30qjqej" path="res://Assets/Textures/Tiles/texture_03.png" id="1_mjkmo"]
 [ext_resource type="PackedScene" uid="uid://cjn5x2ke8mg3g" path="res://Scenes/Entities/Player/player_chart.tscn" id="2_eq1yq"]
+[ext_resource type="Material" uid="uid://dlf4gyitrd3mw" path="res://Assets/3D Model/TerrainProps/Mashrooms.material" id="2_jakeb"]
 [ext_resource type="PackedScene" uid="uid://6fh58157bis1" path="res://Assets/Environment/Horror_trees.glb" id="4_jakeb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jakeb"]
@@ -14,10 +14,6 @@ uv1_triplanar = true
 [sub_resource type="PrismMesh" id="PrismMesh_mjkmo"]
 left_to_right = 1.0
 size = Vector3(1, 1.58, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjkmo"]
-albedo_texture = ExtResource("1_eq1yq")
-uv1_triplanar = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_chwc0"]
 _surfaces = [{
@@ -57,7 +53,7 @@ material_override = SubResource("StandardMaterial3D_jakeb")
 mesh = SubResource("PrismMesh_mjkmo")
 
 [node name="Platform" type="MeshInstance3D" parent="PlatformWorld"]
-material_override = SubResource("StandardMaterial3D_mjkmo")
+material_override = ExtResource("2_jakeb")
 mesh = SubResource("ArrayMesh_chwc0")
 skeleton = NodePath("../..")
 

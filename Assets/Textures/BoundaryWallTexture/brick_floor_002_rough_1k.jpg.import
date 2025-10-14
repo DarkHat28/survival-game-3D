@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ygxs3286i0wm"
-path.s3tc="res://.godot/imported/t_brick_floor_002_rough_1k.jpg-a50a9d2b0c9887709c9d921afc64854a.s3tc.ctex"
+path.s3tc="res://.godot/imported/brick_floor_002_rough_1k.jpg-44eb7de575c133ce22c03cd17b78654a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/BrickFloor1k/t_brick_floor_002_rough_1k.jpg"
-dest_files=["res://.godot/imported/t_brick_floor_002_rough_1k.jpg-a50a9d2b0c9887709c9d921afc64854a.s3tc.ctex"]
+source_file="res://Assets/Textures/BoundaryWallTexture/brick_floor_002_rough_1k.jpg"
+dest_files=["res://.godot/imported/brick_floor_002_rough_1k.jpg-44eb7de575c133ce22c03cd17b78654a.s3tc.ctex"]
 
 [params]
 

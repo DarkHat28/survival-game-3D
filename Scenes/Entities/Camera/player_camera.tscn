@@ -8,7 +8,6 @@ radius = 0.2
 
 [node name="CameraLogic" type="Node3D"]
 script = ExtResource("1_g5kic")
-can_switch = true
 max_spring_length = 3.0
 
 [node name="FPSPivot" type="Node3D" parent="."]
@@ -35,4 +34,5 @@ unique_name_in_owner = true
 transform = Transform3D(0.14391747, 0.03645718, 0.021415936, -0.030124094, 0.1417227, -0.038822856, -0.029669981, 0.03294767, 0.14329739, 0.50561106, -0.5, -0.55376565)
 
 [node name="FlameThrowerBlue" parent="FlameThrowerPosition" instance=ExtResource("2_cutip")]
+transform = Transform3D(1, 3.7252903e-09, 0, -1.4901161e-08, 0.99999994, -1.4901161e-08, -1.4901161e-08, 0, 1, 0, 0, 0)
 visible = false
