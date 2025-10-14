@@ -1,11 +1,49 @@
-[gd_scene load_steps=6 format=3 uid="uid://sv77v1ax2yuj"]
+[gd_scene load_steps=8 format=3 uid="uid://sv77v1ax2yuj"]
 
 [ext_resource type="Script" uid="uid://dyxo1i22grncu" path="res://Scripts/UI/InGame/throwable_ui.gd" id="1_1ng00"]
-[ext_resource type="Texture2D" uid="uid://cp78iw42ugqpu" path="res://Assets/Icons/poison.png" id="2_3hubk"]
-[ext_resource type="Texture2D" uid="uid://bq63qji1qiao" path="res://Assets/Icons/elixir.png" id="3_ytler"]
-[ext_resource type="Texture2D" uid="uid://dv6ejy32sa0jb" path="res://Assets/Icons/magic-book.png" id="4_ytler"]
+[ext_resource type="Texture2D" uid="uid://b3yr18skwyy70" path="res://Assets/Icons/grenade.png" id="2_3hubk"]
+[ext_resource type="Texture2D" uid="uid://cqqkpkmw8nlsr" path="res://Assets/Icons/molotov_cocktail.png" id="3_ytler"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ytler"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytler"]
+bg_color = Color(0.13816993, 0.13816993, 0.13816993, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.13816993, 0.13816993, 0.13816993, 0.89400005)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 10.0
+expand_margin_top = 15.0
+expand_margin_right = 10.0
+expand_margin_bottom = 15.0
+shadow_color = Color(0, 0, 0, 0.2)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hubk"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0.2)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.109340526, 0.10934057, 0.10934045, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_scapr"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0.6)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_3hubk"]
+color = Color(0, 0, 0, 0.3)
+grow_begin = 8.0
+grow_end = 8.0
+thickness = 2
 
 [node name="ThrowableUI" type="Control"]
 layout_mode = 3
@@ -18,39 +56,81 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1ng00")
 
-[node name="Grid" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Container" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(80, 250)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -183.0
+offset_right = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ytler")
+metadata/_edit_use_anchors_ = true
 
-[node name="GrenadeList" type="VBoxContainer" parent="Grid"]
+[node name="Grid" type="VBoxContainer" parent="Container"]
 layout_mode = 2
+alignment = 2
 
-[node name="FragGrenade" type="TextureButton" parent="Grid/GrenadeList"]
-custom_minimum_size = Vector2(50, 50)
+[node name="FragGrenade" type="Button" parent="Container/Grid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 80)
 layout_mode = 2
-texture_normal = ExtResource("2_3hubk")
-ignore_texture_size = true
-stretch_mode = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_3hubk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_scapr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3hubk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3hubk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3hubk")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3hubk")
+button_mask = 3
+text = "0"
+icon = ExtResource("2_3hubk")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
-[node name="Motolov" type="TextureButton" parent="Grid/GrenadeList"]
-custom_minimum_size = Vector2(50, 50)
+[node name="MotolovCocktail" type="Button" parent="Container/Grid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 80)
 layout_mode = 2
-texture_normal = ExtResource("3_ytler")
-ignore_texture_size = true
-stretch_mode = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_3hubk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_scapr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3hubk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3hubk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3hubk")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3hubk")
+text = "0"
+icon = ExtResource("3_ytler")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
-[node name="Separator" type="HSeparator" parent="Grid"]
+[node name="Separator2" type="HSeparator" parent="Container/Grid"]
+z_index = -3
 layout_mode = 2
-theme_override_constants/separation = 20
-theme_override_styles/separator = SubResource("StyleBoxEmpty_ytler")
+mouse_filter = 2
+theme_override_constants/separation = 5
+theme_override_styles/separator = SubResource("StyleBoxLine_3hubk")
 
-[node name="GrenadeIcon" type="TextureButton" parent="Grid"]
-custom_minimum_size = Vector2(50, 50)
+[node name="GrenadeIcon" type="Button" parent="Container/Grid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 100)
 layout_mode = 2
-texture_normal = ExtResource("4_ytler")
-stretch_mode = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_3hubk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_scapr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3hubk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3hubk")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3hubk")
+text = "0"
+icon = ExtResource("2_3hubk")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
-[connection signal="pressed" from="Grid/GrenadeList/FragGrenade" to="." method="_on_frag_grenade_pressed"]
-[connection signal="pressed" from="Grid/GrenadeList/Motolov" to="." method="_on_motolov_pressed"]
-[connection signal="pressed" from="Grid/GrenadeIcon" to="." method="_on_grenade_icon_pressed"]
+[connection signal="pressed" from="Container/Grid/FragGrenade" to="." method="_on_frag_grenade_pressed"]
+[connection signal="pressed" from="Container/Grid/MotolovCocktail" to="." method="_on_frag_grenade_pressed"]
+[connection signal="pressed" from="Container/Grid/GrenadeIcon" to="." method="_on_grenade_icon_pressed"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqqkpkmw8nlsr"
-path="res://.godot/imported/molotov-cocktail.png-027c987488deb571ea95386b813797e7.ctex"
+path="res://.godot/imported/molotov_cocktail.png-9b98c57b6ae8e159dd4a93e9f0377b0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/molotov-cocktail.png"
-dest_files=["res://.godot/imported/molotov-cocktail.png-027c987488deb571ea95386b813797e7.ctex"]
+source_file="res://Assets/Icons/molotov_cocktail.png"
+dest_files=["res://.godot/imported/molotov_cocktail.png-9b98c57b6ae8e159dd4a93e9f0377b0e.ctex"]
 
 [params]
 

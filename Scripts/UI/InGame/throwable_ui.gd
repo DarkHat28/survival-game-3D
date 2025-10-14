@@ -2,10 +2,9 @@ class_name GrenadeUI
 extends Control
 
 @onready var grenade_icon: TextureButton = %GrenadeIcon
-#@onready var grenade_icon: TextureRect = %GrenadeIcon
 @onready var grenade_list: VBoxContainer = %GrenadeList
 @onready var frag_grenade: TextureButton = %FragGrenade
-@onready var motolov: TextureButton = %Motolov
+@onready var motolov_cocktail: TextureButton = %MotolovCocktail
 
 enum GrenadeType { FRAG, MOLOTOV }
 @export var current_grenade: GrenadeType = GrenadeType.FRAG
@@ -34,9 +33,13 @@ func update_texture() -> void:
 	match current_grenade:
 		GrenadeType.FRAG:
 			print("Frag Texture")
-			grenade_icon.texture_normal = %FragGrenade.texture_normal
+			grenade_icon.texture_normal = frag_grenade.texture_normal
+			frag_grenade.disabled = false
+			motolov_cocktail.disabled = true
 		
 		GrenadeType.MOLOTOV:
 			print("Motolov Texture")
-			grenade_icon.texture_normal = %Motolov.texture_normal
+			grenade_icon.texture_normal = motolov_cocktail.texture_normal
+			frag_grenade.disabled = true
+			motolov_cocktail.disabled = false
 	
