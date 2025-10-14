@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://der1tdfpfs1by"]
+[gd_scene load_steps=6 format=3 uid="uid://chkyj0hh85lcj"]
 
 [ext_resource type="Script" uid="uid://bg362223glhqr" path="res://Scripts/src/gui.gd" id="1_p6w5o"]
 [ext_resource type="Texture2D" uid="uid://dlqgotrdgxo0u" path="res://Assets/Icons/image-removebg-preview(6).png" id="2_3lhpj"]
