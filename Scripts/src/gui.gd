@@ -1,6 +1,7 @@
 extends CanvasLayer
 
-var items :Array = ["grenade","molotov","none","none"] #T,R,B,L
+
+var items :Array = ["grenade","molotov","none", "none"] #T,R,B,L
 
 var selecting :bool = false
 var threshold :int = 20
@@ -42,6 +43,3 @@ func _input(event):
 			ind=2 if event_velocity.y>0 else 0
 		else:
 			ind=3 if event_velocity.x<0 else 1
-			
-			
-		

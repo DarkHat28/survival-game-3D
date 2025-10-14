@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csilyj3m83c3a"
-path="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"
+uid="uid://bmeqbpwr6kt6g"
+path="res://.godot/imported/MiddleCircle.png-ee64568963d0d2a6b9010b5b126f14a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"]
+source_file="res://Assets/Icons/MiddleCircle.png"
+dest_files=["res://.godot/imported/MiddleCircle.png-ee64568963d0d2a6b9010b5b126f14a3.ctex"]
 
 [params]
 
@@ -22,7 +22,7 @@ compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
-compress/channel_pack=1
+compress/channel_pack=0
 mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0

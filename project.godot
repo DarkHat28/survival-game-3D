@@ -15,6 +15,7 @@ config/tags=PackedStringArray("editing...", "local", "p_c", "survival")
 run/main_scene="uid://x34e4v60vdmy"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://csilyj3m83c3a"
+config/macos_native_icon="uid://csilyj3m83c3a"
 
 [autoload]
 

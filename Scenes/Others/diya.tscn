@@ -1,11 +1,10 @@
-[gd_scene load_steps=19 format=4 uid="uid://dcpxv8d7ociku"]
+[gd_scene load_steps=18 format=4 uid="uid://dcpxv8d7ociku"]
 
-[ext_resource type="Texture2D" uid="uid://btqgem6n2ar58" path="res://Assets/3D Model/Props/diya/textures/lambert1_baseColor.png" id="1_57uah"]
+[ext_resource type="Texture2D" uid="uid://btqgem6n2ar58" path="res://Assets/3D Model/Items/diya/textures/lambert1_baseColor.png" id="1_57uah"]
 [ext_resource type="Script" uid="uid://cmhqaso5f0hal" path="res://Scripts/Others/diya.gd" id="1_cao0p"]
-[ext_resource type="Texture2D" uid="uid://cqdio6kmgf7oe" path="res://Assets/3D Model/Props/diya/textures/lambert1_normal.png" id="2_cao0p"]
+[ext_resource type="Texture2D" uid="uid://cqdio6kmgf7oe" path="res://Assets/3D Model/Items/diya/textures/lambert1_normal.png" id="2_cao0p"]
 [ext_resource type="Texture2D" uid="uid://c3wys0ghf6t1j" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_4.png" id="4_oo8ql"]
 [ext_resource type="Texture2D" uid="uid://4yslsdb1ers" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_5.png" id="5_74vdd"]
-[ext_resource type="PackedScene" uid="uid://cjn5x2ke8mg3g" path="res://Scenes/Entities/Player/player_chart.tscn" id="6_74vdd"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_cao0p"]
 lightmap_size_hint = Vector2i(33, 14)
@@ -143,6 +142,7 @@ _surfaces = [{
 shadow_mesh = SubResource("ArrayMesh_8qfwt")
 
 [node name="Diya" type="Node3D"]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0, 0)
 script = ExtResource("1_cao0p")
 
 [node name="Oil" type="MeshInstance3D" parent="."]
@@ -165,5 +165,7 @@ skeleton = NodePath("")
 transform = Transform3D(-0.06129353, -0.020272434, -0.076368384, -0.07695622, -0.006594166, 0.0635158, -0.017912067, 0.09770131, -0.011559108, -1.3823482, 0.107177496, 5.8127375)
 mesh = SubResource("ArrayMesh_3ermk")
 
-[node name="Player" parent="." instance=ExtResource("6_74vdd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23265204, -1.7970247)
+[node name="OmniLight3D" type="OmniLight3D" parent="Flame"]
+transform = Transform3D(28.571432, 1.9073486e-06, -2.7418137e-06, 9.536743e-07, 28.571428, 3.33786e-06, 3.7550926e-06, -1.9073486e-06, 28.571432, 3.1308513, -69.36808, -2.1593719)
+light_color = Color(1.6498427, 1.6498427, 0, 1)
+omni_shadow_mode = 0
