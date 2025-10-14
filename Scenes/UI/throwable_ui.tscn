@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://sv77v1ax2yuj"]
+[gd_scene load_steps=10 format=3 uid="uid://sv77v1ax2yuj"]
 
 [ext_resource type="Script" uid="uid://dyxo1i22grncu" path="res://Scripts/UI/InGame/throwable_ui.gd" id="1_1ng00"]
 [ext_resource type="Texture2D" uid="uid://b3yr18skwyy70" path="res://Assets/Icons/grenade.png" id="2_3hubk"]
@@ -45,6 +45,13 @@ grow_begin = 12.0
 grow_end = 12.0
 thickness = 2
 
+[sub_resource type="InputEventKey" id="InputEventKey_3hubk"]
+device = -1
+keycode = 4194326
+
+[sub_resource type="Shortcut" id="Shortcut_ytler"]
+events = [SubResource("InputEventKey_3hubk")]
+
 [node name="ThrowableUI" type="Control"]
 layout_mode = 3
 anchors_preset = 3
@@ -52,8 +59,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -2.0
-offset_bottom = -2.0
+offset_left = 26.0
+offset_top = 39.0
+offset_right = 26.0
+offset_bottom = 39.0
 grow_horizontal = 0
 grow_vertical = 0
 script = ExtResource("1_1ng00")
@@ -71,7 +80,7 @@ offset_right = -68.0
 offset_bottom = -84.0
 grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.75, 0.75)
 
 [node name="Container" type="PanelContainer" parent="Control"]
 unique_name_in_owner = true
@@ -169,6 +178,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_scapr")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3hubk")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_3hubk")
 theme_override_styles/focus = SubResource("StyleBoxFlat_3hubk")
+shortcut = SubResource("Shortcut_ytler")
 text = "0"
 icon = ExtResource("2_3hubk")
 icon_alignment = 1
