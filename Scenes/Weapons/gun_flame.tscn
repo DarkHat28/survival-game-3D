@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b7q5hpstbv336"]
+[gd_scene load_steps=11 format=3 uid="uid://b7q5hpstbv336"]
 
 [ext_resource type="Texture2D" uid="uid://cweb0t7ekh7xk" path="res://Assets/Textures/Flames/flame_flipbook.png" id="1_pym1x"]
 
@@ -14,10 +14,16 @@ billboard_keep_scale = true
 particles_anim_h_frames = 8
 particles_anim_v_frames = 8
 particles_anim_loop = true
-grow = true
+
+[sub_resource type="Curve" id="Curve_pym1x"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.75757575, 0.27058828), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ejfo6"]
+curve = SubResource("Curve_pym1x")
 
 [sub_resource type="Gradient" id="Gradient_ejfo6"]
-offsets = PackedFloat32Array(0, 0.004385965, 0.31578946, 0.5350877, 0.6096491)
+offsets = PackedFloat32Array(0, 0.004385965, 0.21818182, 0.58181816, 0.7090909)
 colors = PackedColorArray(1, 0.89855075, 0, 1, 1, 0.8204159, 0, 1, 1, 0.35086948, 0, 1, 0.41996893, 5.4147097e-07, 2.1658838e-07, 1, 0.4195712, 0, 0, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_0ihuv"]
@@ -32,27 +38,26 @@ point_count = 3
 curve = SubResource("Curve_ejfo6")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rv6jk"]
-particle_flag_rotate_y = true
+lifetime_randomness = 0.1
 angle_min = -44.99999
 angle_max = 45.00001
 direction = Vector3(0, 0, -1)
-spread = 40.0
+spread = 0.0
 initial_velocity_min = 6.0
 initial_velocity_max = 10.0
 angular_velocity_min = -100.000015
 angular_velocity_max = 99.999985
 radial_velocity_min = -2.2351742e-05
 radial_velocity_max = 4.9999776
-gravity = Vector3(0, 20, 0)
-scale_min = 2.0
+gravity = Vector3(0, 0, 0)
+attractor_interaction_enabled = false
 scale_max = 2.0
 scale_curve = SubResource("CurveTexture_0ihuv")
 color_ramp = SubResource("GradientTexture1D_0ihuv")
+alpha_curve = SubResource("CurveTexture_ejfo6")
 anim_speed_min = 2.0
 anim_speed_max = 5.0
-collision_mode = 1
-collision_friction = 0.2
-collision_bounce = 0.5
+collision_mode = 2
 collision_use_scale = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_pym1x"]
@@ -60,9 +65,8 @@ collision_use_scale = true
 [node name="GunFlame" type="GPUParticles3D"]
 layers = 7
 material_override = SubResource("StandardMaterial3D_rv6jk")
-amount = 100
+amount = 10
 fixed_fps = 60
-local_coords = true
 draw_order = 1
 process_material = SubResource("ParticleProcessMaterial_rv6jk")
 draw_pass_1 = SubResource("QuadMesh_pym1x")

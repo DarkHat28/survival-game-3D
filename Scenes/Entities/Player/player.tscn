@@ -78,7 +78,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 
 [node name="CapsuleMesh" type="MeshInstance3D" parent="PlayerAvatar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851877, 0)
-visible = false
 mesh = SubResource("CapsuleMesh_cinok")
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_24s2i")]
@@ -376,9 +375,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -150.0
-offset_top = -40.0
+offset_top = -94.0
 offset_right = 150.0
-offset_bottom = -5.0
+offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/outline_size = 10

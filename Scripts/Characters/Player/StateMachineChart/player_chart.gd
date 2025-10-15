@@ -47,7 +47,8 @@ var can_dash: bool = true
 #endregion
 
 ## state_chart.get_active_state() == "JumpState" # How to check current State
-func _ready() -> void: pass
+func _ready() -> void:
+	Global.player = self
 
 
 func _physics_process(_delta: float) -> void:

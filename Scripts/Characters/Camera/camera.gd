@@ -49,9 +49,9 @@ func _ready() -> void:
 	spring_arm.spring_length = 2.5
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
-	# Instantiate Flame Thrower
-	var flame_thrower: Node3D = current_flame_thrower.instantiate()
-	%FlameThrowerPosition.add_child(flame_thrower)
+	## Instantiate Flame Thrower
+	#var flame_thrower: Node3D = current_flame_thrower.instantiate()
+	#%FlameThrowerPosition.add_child(flame_thrower)
 
 func _input(event: InputEvent) -> void:
 	# Mouse look
