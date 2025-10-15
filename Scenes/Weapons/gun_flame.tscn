@@ -15,6 +15,8 @@ billboard_keep_scale = true
 particles_anim_h_frames = 8
 particles_anim_v_frames = 8
 particles_anim_loop = false
+grow = true
+grow_amount = 0.5
 proximity_fade_enabled = true
 
 [sub_resource type="Gradient" id="Gradient_ejfo6"]
