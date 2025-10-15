@@ -1,7 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://cjn5x2ke8mg3g"]
+[gd_scene load_steps=15 format=3 uid="uid://cjn5x2ke8mg3g"]
 
 [ext_resource type="Script" uid="uid://bl8veb4p711jg" path="res://Scripts/Characters/Player/StateMachineChart/player_chart.gd" id="1_e35kc"]
-[ext_resource type="Texture2D" uid="uid://bqifys0xpep6s" path="res://Assets/Textures/GraniteTileTexture/granite_tile_02_diff_1k.jpg" id="2_2y2ob"]
 [ext_resource type="PackedScene" uid="uid://bcwkugn6v3oy7" path="res://addons/godot_state_charts/utilities/state_chart_debugger.tscn" id="2_cinok"]
 [ext_resource type="PackedScene" uid="uid://brbyva2n23ux0" path="res://Scenes/Entities/Camera/player_camera.tscn" id="4_24s2i"]
 [ext_resource type="Script" uid="uid://couw105c3bde4" path="res://addons/godot_state_charts/state_chart.gd" id="4_cinok"]
@@ -17,9 +16,7 @@ radius = 0.25
 height = 1.7
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2y2ob"]
-albedo_texture = ExtResource("2_2y2ob")
-uv1_scale = Vector3(2.275, 2.275, 2.275)
-uv1_triplanar = true
+albedo_color = Color(0.08473002, 0.6675499, 5.7756904e-07, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cinok"]
 material = SubResource("StandardMaterial3D_2y2ob")
@@ -63,7 +60,7 @@ mesh = SubResource("CapsuleMesh_cinok")
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_24s2i")]
 unique_name_in_owner = true
-transform = Transform3D(0.999848, 0, 0.0174524, 0, 1, 0, -0.0174524, 0, 0.999848, 0, 1.4520056, 0)
+transform = Transform3D(0.999848, 0, 0.0174524, 0, 1, 0, -0.0174524, 0, 0.999848, 0, 1.9744878, 0)
 player = NodePath("..")
 
 [node name="StateChart" type="Node" parent="."]

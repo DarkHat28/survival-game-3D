@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmnmklmc51eq3"
-path.s3tc="res://.godot/imported/texture_10.png-9644a0e8b15009cb9ab0a4ca3c7a65cc.s3tc.ctex"
+uid="uid://w4ups2rn41ql"
+path.bptc="res://.godot/imported/aerial_rocks_02_nor_1k.png-e484a9c7f0d33c24b5cc83cf9b5e27a1.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,18 +11,18 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/Tiles/texture_10.png"
-dest_files=["res://.godot/imported/texture_10.png-9644a0e8b15009cb9ab0a4ca3c7a65cc.s3tc.ctex"]
+source_file="res://Assets/Textures/AerialRock/aerial_rocks_02_nor_1k.png"
+dest_files=["res://.godot/imported/aerial_rocks_02_nor_1k.png-e484a9c7f0d33c24b5cc83cf9b5e27a1.bptc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
@@ -38,4 +38,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

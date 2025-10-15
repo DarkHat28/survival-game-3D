@@ -60,12 +60,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.965204, 1.5297451, -45.88
 target = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("6_lawvb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 239.2237, 5.759101, -145.19087)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 223.01389, 4.5018406, -194.64534)
 
 [node name="Props" type="Node" parent="."]
 
 [node name="graveyard" parent="Props" instance=ExtResource("7_8egvv")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 205.5821, 1.5739975, -219.5391)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 228.99892, 0.30729282, -237.25992)
 
 [node name="Diya" parent="Props/graveyard" instance=ExtResource("6_coh1d")]
 transform = Transform3D(-0.1, 0, -1.509958e-08, 0, 0.1, 0, 1.509958e-08, 0, -0.1, 0.03439827, 0.36768848, -0.09721966)
