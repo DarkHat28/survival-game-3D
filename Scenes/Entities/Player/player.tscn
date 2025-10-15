@@ -404,6 +404,14 @@ grow_vertical = 1
 initial_node_to_watch = NodePath("../../StateChart")
 ignore_events = true
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9107895, 0.5325669)
+light_color = Color(0.8597081, 0.8528635, 0.5527958, 1)
+light_energy = 2.0
+light_bake_mode = 1
+omni_range = 50.0
+omni_shadow_mode = 0
+
 [connection signal="state_physics_processing" from="StateChart/Actions/Locomotion/IdleState" to="." method="_on_idle_state_physics_processing"]
 [connection signal="state_physics_processing" from="StateChart/Actions/Locomotion/WalkState" to="." method="_on_walk_state_physics_processing"]
 [connection signal="state_processing" from="StateChart/Actions/Locomotion/SprintState" to="." method="_on_sprint_state_processing"]
