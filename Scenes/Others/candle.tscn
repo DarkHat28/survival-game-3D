@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cfqybkwlbrgji"]
 
-[ext_resource type="Script" uid="uid://cmhqaso5f0hal" path="res://Scripts/Others/diya.gd" id="1_b6gqu"]
-[ext_resource type="PackedScene" uid="uid://c23ttijirousw" path="res://Assets/3D Model/Props/diya/scene.gltf" id="2_v5qcy"]
+[ext_resource type="Script" uid="uid://cmhqaso5f0hal" path="res://Scripts/Props/diya.gd" id="1_b6gqu"]
+[ext_resource type="PackedScene" uid="uid://c23ttijirousw" path="res://Assets/3D Model/Items/diya/diya.gltf" id="2_v5qcy"]
+
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_c5m0c"]
 lightmap_size_hint = Vector2i(33, 14)

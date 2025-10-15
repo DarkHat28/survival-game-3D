@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://biavh5rqk7kxx"]
+
+[ext_resource type="PackedScene" uid="uid://da274hpw3lo75" path="res://Assets/3D Model/TerrainProps/graveyard.glb" id="1_ufpx5"]
+
+[node name="graveyard" instance=ExtResource("1_ufpx5")]
+
+[node name="Column002" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="6"]
+visible = false
+
+[node name="Column010" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="7"]
+visible = false
+
+[node name="Column011" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="8"]
+visible = false
+
+[node name="Column012" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="9"]
+visible = false
+
+[node name="Crypt" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="21"]
+visible = false
+
+[node name="Crypt_Stone_0" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode/Crypt" index="0"]
+visible = false
+
+[node name="FenceSection009" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="27"]
+visible = false
+
+[node name="FenceSection010" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="28"]
+visible = false
+
+[node name="FenceSection011" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="29"]
+visible = false
+
+[node name="Light" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="49"]
+visible = false
