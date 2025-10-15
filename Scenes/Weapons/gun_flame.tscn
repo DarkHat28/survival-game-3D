@@ -1,31 +1,36 @@
-[gd_scene load_steps=8 format=3 uid="uid://b7q5hpstbv336"]
+[gd_scene load_steps=9 format=3 uid="uid://b7q5hpstbv336"]
 
 [ext_resource type="Texture2D" uid="uid://cweb0t7ekh7xk" path="res://Assets/Textures/Flames/flame_flipbook.png" id="1_pym1x"]
-[ext_resource type="PackedScene" uid="uid://cjn5x2ke8mg3g" path="res://Scenes/Entities/Player/player.tscn" id="2_ejfo6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rv6jk"]
 transparency = 1
 shading_mode = 0
 vertex_color_use_as_albedo = true
 vertex_color_is_srgb = true
-albedo_color = Color(4.415934, 2.2550907, 1.064071, 1)
+albedo_color = Color(4.415934, 2.2550907, 1.0377342, 1)
 albedo_texture = ExtResource("1_pym1x")
 billboard_mode = 3
 billboard_keep_scale = true
 particles_anim_h_frames = 8
 particles_anim_v_frames = 8
-particles_anim_loop = false
+particles_anim_loop = true
 grow = true
 grow_amount = 0.5
-proximity_fade_enabled = true
 
 [sub_resource type="Gradient" id="Gradient_ejfo6"]
-offsets = PackedFloat32Array(0, 0.6052632, 0.89912283)
-colors = PackedColorArray(1, 1, 0, 1, 1, 0, 0, 1, 0.41996893, 5.4147097e-07, 2.1658838e-07, 1)
+offsets = PackedFloat32Array(0, 0.004385965, 0.31578946, 0.5350877, 0.6096491)
+colors = PackedColorArray(1, 0.89855075, 0, 1, 1, 0.8204159, 0, 1, 1, 0.35086948, 0, 1, 0.41996893, 5.4147097e-07, 2.1658838e-07, 1, 0.4195712, 0, 0, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_0ihuv"]
 gradient = SubResource("Gradient_ejfo6")
 use_hdr = true
+
+[sub_resource type="Curve" id="Curve_ejfo6"]
+_data = [Vector2(0, 0.5252174), 0.0, 0.0, 0, 0, Vector2(0.28000003, 0.9886957), 0.0, 0.0, 0, 0, Vector2(1, 0.8417392), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_0ihuv"]
+curve = SubResource("Curve_ejfo6")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rv6jk"]
 particle_flag_rotate_y = true
@@ -40,6 +45,7 @@ angular_velocity_max = 49.99998
 gravity = Vector3(0, 0, 0)
 scale_min = 2.0
 scale_max = 2.0
+scale_curve = SubResource("CurveTexture_0ihuv")
 color_ramp = SubResource("GradientTexture1D_0ihuv")
 anim_speed_min = 2.0
 anim_speed_max = 5.0
@@ -51,11 +57,11 @@ collision_use_scale = true
 [sub_resource type="QuadMesh" id="QuadMesh_pym1x"]
 
 [node name="GunFlame" type="GPUParticles3D"]
+layers = 7
 material_override = SubResource("StandardMaterial3D_rv6jk")
-amount = 25
+amount = 20
 fixed_fps = 60
+local_coords = true
+draw_order = 1
 process_material = SubResource("ParticleProcessMaterial_rv6jk")
 draw_pass_1 = SubResource("QuadMesh_pym1x")
-
-[node name="Player" parent="." instance=ExtResource("2_ejfo6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.62790567, -1.6670241)
