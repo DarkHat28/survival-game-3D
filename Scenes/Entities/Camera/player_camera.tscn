@@ -1,15 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://brbyva2n23ux0"]
+[gd_scene load_steps=4 format=3 uid="uid://brbyva2n23ux0"]
 
 [ext_resource type="Script" uid="uid://tuqu3fhakh4x" path="res://Scripts/Characters/Camera/camera.gd" id="1_g5kic"]
-[ext_resource type="PackedScene" uid="uid://bt38bt2epaoct" path="res://Scenes/Weapons/flame_thrower_blue.tscn" id="2_cutip"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cutip"]
+radius = 0.55
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_o58j0"]
 radius = 0.2
 
 [node name="CameraLogic" type="Node3D"]
 script = ExtResource("1_g5kic")
+can_switch_camera = true
 max_spring_length = 3.0
 
 [node name="FPSPivot" type="Node3D" parent="."]
@@ -21,16 +22,14 @@ current = true
 far = 1024.0
 
 [node name="SpringArm3D" type="SpringArm3D" parent="FPSPivot"]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.2, 0, 0.62779784)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.2, 0, 0.6)
 collision_mask = 5
 shape = SubResource("SphereShape3D_cutip")
-spring_length = 0.5
+spring_length = 0.8
 
 [node name="FlameThrowerPosition" type="Marker3D" parent="FPSPivot/SpringArm3D"]
 unique_name_in_owner = true
-transform = Transform3D(-0.15000002, 0, -1.3113416e-08, 0, 0.14999993, 0, 1.3113418e-08, 0, -0.14999999, -1.4901161e-08, 0, 0.22012806)
-
-[node name="FlameThrowerBlue" parent="FPSPivot/SpringArm3D/FlameThrowerPosition" instance=ExtResource("2_cutip")]
+transform = Transform3D(-0.14980121, 1.4079579e-09, -0.007719681, 0.00082139805, 0.14914839, -0.015939282, 0.0076758587, -0.015960427, -0.14895079, -2.9802322e-08, 0, 0.12042576)
 
 [node name="TPSPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.231851, 0)
