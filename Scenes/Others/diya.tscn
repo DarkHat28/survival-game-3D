@@ -170,7 +170,7 @@ mesh = SubResource("ArrayMesh_3ermk")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Flame"]
 transform = Transform3D(1, -3.337859e-08, -1.3142824e-07, 3.3378598e-08, 1, 6.675722e-08, 1.3142824e-07, -6.6757224e-08, 1, 1.0016181, -71.92482, 0.6882968)
-light_color = Color(1.6498427, 1.6498427, 0, 1)
+light_color = Color(1.353256, 1.353256, 0, 1)
 light_energy = 10.0
 omni_range = 50.0
 omni_shadow_mode = 0

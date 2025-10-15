@@ -1,14 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bofy2d2amnblb"]
-
-[ext_resource type="Script" uid="uid://c2s2ahgbowjpv" path="res://Scripts/Characters/Camera/custom_camera.gd" id="1_nx5cp"]
-[ext_resource type="Script" uid="uid://kgh3l2nia3uj" path="res://Scripts/Characters/Camera/CameraCollisionShape.gd" id="2_tpjpd"]
-[ext_resource type="PackedScene" uid="uid://cxh4tojp1xq1c" path="res://Scenes/Player/godette.tscn" id="3_0pidp"]
+[gd_scene load_steps=2 format=3 uid="uid://bofy2d2amnblb"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_nx5cp"]
 radius = 0.1
 
 [node name="CustomCamera3D" type="Node3D"]
-script = ExtResource("1_nx5cp")
 
 [node name="CameraPivot" type="Node3D" parent="."]
 unique_name_in_owner = true
@@ -16,7 +11,6 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3, 2)
 
 [node name="CameraBody" type="CharacterBody3D" parent="CameraPivot"]
 unique_name_in_owner = true
-script = ExtResource("2_tpjpd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraPivot/CameraBody"]
 shape = SubResource("SphereShape3D_nx5cp")
@@ -28,7 +22,3 @@ current = true
 [node name="RayCast" type="RayCast3D" parent="CameraPivot/Camera"]
 unique_name_in_owner = true
 transform = Transform3D(-1, 4.37114e-08, -7.57103e-08, -4.37114e-08, 0.5, 0.866025, 7.57103e-08, 0.866025, -0.5, 0, 0, 0)
-
-[node name="GodetteSkin" parent="." instance=ExtResource("3_0pidp")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
-visible = false

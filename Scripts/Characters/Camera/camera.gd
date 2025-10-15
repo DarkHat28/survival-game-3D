@@ -24,7 +24,7 @@ const FLAME_THROWER_PINK = preload("uid://c1q5a2i3bd2lc") # "res://Scenes/Weapon
 
 
 
-@export var current_flame_thrower: PackedScene = FLAME_THROWER_BLUE
+@export var current_flame_thrower: PackedScene = FLAME_THROWER_PINK
 
 
 @export_group("Camera Rotation")
