@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://brbyva2n23ux0"]
+[gd_scene load_steps=5 format=3 uid="uid://brbyva2n23ux0"]
 
 [ext_resource type="Script" uid="uid://tuqu3fhakh4x" path="res://Scripts/Characters/Camera/camera.gd" id="1_g5kic"]
 [ext_resource type="PackedScene" uid="uid://bt38bt2epaoct" path="res://Scenes/Weapons/flame_thrower_blue.tscn" id="2_cutip"]
+[ext_resource type="PackedScene" uid="uid://c3gt37tdiy0wa" path="res://Scenes/Entities/Camera/WeaponRendered.tscn" id="3_whphg"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_o58j0"]
 radius = 0.2
@@ -14,11 +15,13 @@ max_spring_length = 3.0
 
 [node name="FPSCamera" type="Camera3D" parent="FPSPivot"]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2331562, 0)
 current = true
 far = 1024.0
 
 [node name="TPSPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.231851, 0)
+visible = false
 
 [node name="SpringArm" type="SpringArm3D" parent="TPSPivot"]
 unique_name_in_owner = true
@@ -38,7 +41,13 @@ transform = Transform3D(1, 3.7252903e-09, 0, -1.4901161e-08, 0.99999994, -1.4901
 visible = false
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+
+[node name="Camera3D" parent="SubViewportContainer/SubViewport" instance=ExtResource("3_whphg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23315626, 0)
