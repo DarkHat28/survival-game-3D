@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://tuqu3fhakh4x" path="res://Scripts/Characters/Camera/camera.gd" id="1_g5kic"]
 [ext_resource type="PackedScene" uid="uid://bt38bt2epaoct" path="res://Scenes/Weapons/flame_thrower_blue.tscn" id="2_cutip"]
-[ext_resource type="PackedScene" uid="uid://c3gt37tdiy0wa" path="res://Scenes/Entities/Camera/WeaponRendered.tscn" id="3_whphg"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cutip"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_o58j0"]
 radius = 0.2
@@ -19,6 +20,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2331562, 0)
 current = true
 far = 1024.0
 
+[node name="SpringArm3D" type="SpringArm3D" parent="FPSPivot"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.15936327, 0, 0.3599155)
+collision_mask = 5
+shape = SubResource("SphereShape3D_cutip")
+spring_length = 0.5
+
+[node name="FlameThrowerPosition" type="Marker3D" parent="FPSPivot/SpringArm3D"]
+unique_name_in_owner = true
+transform = Transform3D(-0.15000002, 0, -1.3113416e-08, 0, 0.14999993, 0, 1.3113418e-08, 0, -0.14999999, 0, 0, 0)
+
+[node name="FlameThrowerBlue" parent="FPSPivot/SpringArm3D/FlameThrowerPosition" instance=ExtResource("2_cutip")]
+
 [node name="TPSPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.231851, 0)
 visible = false
@@ -31,23 +44,3 @@ spring_length = 3.0
 [node name="TPSCamera" type="Camera3D" parent="TPSPivot/SpringArm"]
 unique_name_in_owner = true
 fov = 85.0
-
-[node name="FlameThrowerPosition" type="Marker3D" parent="."]
-unique_name_in_owner = true
-transform = Transform3D(0.14391747, 0.03645718, 0.021415936, -0.030124094, 0.1417227, -0.038822856, -0.029669981, 0.03294767, 0.14329739, 0.50561106, -0.5, -0.55376565)
-
-[node name="FlameThrowerBlue" parent="FlameThrowerPosition" instance=ExtResource("2_cutip")]
-transform = Transform3D(1, 3.7252903e-09, 0, -1.4901161e-08, 0.99999994, -1.4901161e-08, -1.4901161e-08, 0, 1, 0, 0, 0)
-visible = false
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
-
-[node name="Camera3D" parent="SubViewportContainer/SubViewport" instance=ExtResource("3_whphg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23315626, 0)
