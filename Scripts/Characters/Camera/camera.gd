@@ -17,8 +17,6 @@ enum CameraMode { F_P_S,T_P_S }
 @onready var active_camera: Camera3D
 
 ## FlameThrowerSkins
-const FLAME_THROWER_BLUE = preload("uid://bt38bt2epaoct") # "res://Scenes/Weapons/flame_thrower_blue.tscn"
-const FLAME_THROWER_GOLDEN = preload("uid://naeeiv52mtr0") # "res://Scenes/Weapons/flame_thrower_golden.tscn"
 const FLAME_THROWER_GREY = preload("uid://cesc7xsio46t8") # "res://Scenes/Weapons/flame_thrower_grey.tscn"
 const FLAME_THROWER_PINK = preload("uid://c1q5a2i3bd2lc") # "res://Scenes/Weapons/flame_thrower_pink.tscn"
 
