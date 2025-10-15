@@ -36,3 +36,9 @@ transform = Transform3D(0.14391747, 0.03645718, 0.021415936, -0.030124094, 0.141
 [node name="FlameThrowerBlue" parent="FlameThrowerPosition" instance=ExtResource("2_cutip")]
 transform = Transform3D(1, 3.7252903e-09, 0, -1.4901161e-08, 0.99999994, -1.4901161e-08, -1.4901161e-08, 0, 1, 0, 0, 0)
 visible = false
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
