@@ -74,7 +74,7 @@ shape = SubResource("CapsuleShape3D_rut33")
 [node name="PlayerAvatar" type="Node3D" parent="."]
 
 [node name="HeadPosition" type="Marker3D" parent="PlayerAvatar"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68111, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 
 [node name="CapsuleMesh" type="MeshInstance3D" parent="PlayerAvatar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851877, 0)
@@ -82,7 +82,7 @@ mesh = SubResource("CapsuleMesh_cinok")
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_24s2i")]
 unique_name_in_owner = true
-transform = Transform3D(0.999848, 0, 0.0174524, 0, 1, 0, -0.0174524, 0, 0.999848, 0, 1.9744878, 0)
+transform = Transform3D(0.999848, 0, 0.0174524, 0, 1, 0, -0.0174524, 0, 0.999848, 0, 2, 0)
 player = NodePath("..")
 
 [node name="StateChart" type="Node" parent="."]

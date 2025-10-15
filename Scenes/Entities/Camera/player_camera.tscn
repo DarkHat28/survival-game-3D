@@ -21,20 +21,19 @@ current = true
 far = 1024.0
 
 [node name="SpringArm3D" type="SpringArm3D" parent="FPSPivot"]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.15936327, 0, 0.3599155)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.2, 0, 0.62779784)
 collision_mask = 5
 shape = SubResource("SphereShape3D_cutip")
 spring_length = 0.5
 
 [node name="FlameThrowerPosition" type="Marker3D" parent="FPSPivot/SpringArm3D"]
 unique_name_in_owner = true
-transform = Transform3D(-0.15000002, 0, -1.3113416e-08, 0, 0.14999993, 0, 1.3113418e-08, 0, -0.14999999, 0, 0, 0)
+transform = Transform3D(-0.15000002, 0, -1.3113416e-08, 0, 0.14999993, 0, 1.3113418e-08, 0, -0.14999999, -1.4901161e-08, 0, 0.22012806)
 
 [node name="FlameThrowerBlue" parent="FPSPivot/SpringArm3D/FlameThrowerPosition" instance=ExtResource("2_cutip")]
 
 [node name="TPSPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.231851, 0)
-visible = false
 
 [node name="SpringArm" type="SpringArm3D" parent="TPSPivot"]
 unique_name_in_owner = true

@@ -64,6 +64,9 @@ func _input(event: InputEvent) -> void:
 	_switch_camera()
 	update_spring_arm()
 
+#func _physics_process(_delta: float) -> void:
+	#print($FPSPivot/SpringArm3D.shape.radius)
+
 func _process(_delta):
 	# Smoothly rotate the camera
 	if mouse_rotation.length() > 0:
