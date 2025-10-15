@@ -15,6 +15,7 @@ billboard_keep_scale = true
 particles_anim_h_frames = 8
 particles_anim_v_frames = 8
 particles_anim_loop = false
+proximity_fade_enabled = true
 
 [sub_resource type="Gradient" id="Gradient_ejfo6"]
 offsets = PackedFloat32Array(0, 0.6052632, 0.89912283)
@@ -49,7 +50,7 @@ collision_use_scale = true
 
 [node name="GunFlame" type="GPUParticles3D"]
 material_override = SubResource("StandardMaterial3D_rv6jk")
-amount = 20
+amount = 25
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_rv6jk")
 draw_pass_1 = SubResource("QuadMesh_pym1x")
