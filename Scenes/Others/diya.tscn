@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=4 uid="uid://dcpxv8d7ociku"]
 
 [ext_resource type="Texture2D" uid="uid://btqgem6n2ar58" path="res://Assets/3D Model/Items/diya/textures/lambert1_baseColor.png" id="1_57uah"]
-[ext_resource type="Script" uid="uid://cmhqaso5f0hal" path="res://Scripts/Others/diya.gd" id="1_cao0p"]
+[ext_resource type="Script" uid="uid://cmhqaso5f0hal" path="res://Scripts/Props/diya.gd" id="1_cao0p"]
 [ext_resource type="Texture2D" uid="uid://cqdio6kmgf7oe" path="res://Assets/3D Model/Items/diya/textures/lambert1_normal.png" id="2_cao0p"]
 [ext_resource type="Material" uid="uid://dvexmc2vp5whc" path="res://Assets/3D Model/TerrainProps/Light.material" id="4_74vdd"]
 [ext_resource type="Texture2D" uid="uid://c3wys0ghf6t1j" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_4.png" id="4_oo8ql"]
