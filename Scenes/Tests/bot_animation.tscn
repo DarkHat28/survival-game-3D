@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dvsasw1oa4wma"]
 
-[ext_resource type="PackedScene" uid="uid://chsammfl83b5r" path="res://Scenes/Entities/Player/human_bot.tscn" id="2_7t2ix"]
-[ext_resource type="Script" uid="uid://c50bgpp1v3evi" path="res://Scenes/Tests/camera_rig.gd" id="5_21mdn"]
+[ext_resource type="PackedScene" uid="uid://chsammfl83b5r" path="res://Scenes/Entities/Player/human_bot.tscn" id="1_ilqmg"]
+[ext_resource type="Script" uid="uid://c50bgpp1v3evi" path="res://Scenes/Tests/camera_rig.gd" id="2_1k4dm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rut33"]
 radius = 0.281934
@@ -10,7 +10,7 @@ height = 1.87602
 [node name="TestPlayer" type="CharacterBody3D"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
-[node name="Skin" parent="." instance=ExtResource("2_7t2ix")]
+[node name="Skin" parent="." instance=ExtResource("1_ilqmg")]
 unique_name_in_owner = true
 
 [node name="FullCollisionShape" type="CollisionShape3D" parent="."]
@@ -34,7 +34,7 @@ vertical_alignment = 2
 
 [node name="CameraRig" type="Node3D" parent="." node_paths=PackedStringArray("player", "cam")]
 transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 2.5, -1.25)
-script = ExtResource("5_21mdn")
+script = ExtResource("2_1k4dm")
 player = NodePath("..")
 cam = NodePath("Camera3D")
 

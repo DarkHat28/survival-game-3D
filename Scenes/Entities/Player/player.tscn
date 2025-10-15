@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cjn5x2ke8mg3g"]
+[gd_scene load_steps=17 format=3 uid="uid://cjn5x2ke8mg3g"]
 
 [ext_resource type="Script" uid="uid://bl8veb4p711jg" path="res://Scripts/Characters/Player/StateMachineChart/player_chart.gd" id="1_e35kc"]
 [ext_resource type="PackedScene" uid="uid://bcwkugn6v3oy7" path="res://addons/godot_state_charts/utilities/state_chart_debugger.tscn" id="2_cinok"]
@@ -39,6 +39,26 @@ expand_margin_left = 10.0
 expand_margin_top = 10.0
 expand_margin_right = 10.0
 expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q8fdp"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0.3)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0yfgq"]
+bg_color = Color(0.76487833, 0.76487833, 0.76487833, 0.8)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("state_chart")]
 script = ExtResource("1_e35kc")
@@ -330,9 +350,45 @@ width = 2.0
 
 [node name="ThrowableUI" parent="PlayerUI" instance=ExtResource("10_ykqp4")]
 
+[node name="HealthBar" type="Control" parent="PlayerUI"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -68.0
+offset_right = 20.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="PlayerUI/HealthBar"]
+custom_minimum_size = Vector2(300, 35)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -40.0
+offset_right = 150.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 24
+theme_override_styles/background = SubResource("StyleBoxFlat_q8fdp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0yfgq")
+value = 50.0
+rounded = true
+
 [node name="Raycasts" type="Node3D" parent="."]
 
 [node name="UIAndDebug" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="StateChartDebugger" parent="UIAndDebug" instance=ExtResource("2_cinok")]
 anchors_preset = 1

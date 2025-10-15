@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://di5fovhcyd7re" path="res://Scenes/Terrains/models/components/Enemy.tscn" id="5_cs75k"]
 [ext_resource type="Terrain3DMaterial" uid="uid://b7hylufb32h02" path="res://Scenes/Terrains/TerrainsData/terrain_material.res" id="6_8egvv"]
 [ext_resource type="PackedScene" uid="uid://dcpxv8d7ociku" path="res://Scenes/Others/diya.tscn" id="6_coh1d"]
-[ext_resource type="PackedScene" uid="uid://cjn5x2ke8mg3g" path="res://Scenes/Entities/Player/player_chart.tscn" id="6_lawvb"]
+[ext_resource type="PackedScene" uid="uid://cjn5x2ke8mg3g" path="res://Scenes/Entities/Player/player.tscn" id="6_lawvb"]
 [ext_resource type="PackedScene" uid="uid://di1bq8glbmex5" path="res://Scenes/Terrains/Props/graveyard.tscn" id="7_8egvv"]
 [ext_resource type="Terrain3DAssets" uid="uid://4rsqvby3vuc2" path="res://Scenes/Terrains/TerrainsData/terrain_asset.tres" id="7_coh1d"]
 [ext_resource type="Texture2D" uid="uid://c4bjnl55tgqqf" path="res://Assets/Textures/BoundaryWallTexture/brick_floor_002_diffuse_1k.jpg" id="7_cs75k"]
