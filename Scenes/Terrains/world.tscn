@@ -33,16 +33,16 @@ uv1_scale = Vector3(0.4, 0.4, 0.4)
 uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_coh1d"]
-size = Vector3(512, 5, 0.1)
+size = Vector3(512, 5, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ybvgm"]
-size = Vector3(512, 5, 0.1)
+size = Vector3(512, 5, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cs75k"]
-size = Vector3(512, 5, 0.1)
+size = Vector3(512, 5, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d8t5q"]
-size = Vector3(512, 5, 0.1)
+size = Vector3(512, 5, 1)
 
 [node name="World" type="Node"]
 
