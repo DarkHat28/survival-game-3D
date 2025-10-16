@@ -77,7 +77,6 @@ func _unhandled_input(event):
 	
 
 func _physics_process(delta):
-	Global.player_pos = self.global_position
 	dir = Input.get_vector("move_left","move_right","move_forward","move_backward").normalized()
 	update_cam_movement(delta)
 	if not is_on_floor():
@@ -93,7 +92,6 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, speed*delta)
 		velocity.z = move_toward(velocity.z, 0, speed*delta)
 	move_and_slide()
-	Global.dir = dir
 	
 	#if(dir != Vector2.ZERO and holding_sprint and not running_sound.playing):
 		#pass

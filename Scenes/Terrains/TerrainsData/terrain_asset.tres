@@ -1,39 +1,28 @@
-[gd_resource type="Terrain3DAssets" load_steps=19 format=3 uid="uid://4rsqvby3vuc2"]
+[gd_resource type="Terrain3DAssets" load_steps=15 format=3 uid="uid://4rsqvby3vuc2"]
 
 [ext_resource type="Texture2D" uid="uid://ddprscrpsofah" path="res://Scenes/Terrains/Textures/ground037_alb_ht.png" id="1_ndjrs"]
-[ext_resource type="PackedScene" uid="uid://be6nrf0b8j4l0" path="res://Scenes/Terrains/models/RockA.tscn" id="2_88gm4"]
-[ext_resource type="PackedScene" uid="uid://bwvtgwartxt0g" path="res://Scenes/Terrains/models/RockB.tscn" id="2_q6fw5"]
 [ext_resource type="Texture2D" uid="uid://c1ots7w6i0i1q" path="res://Scenes/Terrains/Textures/ground037_nrm_rgh.png" id="2_tv61o"]
-[ext_resource type="PackedScene" uid="uid://lsvs8a7urkca" path="res://Scenes/Terrains/models/RockC.tscn" id="3_1mtmi"]
 [ext_resource type="Texture2D" uid="uid://c88j3oj0lf6om" path="res://Scenes/Terrains/Textures/rock023_alb_ht.png" id="3_sb1cp"]
 [ext_resource type="Texture2D" uid="uid://c307hdmos4gtm" path="res://Scenes/Terrains/Textures/rock023_nrm_rgh.png" id="4_j6v5l"]
+[ext_resource type="Texture2D" uid="uid://bfrnja34smbe6" path="res://Assets/Textures/Road/NewRoad/asphalt_pit_lane_diff_1k.jpg" id="7_q6fw5"]
 [ext_resource type="Texture2D" uid="uid://da71cjeukcqwx" path="res://Assets/Textures/AerialRock/aerial_rocks_02_diff_1k.jpg" id="8_1mtmi"]
+[ext_resource type="Texture2D" uid="uid://c3814qthrodnm" path="res://Assets/Textures/Road/NewRoad/asphalt_pit_lane_nor_gl_1k.jpg" id="8_jlnd7"]
 [ext_resource type="Texture2D" uid="uid://w4ups2rn41ql" path="res://Assets/Textures/AerialRock/aerial_rocks_02_nor_1k.png" id="9_jlnd7"]
-[ext_resource type="Texture2D" uid="uid://dyfvltwqq5g0v" path="res://Assets/Textures/Road/asphalt_02_diff_1k.jpg" id="10_fdghi"]
-[ext_resource type="Texture2D" uid="uid://b84vny5koq532" path="res://Assets/Textures/Road/asphalt_02_nor_gl_1k.jpg" id="11_wqvjw"]
 
-[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_fdghi"]
-name = "RockA"
-scene_file = ExtResource("2_88gm4")
-density = 0.036441512
-last_lod = 0
-last_shadow_lod = 0
-lod0_range = 128.0
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fdghi"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
 
 [sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_wqvjw"]
-name = "RockB"
-id = 1
-scene_file = ExtResource("2_q6fw5")
-density = 0.029499011
-last_lod = 0
-last_shadow_lod = 0
-lod0_range = 128.0
-
-[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_7i6c2"]
-name = "RockC"
-id = 2
-scene_file = ExtResource("3_1mtmi")
-density = 0.014639318
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_fdghi")
 last_lod = 0
 last_shadow_lod = 0
 lod0_range = 128.0
@@ -57,13 +46,11 @@ albedo_texture = ExtResource("8_1mtmi")
 normal_texture = ExtResource("9_jlnd7")
 
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_85dj7"]
-name = "asphalt_02_diff_1k"
+name = "asphalt_pit_lane_diff_1k"
 id = 3
-albedo_color = Color(0.8324741, 0.8324741, 0.8324741, 1)
-albedo_texture = ExtResource("10_fdghi")
-normal_texture = ExtResource("11_wqvjw")
-uv_scale = 0.15
+albedo_texture = ExtResource("7_q6fw5")
+normal_texture = ExtResource("8_jlnd7")
 
 [resource]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_fdghi"), SubResource("Terrain3DMeshAsset_wqvjw"), SubResource("Terrain3DMeshAsset_7i6c2")])
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_wqvjw")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_sb1cp"), SubResource("Terrain3DTextureAsset_7i6c2"), SubResource("Terrain3DTextureAsset_fdghi"), SubResource("Terrain3DTextureAsset_85dj7")])

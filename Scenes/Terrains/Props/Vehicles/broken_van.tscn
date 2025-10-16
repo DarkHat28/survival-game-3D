@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=3 uid="uid://bqok7sgqvce4x"]
+
+[ext_resource type="PackedScene" uid="uid://c6cl0gn0r2ray" path="res://Assets/3D Model/Vehicles/broken_van.glb" id="1_x84l3"]
+[ext_resource type="Texture2D" uid="uid://cweb0t7ekh7xk" path="res://Assets/Textures/Flames/flame_flipbook.png" id="2_norjc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7pb6k"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(18.892157, 18.892157, 18.892157, 1)
+albedo_texture = ExtResource("2_norjc")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 8
+particles_anim_loop = true
+
+[sub_resource type="Curve" id="Curve_rggf1"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.75757575, 0.27058828), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_76xpr"]
+curve = SubResource("Curve_rggf1")
+
+[sub_resource type="Gradient" id="Gradient_axhy0"]
+offsets = PackedFloat32Array(0, 0.004385965, 0.21818182, 0.58181816, 0.7090909)
+colors = PackedColorArray(1, 0.89855075, 0, 1, 1, 0.8204159, 0, 1, 1, 0.35086948, 0, 1, 0.41996893, 5.4147097e-07, 2.1658838e-07, 1, 0.4195712, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4xqbu"]
+gradient = SubResource("Gradient_axhy0")
+use_hdr = true
+
+[sub_resource type="Curve" id="Curve_jxdf7"]
+_data = [Vector2(0, 0.5252174), 0.0, 0.0, 0, 0, Vector2(0.28000003, 0.9886957), 0.0, 0.0, 0, 0, Vector2(1, 0.8417392), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_8m6j6"]
+curve = SubResource("Curve_jxdf7")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_norjc"]
+lifetime_randomness = 0.1
+emission_shape_scale = Vector3(1, 0.2, 1.2)
+emission_shape = 3
+emission_box_extents = Vector3(1.2, 0.1, 0.5)
+angle_min = -44.99999
+angle_max = 45.00001
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_min = 0.5
+initial_velocity_max = 0.5
+gravity = Vector3(0, 0, 0)
+attractor_interaction_enabled = false
+scale_curve = SubResource("CurveTexture_8m6j6")
+color_ramp = SubResource("GradientTexture1D_4xqbu")
+alpha_curve = SubResource("CurveTexture_76xpr")
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_ip38q"]
+
+[node name="BrokenVan" type="Node3D"]
+
+[node name="AuxScene" parent="." instance=ExtResource("1_x84l3")]
+
+[node name="GunFlame" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26546323, 0)
+layers = 5
+material_override = SubResource("StandardMaterial3D_7pb6k")
+amount = 16
+fixed_fps = 60
+local_coords = true
+draw_order = 1
+process_material = SubResource("ParticleProcessMaterial_norjc")
+draw_pass_1 = SubResource("QuadMesh_ip38q")

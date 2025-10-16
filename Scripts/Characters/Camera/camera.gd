@@ -7,6 +7,8 @@ extends Node3D
 
 @export_category("Camera View")
 @export var can_switch_camera: bool = false
+@export var can_grab_mouse: bool = false
+
 enum CameraMode { F_P_S,T_P_S }
 @export var camera_mode: CameraMode = CameraMode.F_P_S
 
@@ -97,7 +99,7 @@ func update_spring_arm() -> void:
 
 func _grab_mouse() -> void:
 	# Toggle mouse capture
-	if Input.is_action_just_pressed("toggle_mouse_capture"):
+	if Input.is_action_just_pressed("toggle_mouse_capture") and can_grab_mouse:
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		else:

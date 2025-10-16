@@ -1,7 +1,5 @@
-[gd_scene load_steps=19 format=3 uid="uid://x34e4v60vdmy"]
+[gd_scene load_steps=18 format=3 uid="uid://x34e4v60vdmy"]
 
-[ext_resource type="Texture2D" uid="uid://xncgdjj6mntq" path="res://Assets/Environment/SkyBox/clear_night_2k.hdr" id="1_cs75k"]
-[ext_resource type="PackedScene" uid="uid://c2xrg7efborpf" path="res://Scenes/Entities/Player/player_2.tscn" id="3_cs75k"]
 [ext_resource type="PackedScene" uid="uid://di5fovhcyd7re" path="res://Scenes/Terrains/models/components/Enemy.tscn" id="5_cs75k"]
 [ext_resource type="Terrain3DMaterial" uid="uid://b7hylufb32h02" path="res://Scenes/Terrains/TerrainsData/terrain_material.res" id="6_8egvv"]
 [ext_resource type="PackedScene" uid="uid://dcpxv8d7ociku" path="res://Scenes/Others/diya.tscn" id="6_coh1d"]
@@ -9,21 +7,19 @@
 [ext_resource type="Terrain3DAssets" uid="uid://4rsqvby3vuc2" path="res://Scenes/Terrains/TerrainsData/terrain_asset.tres" id="7_coh1d"]
 [ext_resource type="Texture2D" uid="uid://c4bjnl55tgqqf" path="res://Assets/Textures/BoundaryWallTexture/brick_floor_002_diffuse_1k.jpg" id="7_cs75k"]
 [ext_resource type="Texture2D" uid="uid://s4veu2aleloh" path="res://Assets/Textures/BoundaryWallTexture/brick_floor_002_displacement_1k.png" id="8_ybvgm"]
+[ext_resource type="PackedScene" uid="uid://cjn5x2ke8mg3g" path="res://Scenes/Entities/Player/player.tscn" id="9_cs75k"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ybvgm"]
-panorama = ExtResource("1_cs75k")
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_coh1d"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
-[sub_resource type="Sky" id="Sky_d8t5q"]
-sky_material = SubResource("PanoramaSkyMaterial_ybvgm")
+[sub_resource type="Sky" id="Sky_cs75k"]
+sky_material = SubResource("ProceduralSkyMaterial_coh1d")
 
-[sub_resource type="Environment" id="Environment_coh1d"]
-background_mode = 2
-background_energy_multiplier = 0.2
-sky = SubResource("Sky_d8t5q")
-ambient_light_source = 1
-reflected_light_source = 1
-volumetric_fog_enabled = true
-volumetric_fog_albedo = Color(0.34968942, 0.34968925, 0.34968942, 1)
+[sub_resource type="Environment" id="Environment_ybvgm"]
+sky = SubResource("Sky_cs75k")
+ambient_light_source = 3
+tonemap_mode = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_lawvb"]
 size = Vector3(512, 5, 0.1)
@@ -49,21 +45,15 @@ size = Vector3(512, 5, 1)
 
 [node name="World" type="Node"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_coh1d")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 49.466377, 0)
-directional_shadow_mode = 0
-directional_shadow_max_distance = 1.0
-sky_mode = 2
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
 
-[node name="Enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_cs75k")]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ybvgm")
+
+[node name="Enemy" parent="." instance=ExtResource("5_cs75k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.965204, 1.5297451, -45.882233)
-target = NodePath("")
-
-[node name="Player2" parent="." instance=ExtResource("3_cs75k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.91199, 3.5266032, -222.9682)
 
 [node name="Props" type="Node" parent="."]
 
@@ -132,3 +122,6 @@ collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry/Boundry4/StaticBody3D"]
 shape = SubResource("BoxShape3D_d8t5q")
+
+[node name="Player" parent="." instance=ExtResource("9_cs75k")]
+camera_sensitivity = 10000

@@ -64,10 +64,11 @@ collision_use_scale = true
 
 [node name="GunFlame" type="GPUParticles3D"]
 transform = Transform3D(0.962561, 0.0029158334, 0.27104953, 0.023758072, 0.99518645, -0.09507632, -0.27002206, 0.09795639, 0.9578584, 0, 0, 0)
-layers = 7
+layers = 5
 material_override = SubResource("StandardMaterial3D_rv6jk")
 amount = 16
 fixed_fps = 60
+local_coords = true
 draw_order = 1
 process_material = SubResource("ParticleProcessMaterial_pym1x")
 draw_pass_1 = SubResource("QuadMesh_pym1x")

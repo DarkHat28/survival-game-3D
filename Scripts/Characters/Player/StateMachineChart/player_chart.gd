@@ -8,8 +8,11 @@ extends CharacterBody3D
 @export var state_chart: StateChart
 @onready var state_label: Label = %StateLabel
 @onready var dash_cooldown_timer: Timer = %DashCooldownTimer
-#@onready var player_camera: PlayerCamera = %PlayerCamera
+@onready var player_camera: PlayerCamera = %PlayerCamera
 #@export var animation_player: AnimationPlayer
+
+@export_group("Camera Animation")
+@export var camera_sensitivity: int = 50 # 1 to 100 only,baaki v ho skte hai wese...
 
 @export_group("Movement")
 @export var walk_speed: float = 4.0
@@ -49,6 +52,7 @@ var can_dash: bool = true
 ## state_chart.get_active_state() == "JumpState" # How to check current State
 func _ready() -> void:
 	Global.player = self
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
 func _physics_process(_delta: float) -> void:
@@ -60,9 +64,10 @@ func _input(_event: InputEvent) -> void:
 	# Update Input booleans
 	is_jumping = Input.is_action_just_pressed("jump")
 	is_sprinting = Input.is_action_pressed("sprint")
-	
+	#update_cam_movement(delta)
 	# Get input direction
 	input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+	Global.input_dir = input_dir
 	# Rotate input relative to camera orientation
 	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
@@ -126,9 +131,11 @@ func _on_idle_state_physics_processing(delta: float) -> void:
 
 func _on_walk_state_physics_processing(delta: float) -> void:
 	start_horizontal_velocity(delta)
+	update_cam_movement(delta)
 
 func _on_sprint_state_processing(delta: float) -> void:
 	start_horizontal_velocity(delta, sprint_speed)
+	update_cam_movement(delta)
 
 func _on_jump_state_state_entered() -> void:
 	velocity.y = -jump_velocity
@@ -161,3 +168,49 @@ func _on_dash_state_exited() -> void:
 
 func _on_dash_cooldown_timer_timeout() -> void:
 	can_dash = true
+
+
+
+
+
+
+
+## Below is only Head Bobbing Code
+var sprint_lerp_time = 10
+var sprint_bobbing_normal_speed :float = 20.0
+var sprint_bobbing_normal_ind :float = 0.25
+var sprint_bobbing_index:float = 0.0
+var sprint_bobbing_vector = Vector2.ZERO
+
+var idle_lerp_time = 5
+var idle_bobbing_normal_speed :float = 1.0
+var idle_bobbing_normal_ind :float = 0.01
+var idle_bobbing_index:float = 0.0
+var idle_bobbing_vector = Vector2.ZERO
+
+var walk_lerp_time = 10
+var walk_bobbing_normal_speed :float = 12.0
+var walk_bobbing_normal_ind :float = 0.12
+var walk_bobbing_index:float = 0.0
+var walk_bobbing_vector = Vector2.ZERO
+
+func update_cam_movement(delta: float):
+	sprint_bobbing_index += sprint_bobbing_normal_speed *delta
+	idle_bobbing_index += idle_bobbing_normal_speed * delta
+	walk_bobbing_index += walk_bobbing_normal_speed * delta
+	
+	if(is_on_floor() and input_dir != Vector2.ZERO and is_sprinting):
+		sprint_bobbing_vector.y  = sin(sprint_bobbing_index)
+		sprint_bobbing_vector.x = sin(sprint_bobbing_index/2)/2.0
+		player_camera.position.y = lerp(player_camera.position.y ,player_camera.position.y+ sprint_bobbing_vector.y * (sprint_bobbing_normal_ind/2.0 ), delta * sprint_lerp_time)
+		player_camera.position.x = lerp(player_camera.position.x ,player_camera.position.x+ sprint_bobbing_vector.x * sprint_bobbing_normal_ind, delta * sprint_lerp_time)
+		
+	if(is_on_floor() and input_dir == Vector2.ZERO):
+		idle_bobbing_vector.y  = sin(idle_bobbing_index)
+		player_camera.position.y = lerp(player_camera.position.y ,player_camera.position.y+ idle_bobbing_vector.y * idle_bobbing_normal_ind, delta * idle_lerp_time)
+
+	if(is_on_floor() and input_dir != Vector2.ZERO and not is_sprinting):
+		walk_bobbing_vector.y  = sin(walk_bobbing_index)
+		walk_bobbing_vector.x = sin(walk_bobbing_index/2)/2.0
+		player_camera.position.y = lerp(player_camera.position.y ,player_camera.position.y+ walk_bobbing_vector.y * (walk_bobbing_normal_ind/2.0 ), delta * walk_lerp_time)
+		player_camera.position.x = lerp(player_camera.position.x ,player_camera.position.x+ walk_bobbing_vector.x * walk_bobbing_normal_ind, delta * walk_lerp_time)

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bauo5hnms328e"]
+
+[ext_resource type="Texture2D" uid="uid://xncgdjj6mntq" path="res://Assets/Environment/SkyBox/clear_night_2k.hdr" id="1_kbq4s"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7ffdu"]
+panorama = ExtResource("1_kbq4s")
+
+[sub_resource type="Sky" id="Sky_d8t5q"]
+sky_material = SubResource("PanoramaSkyMaterial_7ffdu")
+
+[sub_resource type="Environment" id="Environment_6kmrd"]
+background_mode = 2
+background_energy_multiplier = 0.2
+sky = SubResource("Sky_d8t5q")
+ambient_light_source = 1
+reflected_light_source = 1
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.34968942, 0.34968925, 0.34968942, 1)
+
+[node name="Environment" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6kmrd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 49.466377, 0)
+directional_shadow_mode = 0
+directional_shadow_max_distance = 1.0
+sky_mode = 2
