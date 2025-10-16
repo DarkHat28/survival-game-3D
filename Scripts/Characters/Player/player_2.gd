@@ -6,10 +6,11 @@ extends CharacterBody3D
 @onready var cam=$Camera3D
 
 
-@onready var speed :float= 250
+
 const JUMP_VELOCITY :float= 5.0
 const Walk_speed = 170
 const Sprint_speed = 400
+@onready var speed :float= Walk_speed
 
 var dir : Vector2
 var holding_sprint = false
@@ -77,6 +78,10 @@ func _unhandled_input(event):
 	
 
 func _physics_process(delta):
+<<<<<<< Updated upstream
+=======
+	Global.player_pos = global_position
+>>>>>>> Stashed changes
 	dir = Input.get_vector("move_left","move_right","move_forward","move_backward").normalized()
 	update_cam_movement(delta)
 	if not is_on_floor():
