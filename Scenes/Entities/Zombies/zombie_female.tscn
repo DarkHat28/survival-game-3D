@@ -1,40 +1,40 @@
 [gd_scene load_steps=12 format=4 uid="uid://b6vvwduxgvq1"]
 
-[ext_resource type="Texture2D" uid="uid://didp45ye47jtp" path="res://Assets/3D Model/Characters/Zombies/Zombie1/Zombiegirl W Kurniawan_0.png" id="1_ndywc"]
-[ext_resource type="Texture2D" uid="uid://b4jludjvdjgev" path="res://Assets/3D Model/Characters/Zombies/Zombie1/Zombiegirl W Kurniawan_3.png" id="2_2kljh"]
-[ext_resource type="Texture2D" uid="uid://bmgh822pb5vut" path="res://Assets/3D Model/Characters/Zombies/Zombie1/Zombiegirl W Kurniawan_1.png" id="3_ajfoa"]
+[ext_resource type="Texture2D" uid="uid://didp45ye47jtp" path="res://Assets/3D Model/Characters/Zombies/Zombie1/Zombiegirl W Kurniawan_0.png" id="1_6xki0"]
+[ext_resource type="Texture2D" uid="uid://b4jludjvdjgev" path="res://Assets/3D Model/Characters/Zombies/Zombie1/Zombiegirl W Kurniawan_3.png" id="2_ltlup"]
+[ext_resource type="Texture2D" uid="uid://bmgh822pb5vut" path="res://Assets/3D Model/Characters/Zombies/Zombie1/Zombiegirl W Kurniawan_1.png" id="3_eomoy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tc2hd"]
 resource_name = "ZombieGirl_body_Material"
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 0.8)
-albedo_texture = ExtResource("1_ndywc")
+albedo_texture = ExtResource("1_6xki0")
 emission_enabled = true
 normal_enabled = true
 normal_scale = 0.0
-normal_texture = ExtResource("2_2kljh")
+normal_texture = ExtResource("2_ltlup")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3i4e"]
 resource_name = "ZombieGirl_Material"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 0.8)
-albedo_texture = ExtResource("3_ajfoa")
+albedo_texture = ExtResource("3_eomoy")
 emission_enabled = true
 normal_enabled = true
 normal_scale = 0.0
-normal_texture = ExtResource("2_2kljh")
+normal_texture = ExtResource("2_ltlup")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uj8lv"]
 resource_name = "ZombieGirl_Material"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 0.8)
-albedo_texture = ExtResource("3_ajfoa")
+albedo_texture = ExtResource("3_eomoy")
 emission_enabled = true
 normal_enabled = true
 normal_scale = 0.0
-normal_texture = ExtResource("2_2kljh")
+normal_texture = ExtResource("2_ltlup")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xxd1g"]
 resource_name = "ZombieGirl_Body"
