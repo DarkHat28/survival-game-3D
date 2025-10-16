@@ -7,7 +7,7 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_6cg31")
-shader_parameter/coeff = Vector2(1.7906805e-05, -0.009228236)
+shader_parameter/coeff = Vector2(-6e-45, 6e-45)
 shader_parameter/vel = 0.0
 shader_parameter/liquid_color = Color(0, 1.1400272, 0.69283086, 1)
 shader_parameter/foam_color = Color(0.5038834, 1.1227171, 1.6777654, 1)
@@ -15,8 +15,8 @@ shader_parameter/foam_line = 0.2
 shader_parameter/fill_amount = 0.5
 shader_parameter/size = Vector2(1, 1)
 shader_parameter/glass_thickness = 0.05
-shader_parameter/scale = 1.905
-shader_parameter/wave_intensity = 0.05
+shader_parameter/scale = 1.0
+shader_parameter/wave_intensity = 1.0
 shader_parameter/waves_noise = ExtResource("3_ptvqs")
 shader_parameter/HasBubbles = true
 shader_parameter/AlwaysBubbles = false
