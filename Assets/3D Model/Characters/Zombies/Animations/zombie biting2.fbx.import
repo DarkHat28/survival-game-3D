@@ -1,15 +1,15 @@
 [remap]
 
-importer="animation_library"
+importer="scene"
 importer_version=1
-type="AnimationLibrary"
-uid="uid://c46noltesl1qe"
-path="res://.godot/imported/zombie attack.fbx-8378bedf2dd5293936bf3df62b9b4f22.res"
+type="PackedScene"
+uid="uid://cactpt5ya82c3"
+path="res://.godot/imported/zombie biting2.fbx-a9e34b7926b7da04d03c6205538376ee.scn"
 
 [deps]
 
-source_file="res://Assets/3D Model/Characters/Zombies/Zombie1/zombie attack.fbx"
-dest_files=["res://.godot/imported/zombie attack.fbx-8378bedf2dd5293936bf3df62b9b4f22.res"]
+source_file="res://Assets/3D Model/Characters/Zombies/Animations/zombie biting2.fbx"
+dest_files=["res://.godot/imported/zombie biting2.fbx-a9e34b7926b7da04d03c6205538376ee.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://Assets/3D Model/Characters/Zombies/Zombie1/zombie_attack.res",
+"save_to_file/fallback_path": "res://ZombieRetargetedAnimations/zombie_biting2.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://bju0lb614a2il",
+"save_to_file/path": "uid://d0nitx8f8kiyw",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
@@ -2094,6 +2094,13 @@ _subresources={
 "slice_99/save_to_file/path": "",
 "slice_99/start_frame": 0,
 "slices/amount": 0
+}
+},
+"nodes": {
+"PATH:Skeleton3D": {
+"retarget/bone_map": Resource("uid://b1olt0r5ogiu2", "res://addons/mixamo_animation_retargeter/mixamo_bone_map.tres"),
+"retarget/bone_renamer/unique_node/skeleton_name": "Skeleton",
+"retarget/remove_tracks/unmapped_bones": true
 }
 }
 }
