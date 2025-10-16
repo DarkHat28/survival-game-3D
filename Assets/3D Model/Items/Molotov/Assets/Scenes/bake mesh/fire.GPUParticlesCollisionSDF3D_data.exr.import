@@ -3,15 +3,15 @@
 importer="3d_texture"
 type="CompressedTexture3D"
 uid="uid://bfjn5a63ui85f"
-path="res://.godot/imported/fire.GPUParticlesCollisionSDF3D_data.exr-5522172991fd838e08d1c82202ee7b12.ctex3d"
+path="res://.godot/imported/fire.GPUParticlesCollisionSDF3D_data.exr-d2f61f05c4d013afd8e0e0535d69671e.ctex3d"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3D Model/Items/Molotov/Scenes/bake mesh/fire.GPUParticlesCollisionSDF3D_data.exr"
-dest_files=["res://.godot/imported/fire.GPUParticlesCollisionSDF3D_data.exr-5522172991fd838e08d1c82202ee7b12.ctex3d"]
+source_file="res://Assets/3D Model/Items/Molotov/Assets/Scenes/bake mesh/fire.GPUParticlesCollisionSDF3D_data.exr"
+dest_files=["res://.godot/imported/fire.GPUParticlesCollisionSDF3D_data.exr-d2f61f05c4d013afd8e0e0535d69671e.ctex3d"]
 
 [params]
 

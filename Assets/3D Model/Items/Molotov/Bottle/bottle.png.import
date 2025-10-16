@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pfkd10rofxfk"
-path="res://.godot/imported/Explosion02HD_5x5.tga-cf59dd1273d4091cad173637ccbfecc9.ctex"
+uid="uid://d4jhgk4x6xm6k"
+path="res://.godot/imported/bottle.png-a3cf9b80a29b233d2d2351b02c450005.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3D Model/Items/Molotov/Assets/fire+explosion/Explosion02HD_5x5.tga"
-dest_files=["res://.godot/imported/Explosion02HD_5x5.tga-cf59dd1273d4091cad173637ccbfecc9.ctex"]
+source_file="res://Assets/3D Model/Items/Molotov/Bottle/bottle.png"
+dest_files=["res://.godot/imported/bottle.png-a3cf9b80a29b233d2d2351b02c450005.ctex"]
 
 [params]
 

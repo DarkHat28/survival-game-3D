@@ -1,15 +1,15 @@
 [gd_scene load_steps=39 format=3 uid="uid://bxj42fe5235mw"]
 
 [ext_resource type="Script" path="res://Scenes/bottle.gd" id="1_osgoq"]
-[ext_resource type="ArrayMesh" uid="uid://s8ckq01kf4i4" path="res://Assets/Bottle/untitled.obj" id="2_yxo8m"]
-[ext_resource type="Texture2D" uid="uid://dhx2ag0ilk3d2" path="res://Assets/Bottle/bottle.png" id="3_x6n2t"]
+[ext_resource type="ArrayMesh" path="res://Assets/Bottle/untitled.obj" id="2_yxo8m"]
+[ext_resource type="Texture2D" path="res://Assets/Bottle/bottle.png" id="3_x6n2t"]
 [ext_resource type="Script" path="res://Scenes/liquid_mesh.gd" id="4_dv1wc"]
-[ext_resource type="Material" uid="uid://plfgf5gf25oa" path="res://Assets/shader/bottle_liquid.tres" id="4_xp5a6"]
+[ext_resource type="Material" uid="uid://plfgf5gf25oa" path="res://Assets/3D Model/Items/Molotov/shader/bottle_liquid.tres" id="4_xp5a6"]
 [ext_resource type="Shader" path="res://Assets/shader/particle_flipbook_smoothing.gdshader" id="5_xhga0"]
-[ext_resource type="Texture2D" uid="uid://dnckyheh8lxr7" path="res://Assets/fire+explosion/Flame03-hollow_16x4.png" id="6_r2r52"]
+[ext_resource type="Texture2D" path="res://Assets/fire+explosion/Flame03-hollow_16x4.png" id="6_r2r52"]
 [ext_resource type="Shader" path="res://Assets/shader/cocktail.gdshader" id="6_x00rl"]
-[ext_resource type="Texture2D" uid="uid://dy21plnjk76p8" path="res://Assets/fire+explosion/Explosion02HD_5x5.tga" id="7_ayuuq"]
-[ext_resource type="Texture2D" uid="uid://bi24f8mecvxqp" path="res://Assets/fire+explosion/Cloud03_8x8.png" id="8_8jcnx"]
+[ext_resource type="Texture2D" path="res://Assets/fire+explosion/Explosion02HD_5x5.tga" id="7_ayuuq"]
+[ext_resource type="Texture2D" path="res://Assets/fire+explosion/Cloud03_8x8.png" id="8_8jcnx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lss82"]
 next_pass = ExtResource("4_xp5a6")

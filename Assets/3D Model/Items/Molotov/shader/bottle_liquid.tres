@@ -1,8 +1,8 @@
 [gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://plfgf5gf25oa"]
 
 [ext_resource type="Shader" path="res://Assets/shader/liquid.gdshader" id="1_11fo2"]
-[ext_resource type="Texture2D" uid="uid://p48ttmh1g7tq" path="res://Assets/Liquid/BubblesNoise.tres" id="2_83027"]
-[ext_resource type="Texture2D" uid="uid://co7s5tp5nnmpv" path="res://Assets/Liquid/WaveNoise.tres" id="3_6tdfn"]
+[ext_resource type="Texture2D" uid="uid://p48ttmh1g7tq" path="res://Assets/3D Model/Items/Molotov/Liquid/BubblesNoise.tres" id="2_83027"]
+[ext_resource type="Texture2D" uid="uid://co7s5tp5nnmpv" path="res://Assets/3D Model/Items/Molotov/Liquid/WaveNoise.tres" id="3_6tdfn"]
 
 [resource]
 render_priority = 0

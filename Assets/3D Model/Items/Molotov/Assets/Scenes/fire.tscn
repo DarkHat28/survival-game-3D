@@ -1,10 +1,10 @@
 [gd_scene load_steps=33 format=3 uid="uid://u3as7b566ts8"]
 
-[ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://Player/player.tscn" id="2_c8tef"]
-[ext_resource type="PackedScene" uid="uid://bxj42fe5235mw" path="res://Scenes/bottle.tscn" id="3_q7g2p"]
-[ext_resource type="Texture2D" uid="uid://dsdm4fj61iqnh" path="res://grid.jpeg" id="3_soonv"]
-[ext_resource type="CompressedTexture3D" uid="uid://bfjn5a63ui85f" path="res://Scenes/bake mesh/fire.GPUParticlesCollisionSDF3D_data.exr" id="4_68aj1"]
-[ext_resource type="PackedScene" uid="uid://cvmbifowe1o52" path="res://Scenes/enemy.tscn" id="5_n82f5"]
+[ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://Assets/3D Model/Items/Molotov/Assets/Player/player.tscn" id="2_c8tef"]
+[ext_resource type="PackedScene" uid="uid://bxj42fe5235mw" path="res://Assets/3D Model/Items/Molotov/Assets/Scenes/bottle.tscn" id="3_q7g2p"]
+[ext_resource type="Texture2D" path="res://grid.jpeg" id="3_soonv"]
+[ext_resource type="CompressedTexture3D" uid="uid://bfjn5a63ui85f" path="res://Assets/3D Model/Items/Molotov/Assets/Scenes/bake mesh/fire.GPUParticlesCollisionSDF3D_data.exr" id="4_68aj1"]
+[ext_resource type="PackedScene" uid="uid://cvmbifowe1o52" path="res://Assets/3D Model/Items/Molotov/Assets/Scenes/enemy.tscn" id="5_n82f5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_83a00"]
 sky_energy_multiplier = 3.06
