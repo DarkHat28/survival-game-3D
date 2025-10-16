@@ -1,7 +1,42 @@
-[gd_scene format=3 uid="uid://c7p8i16o0eu8b"]
+[gd_scene load_steps=7 format=3 uid="uid://c7p8i16o0eu8b"]
 
-[node name="Node3D" type="StaticBody3D"]
+[ext_resource type="PackedScene" uid="uid://bfquxlg1pphjq" path="res://Scenes/Tests/enemy_2.tscn" id="2_bbnuu"]
+[ext_resource type="PackedScene" uid="uid://c2xrg7efborpf" path="res://Scenes/Entities/Player/player_2.tscn" id="2_tk8ft"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[sub_resource type="NavigationMesh" id="NavigationMesh_83v0b"]
+vertices = PackedVector3Array(-49.5, 0.5, -49.5, -49.5, 0.5, 49.5, 49.5, 0.5, 49.5, 49.5, 0.5, -49.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[sub_resource type="PlaneMesh" id="PlaneMesh_de2mj"]
+size = Vector2(100, 100)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bbnuu"]
+points = PackedVector3Array(-50, 0, -50, -50, 0, 50, 50, 0, -50, 50, 0, 50)
+
+[sub_resource type="Environment" id="Environment_bbnuu"]
+background_mode = 2
+
+[node name="TestingWorld" type="Node3D"]
+
+[node name="testing_world" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_83v0b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="testing_world"]
+mesh = SubResource("PlaneMesh_de2mj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="testing_world/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="testing_world/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_bbnuu")
+
+[node name="Player2" parent="." instance=ExtResource("2_tk8ft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 22.125)
+
+[node name="Enemy2" parent="." instance=ExtResource("2_bbnuu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.3739429, 0.9274517, 0, -0.9274517, -0.3739429, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_bbnuu")
