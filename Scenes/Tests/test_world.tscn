@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=4 uid="uid://desatcndqofug"]
 
 [ext_resource type="Texture2D" uid="uid://dula54famu1wg" path="res://Assets/Textures/concrete_tile_facade_1k/concrete_tile_facade_disp_1k.png" id="1_mjkmo"]
-[ext_resource type="PackedScene" uid="uid://cjn5x2ke8mg3g" path="res://Scenes/Entities/Player/player.tscn" id="2_eq1yq"]
 [ext_resource type="Material" uid="uid://dlf4gyitrd3mw" path="res://Assets/3D Model/TerrainProps/Mashrooms.material" id="2_jakeb"]
 [ext_resource type="PackedScene" uid="uid://6fh58157bis1" path="res://Assets/Environment/Horror_trees.glb" id="4_jakeb"]
+[ext_resource type="PackedScene" uid="uid://c2xrg7efborpf" path="res://Scenes/Entities/Player/player_2.tscn" id="4_mxiy0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jakeb"]
 albedo_color = Color(0.753984, 0.753984, 0.753984, 1)
@@ -45,7 +45,8 @@ glow_enabled = true
 [node name="TestWorld" type="Node3D"]
 
 [node name="PlatformWorld" type="StaticBody3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.1401701, 0)
+collision_mask = 3
 
 [node name="HighSlope" type="MeshInstance3D" parent="PlatformWorld"]
 transform = Transform3D(-3.06119e-07, 0, 13.5471, 0, 13.5471, 0, -14.9018, 0, -2.7829e-07, 17.7748, 7.73026, -17.8534)
@@ -78,5 +79,5 @@ directional_shadow_mode = 0
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 4.4276285, 0, -3.6738095)
 visible = false
 
-[node name="Player2" parent="." instance=ExtResource("2_eq1yq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6321077, 0)
+[node name="Player2" parent="." instance=ExtResource("4_mxiy0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3238366, 0)
