@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://b7q5hpstbv336"]
+[gd_scene load_steps=11 format=3 uid="uid://b7q5hpstbv336"]
 
 [ext_resource type="Texture2D" uid="uid://cweb0t7ekh7xk" path="res://Assets/Textures/Flames/flame_flipbook.png" id="1_pym1x"]
-[ext_resource type="Script" uid="uid://brkov1gswfmyt" path="res://Scripts/Weapon/gun_flame.gd" id="2_ejfo6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rv6jk"]
 transparency = 1
@@ -72,4 +71,3 @@ fixed_fps = 60
 draw_order = 1
 process_material = SubResource("ParticleProcessMaterial_pym1x")
 draw_pass_1 = SubResource("QuadMesh_pym1x")
-script = ExtResource("2_ejfo6")

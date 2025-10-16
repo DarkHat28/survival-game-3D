@@ -2,30 +2,27 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpvgoqfot4n0v"
-path.s3tc="res://.godot/imported/broken_van_0.png-5dea5d1d78b0c67551d06165cfdc55fc.s3tc.ctex"
+uid="uid://dyfvltwqq5g0v"
+path.bptc="res://.godot/imported/asphalt_02_diff_1k.jpg-a0704f1a4c248b2833428f2f8abe69f5.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "a9a1b824420cf158de0e85e0b0d8b4f8"
-}
 
 [deps]
 
-source_file="res://Assets/3D Model/Vehicles/broken_van_0.png"
-dest_files=["res://.godot/imported/broken_van_0.png-5dea5d1d78b0c67551d06165cfdc55fc.s3tc.ctex"]
+source_file="res://Assets/Textures/Road/asphalt_02_diff_1k.jpg"
+dest_files=["res://.godot/imported/asphalt_02_diff_1k.jpg-a0704f1a4c248b2833428f2f8abe69f5.bptc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
@@ -41,4 +38,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
