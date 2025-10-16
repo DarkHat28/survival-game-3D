@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://u3as7b566ts8"]
+
+[ext_resource type="Texture2D" uid="uid://dsdm4fj61iqnh" path="res://517 - Alpha Grid Texture.jpeg" id="1_7t6iw"]
+[ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://Player/player.tscn" id="2_c8tef"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_b226j"]
+size = Vector3(500, 1, 500)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sk6gp"]
+albedo_texture = ExtResource("1_7t6iw")
+uv1_scale = Vector3(100, 100, 100)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2x7dd"]
+data = PackedVector3Array(-250, 0.5, 250, 250, 0.5, 250, -250, -0.5, 250, 250, 0.5, 250, 250, -0.5, 250, -250, -0.5, 250, 250, 0.5, -250, -250, 0.5, -250, 250, -0.5, -250, -250, 0.5, -250, -250, -0.5, -250, 250, -0.5, -250, 250, 0.5, 250, 250, 0.5, -250, 250, -0.5, 250, 250, 0.5, -250, 250, -0.5, -250, 250, -0.5, 250, -250, 0.5, -250, -250, 0.5, 250, -250, -0.5, -250, -250, 0.5, 250, -250, -0.5, 250, -250, -0.5, -250, 250, 0.5, 250, -250, 0.5, 250, 250, 0.5, -250, -250, 0.5, 250, -250, 0.5, -250, 250, 0.5, -250, -250, -0.5, 250, 250, -0.5, 250, -250, -0.5, -250, 250, -0.5, 250, 250, -0.5, -250, -250, -0.5, -250)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_83a00"]
+sky_energy_multiplier = 3.06
+ground_energy_multiplier = 1.15
+
+[sub_resource type="Sky" id="Sky_ph7wo"]
+sky_material = SubResource("ProceduralSkyMaterial_83a00")
+
+[sub_resource type="Environment" id="Environment_14htw"]
+background_mode = 2
+sky = SubResource("Sky_ph7wo")
+glow_intensity = 5.0
+glow_bloom = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_cxrkc"]
+size = Vector3(20, 1, 20)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.538677, 0)
+mesh = SubResource("BoxMesh_b226j")
+surface_material_override/0 = SubResource("StandardMaterial3D_sk6gp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_2x7dd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.206102, 0.978531, 0, -0.978531, 0.206102, 0, 8.76628, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_14htw")
+
+[node name="object" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.343168, -0.939274, 0, 0.939274, -0.343168, 0, 0, 0, 1, -6.37003, 3.2233, 0)
+mesh = SubResource("BoxMesh_cxrkc")
+
+[node name="GPUParticlesCollisionHeightField3D" type="GPUParticlesCollisionHeightField3D" parent="."]
+size = Vector3(100, 100, 100)
+
+[node name="Player" parent="." instance=ExtResource("2_c8tef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.934363, 0)

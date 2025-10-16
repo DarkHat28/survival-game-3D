@@ -65,7 +65,7 @@ collision_use_scale = true
 [node name="GunFlame" type="GPUParticles3D"]
 layers = 7
 material_override = SubResource("StandardMaterial3D_rv6jk")
-amount = 10
+amount = 16
 fixed_fps = 60
 draw_order = 1
 process_material = SubResource("ParticleProcessMaterial_rv6jk")

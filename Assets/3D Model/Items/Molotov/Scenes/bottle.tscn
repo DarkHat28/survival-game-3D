@@ -1,0 +1,435 @@
+[gd_scene load_steps=39 format=3 uid="uid://bxj42fe5235mw"]
+
+[ext_resource type="Script" path="res://Scenes/bottle.gd" id="1_osgoq"]
+[ext_resource type="ArrayMesh" uid="uid://s8ckq01kf4i4" path="res://Assets/Bottle/untitled.obj" id="2_yxo8m"]
+[ext_resource type="Texture2D" uid="uid://dhx2ag0ilk3d2" path="res://Assets/Bottle/bottle.png" id="3_x6n2t"]
+[ext_resource type="Script" path="res://Scenes/liquid_mesh.gd" id="4_dv1wc"]
+[ext_resource type="Material" uid="uid://plfgf5gf25oa" path="res://Assets/shader/bottle_liquid.tres" id="4_xp5a6"]
+[ext_resource type="Shader" path="res://Assets/shader/particle_flipbook_smoothing.gdshader" id="5_xhga0"]
+[ext_resource type="Texture2D" uid="uid://dnckyheh8lxr7" path="res://Assets/fire+explosion/Flame03-hollow_16x4.png" id="6_r2r52"]
+[ext_resource type="Shader" path="res://Assets/shader/cocktail.gdshader" id="6_x00rl"]
+[ext_resource type="Texture2D" uid="uid://dy21plnjk76p8" path="res://Assets/fire+explosion/Explosion02HD_5x5.tga" id="7_ayuuq"]
+[ext_resource type="Texture2D" uid="uid://bi24f8mecvxqp" path="res://Assets/fire+explosion/Cloud03_8x8.png" id="8_8jcnx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lss82"]
+next_pass = ExtResource("4_xp5a6")
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("3_x6n2t")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_th0l2"]
+render_priority = 0
+shader = ExtResource("6_x00rl")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/particles_anim_h_frames = 16
+shader_parameter/particles_anim_v_frames = 5
+shader_parameter/particles_anim_loop = true
+shader_parameter/smoothing = false
+shader_parameter/flow_strength = 0.015
+shader_parameter/particle_scale_x = 0.6
+shader_parameter/particle_scale_y = 1.035
+shader_parameter/texture_albedo = ExtResource("6_r2r52")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8jjub"]
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 0, 0)
+anim_speed_min = 2.0
+anim_speed_max = 5.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_28kpt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6xvgo"]
+size = Vector3(0.499004, 1.96781, 0.487989)
+
+[sub_resource type="Shader" id="Shader_n66ta"]
+code = "shader_type spatial;
+render_mode unshaded;
+
+uniform float max_shift = 2.5;
+uniform float speed = 0.03;
+uniform float min_heathaze_dist = 0.99;
+uniform sampler2D SCREEN_TEXTURE: hint_screen_texture;
+uniform sampler2D DEPTH_TEXTURE: hint_depth_texture;
+
+float random( vec2 pos )
+{ 
+	return fract(sin(dot(pos, vec2(12.9898,78.233))) * 43758.5453);
+}
+
+float noise( vec2 pos )
+{
+	return random( floor( pos ) );
+}
+
+float value_noise( vec2 pos )
+{
+	vec2 p = floor( pos );
+	vec2 f = fract( pos );
+
+	float v00 = noise( p + vec2( 0.0, 0.0 ) );
+	float v10 = noise( p + vec2( 1.0, 0.0 ) );
+	float v01 = noise( p + vec2( 0.0, 1.0 ) );
+	float v11 = noise( p + vec2( 1.0, 1.0 ) );
+
+	vec2 u = f * f * ( 3.0 - 2.0 * f );
+
+	return mix( mix( v00, v10, u.x ), mix( v01, v11, u.x ), u.y );
+}
+
+void fragment( )
+{
+	float depth = max( texture( DEPTH_TEXTURE, SCREEN_UV ).r - min_heathaze_dist, 0.0 );
+	vec2 uv_r = SCREEN_UV + vec2( TIME * speed, 0.0 );
+	vec2 uv_g = SCREEN_UV + vec2( -10.0, -TIME * speed );
+	vec2 shift = vec2(
+		sin(
+				value_noise( uv_r * 8.0 ) * 0.2
+			+	value_noise( uv_r * 16.0 ) * 0.2
+			+	value_noise( uv_r * 32.0 ) * 0.2
+			+	value_noise( uv_r * 64.0 ) * 0.2
+			+	value_noise( uv_r * 128.0 ) * 0.2
+		) - 0.5
+	,	sin(
+			value_noise( uv_g * 8.0 ) * 0.2
+		+	value_noise( uv_g * 16.0 ) * 0.2
+		+	value_noise( uv_g * 32.0 ) * 0.2
+		+	value_noise( uv_g * 64.0 ) * 0.2
+		+	value_noise( uv_g * 128.0 ) * 0.2
+		) - 0.5
+	) * ( depth * max_shift );
+	
+	ALBEDO = texture( SCREEN_TEXTURE, SCREEN_UV + shift ).rgb;
+	float depth_shifted = texture( DEPTH_TEXTURE, SCREEN_UV + shift ).r - min_heathaze_dist;
+
+	ALPHA = float( 0.0 < depth_shifted );
+	DEPTH = 0.0;
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3t8qu"]
+render_priority = 0
+shader = SubResource("Shader_n66ta")
+shader_parameter/max_shift = 2.5
+shader_parameter/speed = 0.03
+shader_parameter/min_heathaze_dist = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_85aaq"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_3t8qu")
+shader = ExtResource("5_xhga0")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/particles_anim_h_frames = 16
+shader_parameter/particles_anim_v_frames = 5
+shader_parameter/particles_anim_loop = true
+shader_parameter/smoothing = false
+shader_parameter/flow_strength = 0.015
+shader_parameter/particle_scale_x = 1.0
+shader_parameter/particle_scale_y = 1.0
+shader_parameter/texture_albedo = ExtResource("6_r2r52")
+
+[sub_resource type="Gradient" id="Gradient_410gj"]
+offsets = PackedFloat32Array(0.0324675, 0.113971, 0.271242, 0.820261, 1)
+colors = PackedColorArray(0.270588, 1, 1, 0, 0.686275, 1, 1, 0.984314, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.313726, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_32nvg"]
+gradient = SubResource("Gradient_410gj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_702w4"]
+emission_shape = 3
+emission_box_extents = Vector3(0.3, 0, 0.3)
+direction = Vector3(5, 0, 5)
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, -20, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 10.0
+damping_min = 0.2
+damping_max = 0.5
+angle_min = -10.0
+angle_max = 10.0
+color_ramp = SubResource("GradientTexture1D_32nvg")
+anim_speed_min = 12.0
+anim_speed_max = 16.0
+sub_emitter_mode = 2
+sub_emitter_amount_at_end = 1
+collision_mode = 1
+collision_friction = 1.0
+collision_bounce = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wmp4l"]
+center_offset = Vector3(0, 0.9, 0)
+orientation = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_283b2"]
+render_priority = 0
+shader = ExtResource("5_xhga0")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/particles_anim_h_frames = 5
+shader_parameter/particles_anim_v_frames = 3
+shader_parameter/particles_anim_loop = false
+shader_parameter/smoothing = false
+shader_parameter/flow_strength = 0.015
+shader_parameter/particle_scale_x = 3.0
+shader_parameter/particle_scale_y = 3.0
+shader_parameter/texture_albedo = ExtResource("7_ayuuq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_orwb8"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(1, 1, 1, 0)
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_o0hcc"]
+offsets = PackedFloat32Array(0.0294118, 0.169935, 0.846753, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3xw8x"]
+gradient = SubResource("Gradient_o0hcc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0vx7l"]
+emission_shape = 1
+emission_sphere_radius = 2.0
+direction = Vector3(5, 5, 5)
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 0, 0)
+damping_min = 0.2
+damping_max = 0.5
+angle_min = -10.0
+angle_max = 10.0
+color_ramp = SubResource("GradientTexture1D_3xw8x")
+anim_speed_min = 1.5
+anim_speed_max = 1.5
+sub_emitter_mode = 2
+sub_emitter_amount_at_end = 1
+collision_mode = 1
+collision_friction = 1.0
+collision_bounce = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ly21r"]
+orientation = 2
+
+[sub_resource type="Shader" id="Shader_vba0i"]
+code = "shader_type spatial;
+render_mode unshaded;
+
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color,filter_linear_mipmap,repeat_disable;
+uniform sampler2D texture_flow : hint_normal,filter_linear_mipmap,repeat_disable;
+uniform int particles_anim_h_frames;
+uniform int particles_anim_v_frames;
+uniform bool particles_anim_loop;
+uniform bool smoothing = false;
+uniform float flow_strength = 0.015;
+uniform float particle_scale_x : hint_range(0.1, 10) = 2.0;
+uniform float particle_scale_y : hint_range(0.1, 10) = 2.0;
+varying vec2 next_UV;
+
+varying float timer;
+void vertex() {
+	VERTEX.x *= particle_scale_x;
+    VERTEX.y *= particle_scale_y;
+
+    mat4 mat_world = mat4(normalize(INV_VIEW_MATRIX[0]), normalize(INV_VIEW_MATRIX[1]), normalize(INV_VIEW_MATRIX[2]), MODEL_MATRIX[3]);
+    mat_world = mat_world * mat4(vec4(cos(INSTANCE_CUSTOM.x), -sin(INSTANCE_CUSTOM.x), 0.0, 0.0), vec4(sin(INSTANCE_CUSTOM.x), cos(INSTANCE_CUSTOM.x), 0.0, 0.0), vec4(0.0, 0.0, 1.0, 0.0), vec4(0.0, 0.0, 0.0, 1.0));
+    MODELVIEW_MATRIX = VIEW_MATRIX * mat_world;
+    MODELVIEW_NORMAL_MATRIX = mat3(MODELVIEW_MATRIX);
+
+    float h_frames = float(particles_anim_h_frames);
+    float v_frames = float(particles_anim_v_frames);
+    float particle_total_frames = float(particles_anim_h_frames * particles_anim_v_frames);
+    float particle_frame = floor(INSTANCE_CUSTOM.z * float(particle_total_frames));
+
+    if (!particles_anim_loop) {
+        particle_frame = clamp(particle_frame, 0.0, particle_total_frames - 1.0);
+    } else {
+        particle_frame = mod(particle_frame, particle_total_frames);
+    }
+
+    // Normalize UV coordinates
+  	UV /= vec2(h_frames, v_frames);
+	next_UV = UV;
+	UV += vec2(mod(particle_frame, h_frames) / h_frames, floor((particle_frame + 0.5) / h_frames) / v_frames);
+	next_UV += vec2(mod(particle_frame + 1.0, h_frames) / h_frames, floor((particle_frame + 1.0 + 0.5) / h_frames) / v_frames);
+	timer = fract(INSTANCE_CUSTOM.y * h_frames * v_frames);
+}
+
+
+void fragment() {
+	vec4 albedo_tex;
+	if (smoothing) {
+		vec2 flow_tex = texture(texture_flow, UV).rg;
+		flow_tex -= 0.5;
+		flow_tex *= 2.0;
+		vec2 flow_uv = UV + flow_tex * timer * -flow_strength;
+		vec2 reverse_flow_uv = next_UV + flow_tex * (1.0 - timer) * flow_strength;
+		albedo_tex = mix(texture(texture_albedo, flow_uv), texture(texture_albedo, reverse_flow_uv), timer);
+	} else {
+		albedo_tex = texture(texture_albedo, UV);
+	}
+	albedo_tex *= COLOR;
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+	ALPHA *= albedo.a * albedo_tex.a;
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5wsf7"]
+render_priority = 0
+shader = SubResource("Shader_vba0i")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/particles_anim_h_frames = 8
+shader_parameter/particles_anim_v_frames = 8
+shader_parameter/particles_anim_loop = true
+shader_parameter/smoothing = false
+shader_parameter/flow_strength = 0.015
+shader_parameter/particle_scale_x = 1.0
+shader_parameter/particle_scale_y = 1.0
+shader_parameter/texture_albedo = ExtResource("8_8jcnx")
+
+[sub_resource type="Gradient" id="Gradient_fey5t"]
+offsets = PackedFloat32Array(0, 0.459559, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.615686, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8c6qo"]
+gradient = SubResource("Gradient_fey5t")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_16ons"]
+direction = Vector3(5, 100, 5)
+gravity = Vector3(0, -9, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 7.0
+angle_max = 720.0
+color_ramp = SubResource("GradientTexture1D_8c6qo")
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_prtye"]
+shape = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ju7e"]
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(1, 0.690196, 0.27451, 1)
+texture_filter = 0
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wfmox"]
+direction = Vector3(5, 100, 5)
+spread = 70.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 8.0
+initial_velocity_max = 10.0
+angular_velocity_max = 720.0
+damping_max = 5.0
+angle_max = 720.0
+color_ramp = SubResource("GradientTexture1D_8c6qo")
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_m1a27"]
+size = Vector2(0.1, 0.1)
+orientation = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rxdgl"]
+size = Vector3(9.15411, 12.2631, 14.0998)
+
+[node name="Node3D" type="RigidBody3D"]
+collision_layer = 2
+mass = 5.0
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_osgoq")
+
+[node name="Bottle" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 1.11759e-08, 0, -1.11759e-08, 0.05, 0, 0, 0)
+mesh = ExtResource("2_yxo8m")
+surface_material_override/0 = SubResource("StandardMaterial3D_lss82")
+script = ExtResource("4_dv1wc")
+liquidShaderMaterial = ExtResource("4_xp5a6")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Bottle"]
+transform = Transform3D(1, 0, 0, 0, 1, 6.96332e-13, 0, -6.96332e-13, 1, 0, 23.155, 0)
+material_override = SubResource("ShaderMaterial_th0l2")
+amount = 3
+lifetime = 10.0
+explosiveness = 1.0
+visibility_aabb = AABB(-23.2256, -20.0407, -25.4462, 46.4512, 40.0814, 50.8924)
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_8jjub")
+draw_pass_1 = SubResource("QuadMesh_28kpt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_6xvgo")
+
+[node name="fire" type="Node3D" parent="."]
+
+[node name="fire" type="GPUParticles3D" parent="fire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0142417, 0.810241, 0.0127482)
+material_override = SubResource("ShaderMaterial_85aaq")
+emitting = false
+amount = 120
+lifetime = 15.0
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 60
+visibility_aabb = AABB(-89.5396, -89.4842, -83.8865, 170.049, 173.398, 162.555)
+process_material = SubResource("ParticleProcessMaterial_702w4")
+draw_pass_1 = SubResource("PlaneMesh_wmp4l")
+
+[node name="blast" type="GPUParticles3D" parent="fire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0142417, -0.740658, 0.0293689)
+material_override = SubResource("ShaderMaterial_283b2")
+material_overlay = SubResource("StandardMaterial3D_orwb8")
+emitting = false
+amount = 2
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 60
+visibility_aabb = AABB(-4, -4.9491, -4, 8, 8, 8)
+process_material = SubResource("ParticleProcessMaterial_0vx7l")
+draw_pass_1 = SubResource("PlaneMesh_ly21r")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="fire/blast"]
+material_override = SubResource("ShaderMaterial_5wsf7")
+emitting = false
+amount = 50
+one_shot = true
+speed_scale = 2.5
+explosiveness = 1.0
+randomness = 1.0
+fixed_fps = 60
+trail_lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_16ons")
+draw_pass_1 = SubResource("RibbonTrailMesh_prtye")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="fire/blast"]
+material_override = SubResource("StandardMaterial3D_0ju7e")
+emitting = false
+amount = 50
+lifetime = 0.5
+one_shot = true
+speed_scale = 3.0
+explosiveness = 1.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_wfmox")
+draw_pass_1 = SubResource("PlaneMesh_m1a27")
+
+[node name="Area3D" type="Area3D" parent="."]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_rxdgl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
