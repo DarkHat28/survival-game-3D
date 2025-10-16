@@ -138,10 +138,11 @@ skeleton = NodePath("")
 
 [node name="GunFlame" parent="." instance=ExtResource("6_u1bjp")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09355056, 0, -6.9008293)
-emitting = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+top_level = true
 explosiveness = 0.11
 randomness = 0.14
+local_coords = true
 
 [node name="ShapeCast" type="ShapeCast3D" parent="GunFlame"]
 unique_name_in_owner = true
@@ -173,3 +174,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_v6ekg")
 value = 100.0
 rounded = true
 show_percentage = false
+
+[node name="FlamePosition" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.094, 0, -6.9)

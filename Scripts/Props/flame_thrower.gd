@@ -31,3 +31,7 @@ func _process(delta):
 		shape_cast.enabled = false
 	
 	flame_progress_bar.value = Global.ammo
+
+func _physics_process(_delta: float) -> void:
+	gun_flame.global_position = %FlamePosition.global_position
+	gun_flame.global_rotation = %FlamePosition.global_rotation
