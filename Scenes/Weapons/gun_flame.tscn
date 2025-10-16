@@ -37,7 +37,7 @@ point_count = 3
 [sub_resource type="CurveTexture" id="CurveTexture_0ihuv"]
 curve = SubResource("Curve_ejfo6")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rv6jk"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pym1x"]
 lifetime_randomness = 0.1
 angle_min = -44.99999
 angle_max = 45.00001
@@ -69,5 +69,5 @@ material_override = SubResource("StandardMaterial3D_rv6jk")
 amount = 16
 fixed_fps = 60
 draw_order = 1
-process_material = SubResource("ParticleProcessMaterial_rv6jk")
+process_material = SubResource("ParticleProcessMaterial_pym1x")
 draw_pass_1 = SubResource("QuadMesh_pym1x")
