@@ -540,7 +540,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[node name="Skeleton3D" type="Skeleton3D"]
+[node name="ZombieFemale" type="Node3D"]
+
+[node name="Skeleton3D" type="Skeleton3D" parent="."]
 bones/0/name = "mixamorig_Hips"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, -1.7453292e-06, 0, 1.7453292e-06, 1, 0, 0, 0, 1, 1.3988531e-08, 1.0758554, -0.002928754)
@@ -983,16 +985,16 @@ bones/62/position = Vector3(1.7763568e-17, 0.08328, 6.725523e-17)
 bones/62/rotation = Quaternion(0, 0, 0, 1)
 bones/62/scale = Vector3(1, 1, 1)
 
-[node name="ZombieGirl_Body" type="MeshInstance3D" parent="."]
+[node name="ZombieGirl_Body" type="MeshInstance3D" parent="Skeleton3D"]
 mesh = SubResource("ArrayMesh_xxd1g")
 skin = SubResource("Skin_4n6ot")
 
-[node name="ZombieGirl_Top" type="MeshInstance3D" parent="."]
+[node name="ZombieGirl_Top" type="MeshInstance3D" parent="Skeleton3D"]
 mesh = SubResource("ArrayMesh_h8iii")
 skin = SubResource("Skin_pp8n8")
 
-[node name="ZombieGirl_Pants" type="MeshInstance3D" parent="."]
+[node name="ZombieGirl_Pants" type="MeshInstance3D" parent="Skeleton3D"]
 mesh = SubResource("ArrayMesh_a5di5")
 skin = SubResource("Skin_pp8n8")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Skeleton3D"]
