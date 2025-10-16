@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://2oyfl4qqfrfp"]
+
+[ext_resource type="Shader" uid="uid://j5mqcfgv1dt1" path="res://Assets/3D Model/Items/Molotov/shader/liquid.gdshader" id="1_5wfb1"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_5wfb1")
+shader_parameter/coeff = Vector2(0, 0)
+shader_parameter/vel = 0.0
+shader_parameter/liquid_color = Color(0, 1.1400272, 0.69283086, 1)
+shader_parameter/foam_color = Color(0.5038834, 1.1227171, 1.6777654, 1)
+shader_parameter/foam_line = 0.2000000095
+shader_parameter/fill_amount = 0.470000022325
+shader_parameter/size = Vector2(1, 1)
+shader_parameter/glass_thickness = 0.2
+shader_parameter/scale = 1.0
+shader_parameter/wave_intensity = 0.05
+shader_parameter/HasBubbles = true
+shader_parameter/AlwaysBubbles = false
+shader_parameter/BubbleStrength = 0.5
+shader_parameter/BubbleMask = 0.50000002375
+shader_parameter/BubbleSpeed = Vector2(3, 3)

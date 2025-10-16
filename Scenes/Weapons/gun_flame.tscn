@@ -63,6 +63,7 @@ collision_use_scale = true
 [sub_resource type="QuadMesh" id="QuadMesh_pym1x"]
 
 [node name="GunFlame" type="GPUParticles3D"]
+transform = Transform3D(0.962561, 0.0029158334, 0.27104953, 0.023758072, 0.99518645, -0.09507632, -0.27002206, 0.09795639, 0.9578584, 0, 0, 0)
 layers = 7
 material_override = SubResource("StandardMaterial3D_rv6jk")
 amount = 16

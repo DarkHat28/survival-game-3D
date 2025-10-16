@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://jiljf4g88uq2"]
+
+[ext_resource type="Texture2D" uid="uid://d4jhgk4x6xm6k" path="res://Assets/3D Model/Items/Molotov/Bottle/bottle.png" id="1_rof63"]
+[ext_resource type="Material" uid="uid://2oyfl4qqfrfp" path="res://Assets/3D Model/Items/Molotov/Bottle/motolov_liquid.tres" id="2_do5uu"]
+[ext_resource type="ArrayMesh" uid="uid://dlhp6cjfvo48a" path="res://Assets/3D Model/Items/Molotov/Bottle/untitled.obj" id="3_1vwjp"]
+[ext_resource type="Script" uid="uid://p7vc5o2w7yvf" path="res://Scripts/Grenades/liquid_mesh.gd" id="3_do5uu"]
+[ext_resource type="Material" uid="uid://plfgf5gf25oa" path="res://Assets/3D Model/Items/Molotov/shader/bottle_liquid.tres" id="4_do5uu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_biwja"]
+radius = 0.05810547
+height = 0.3314697
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_do5uu"]
+next_pass = ExtResource("2_do5uu")
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_rof63")
+
+[node name="Motolov" type="RigidBody3D"]
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.056433126, 0)
+shape = SubResource("CapsuleShape3D_biwja")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.014999999, 0, 0, 0, 0.014999999, 0, 0, 0, 0.015, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_do5uu")
+mesh = ExtResource("3_1vwjp")
+script = ExtResource("3_do5uu")
+liquidShaderMaterial = ExtResource("4_do5uu")
