@@ -131,21 +131,26 @@ collision_mask = 0
 shape = SubResource("BoxShape3D_d8t5q")
 
 [node name="Player" parent="." instance=ExtResource("9_cs75k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 147.58488, 63.79935, -115.95951)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.674698, 63.79935, -2.4576492)
 camera_sensitivity = 10000
 
-[node name="Terrain3DObjects" type="Node3D" parent="."]
+[node name="PropsUnderThisNode" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.881924, 0)
 script = ExtResource("9_vt4cg")
 metadata/_custom_type_script = "uid://bu0bunuq1764h"
 
-[node name="RockA" parent="Terrain3DObjects" instance=ExtResource("10_gx203")]
+[node name="RockA" parent="PropsUnderThisNode" instance=ExtResource("10_gx203")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.734713, -1.9260798, 0)
 
-[node name="RockB" parent="Terrain3DObjects" instance=ExtResource("11_vjxqu")]
+[node name="RockB" parent="PropsUnderThisNode" instance=ExtResource("11_vjxqu")]
 
-[node name="RockC" parent="Terrain3DObjects" instance=ExtResource("12_c5dgy")]
+[node name="RockC" parent="PropsUnderThisNode" instance=ExtResource("12_c5dgy")]
 
-[node name="BrokenCar1" parent="Terrain3DObjects" instance=ExtResource("13_ygaur")]
+[node name="BrokenCar1" parent="PropsUnderThisNode" instance=ExtResource("13_ygaur")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 
-[node name="BrokenCar2" parent="Terrain3DObjects" instance=ExtResource("14_wuss4")]
+[node name="BrokenCar2" parent="PropsUnderThisNode" instance=ExtResource("14_wuss4")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 
-[node name="BrokenVan" parent="Terrain3DObjects" instance=ExtResource("15_ay6ht")]
+[node name="BrokenVan" parent="PropsUnderThisNode" instance=ExtResource("15_ay6ht")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://l1a5yff88bnt"]
+[gd_scene load_steps=13 format=3 uid="uid://l1a5yff88bnt"]
 
 [ext_resource type="PackedScene" uid="uid://c1gxospjmfgmc" path="res://Assets/3D Model/Vehicles/broken_car.glb" id="1_mx2nu"]
 [ext_resource type="Texture2D" uid="uid://cweb0t7ekh7xk" path="res://Assets/Textures/Flames/flame_flipbook.png" id="2_76xpr"]
@@ -59,6 +59,9 @@ anim_speed_max = 1.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_76xpr"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_76xpr"]
+size = Vector3(0.8925781, 0.48449707, 2.2886658)
+
 [node name="BrokenCar1" type="Node3D"]
 
 [node name="AuxScene" parent="." instance=ExtResource("1_mx2nu")]
@@ -72,3 +75,9 @@ local_coords = true
 draw_order = 1
 process_material = SubResource("ParticleProcessMaterial_4xqbu")
 draw_pass_1 = SubResource("QuadMesh_76xpr")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18481445, -0.101989746, -0.10523987)
+shape = SubResource("BoxShape3D_76xpr")
