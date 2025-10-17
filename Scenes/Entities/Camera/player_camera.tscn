@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://brbyva2n23ux0"]
 
 [ext_resource type="Script" uid="uid://tuqu3fhakh4x" path="res://Scripts/Characters/Camera/camera.gd" id="1_g5kic"]
-[ext_resource type="PackedScene" uid="uid://c1q5a2i3bd2lc" path="res://Scenes/Weapons/flame_thrower_pink.tscn" id="2_cutip"]
+[ext_resource type="PackedScene" uid="uid://c1q5a2i3bd2lc" path="res://Scenes/Weapons/flame_thrower.tscn" id="2_cutip"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cutip"]
 radius = 0.55
@@ -11,6 +11,7 @@ radius = 0.2
 
 [node name="CameraLogic" type="Node3D"]
 script = ExtResource("1_g5kic")
+mouse_sensitivity = 0.001
 max_spring_length = 3.0
 
 [node name="FPSPivot" type="Node3D" parent="."]

@@ -1,27 +1,27 @@
 [gd_scene load_steps=18 format=4 uid="uid://c1q5a2i3bd2lc"]
 
-[ext_resource type="Script" uid="uid://navncg56etdy" path="res://Scripts/Props/flame_thrower.gd" id="1_d6ubk"]
-[ext_resource type="Texture2D" uid="uid://bmkqw3hve8uy4" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_0.jpg" id="1_dr3ls"]
-[ext_resource type="Texture2D" uid="uid://c1j2alnpefppl" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_1.png" id="2_u1bjp"]
-[ext_resource type="Texture2D" uid="uid://ccqnvn3k6vmvt" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_2.png" id="3_d6ubk"]
-[ext_resource type="Texture2D" uid="uid://c3wys0ghf6t1j" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_4.png" id="4_v6ekg"]
-[ext_resource type="Texture2D" uid="uid://4yslsdb1ers" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_5.png" id="5_wrqp8"]
-[ext_resource type="PackedScene" uid="uid://b7q5hpstbv336" path="res://Scenes/Weapons/gun_flame.tscn" id="6_u1bjp"]
-[ext_resource type="Texture2D" uid="uid://brlb0g6q7b77i" path="res://Assets/Icons/fuel-pump.png" id="8_v6ekg"]
+[ext_resource type="Script" uid="uid://navncg56etdy" path="res://Scripts/Props/flame_thrower.gd" id="1_pl86a"]
+[ext_resource type="Texture2D" uid="uid://bmkqw3hve8uy4" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_0.jpg" id="2_1ft6h"]
+[ext_resource type="Texture2D" uid="uid://c1j2alnpefppl" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_1.png" id="3_1obds"]
+[ext_resource type="Texture2D" uid="uid://ccqnvn3k6vmvt" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_2.png" id="4_c2w73"]
+[ext_resource type="Texture2D" uid="uid://c3wys0ghf6t1j" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_4.png" id="5_vvq7w"]
+[ext_resource type="Texture2D" uid="uid://4yslsdb1ers" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_5.png" id="6_u8o83"]
+[ext_resource type="PackedScene" uid="uid://b7q5hpstbv336" path="res://Scenes/Weapons/gun_flame.tscn" id="7_gxs4u"]
+[ext_resource type="Texture2D" uid="uid://brlb0g6q7b77i" path="res://Assets/Icons/fuel-pump.png" id="8_w65h3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_34fs1"]
 resource_name = "c_flamethrower.012"
 cull_mode = 2
-albedo_texture = ExtResource("1_dr3ls")
+albedo_texture = ExtResource("2_1ft6h")
 metallic = 1.0
-metallic_texture = ExtResource("2_u1bjp")
+metallic_texture = ExtResource("3_1obds")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("2_u1bjp")
+roughness_texture = ExtResource("3_1obds")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("3_d6ubk")
+normal_texture = ExtResource("4_c2w73")
 ao_enabled = true
-ao_texture = ExtResource("2_u1bjp")
+ao_texture = ExtResource("3_1obds")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_hyaqr"]
 _surfaces = [{
@@ -61,10 +61,10 @@ shadow_mesh = SubResource("ArrayMesh_hyaqr")
 resource_name = "pilotlight.012"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("4_v6ekg")
+albedo_texture = ExtResource("5_vvq7w")
 emission_enabled = true
 emission_energy_multiplier = 3.0
-emission_texture = ExtResource("5_wrqp8")
+emission_texture = ExtResource("6_u8o83")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5smgo"]
 _surfaces = [{
@@ -123,8 +123,8 @@ border_blend = true
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 
-[node name="FlameThrowerPink" type="Node3D"]
-script = ExtResource("1_d6ubk")
+[node name="FlameThrower" type="Node3D"]
+script = ExtResource("1_pl86a")
 
 [node name="Pink" type="Node3D" parent="."]
 transform = Transform3D(-0.1, 1.509958e-08, 6.6002364e-16, 0, -4.371139e-09, 0.1, 1.509958e-08, 0.1, 4.371139e-09, 0, 0, 0)
@@ -137,7 +137,7 @@ skeleton = NodePath("")
 mesh = SubResource("ArrayMesh_t1hff")
 skeleton = NodePath("")
 
-[node name="GunFlame" parent="." instance=ExtResource("6_u1bjp")]
+[node name="GunFlame" parent="." instance=ExtResource("7_gxs4u")]
 unique_name_in_owner = true
 transform = Transform3D(0.962561, 0.0029158406, 0.27104953, 0.023758072, 0.99518645, -0.09507634, -0.27002206, 0.09795638, 0.9578584, 0, 0, 0)
 top_level = true
@@ -172,11 +172,12 @@ alignment = 1
 [node name="Logo" type="TextureRect" parent="UI/GasBar"]
 custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-texture = ExtResource("8_v6ekg")
+texture = ExtResource("8_w65h3")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="ProgressBar" type="ProgressBar" parent="UI/GasBar"]
+[node name="FlameProgressBar" type="ProgressBar" parent="UI/GasBar"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 35)
 layout_mode = 2
 mouse_filter = 2

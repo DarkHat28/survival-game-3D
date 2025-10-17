@@ -31,6 +31,8 @@ lod0_range = 128.0
 name = "ground037_alb_ht"
 albedo_texture = ExtResource("1_ndjrs")
 normal_texture = ExtResource("2_tv61o")
+uv_scale = 1.0
+detiling_rotation = 0.274
 
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_7i6c2"]
 name = "rock023_nrm_rgh"

@@ -15,8 +15,8 @@ extends CharacterBody3D
 @export var camera_sensitivity: int = 50 # 1 to 100 only,baaki v ho skte hai wese...
 
 @export_group("Movement")
-@export var walk_speed: float = 4.0
-@export var sprint_speed: float = 8.0
+@export var walk_speed: float = 3.5
+@export var sprint_speed: float = 6.0
 @export var acceleration: float = 30.0
 @export var friction: float = 50.0
 @export var lerp_player_rotation: float = 180.0
