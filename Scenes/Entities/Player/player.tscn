@@ -65,6 +65,7 @@ collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_e35kc")
 state_chart = NodePath("StateChart")
+walk_speed = 3.0
 garvity_off = true
 
 [node name="StandingCollisionShape" type="CollisionShape3D" parent="."]

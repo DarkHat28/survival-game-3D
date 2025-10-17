@@ -11,7 +11,6 @@ radius = 0.2
 
 [node name="CameraLogic" type="Node3D"]
 script = ExtResource("1_g5kic")
-can_switch_camera = true
 max_spring_length = 3.0
 
 [node name="FPSPivot" type="Node3D" parent="."]
