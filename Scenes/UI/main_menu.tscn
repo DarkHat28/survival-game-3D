@@ -1,0 +1,175 @@
+[gd_scene load_steps=11 format=3 uid="uid://bf0fk3pbqkh8v"]
+
+[ext_resource type="FontFile" uid="uid://bygdfwdtcfebo" path="res://Assets/Font/collegeb.ttf" id="1_5wsvm"]
+[ext_resource type="Texture2D" uid="uid://6cbj08ltlghv" path="res://Assets/Textures/UI/ChatGPT Image Oct 17, 2025, 05_35_32 PM.png" id="1_i2xx2"]
+[ext_resource type="Script" uid="uid://s7wcsn40c2n" path="res://Scripts/UI/Menu/main_menu.gd" id="1_o14dv"]
+[ext_resource type="AudioStream" uid="uid://c7jbp3syavrhv" path="res://Assets/Audio/Music/menu_background_music.mp3" id="4_u7lva"]
+[ext_resource type="AudioStream" uid="uid://bq73makpsg2r3" path="res://Assets/Audio/SFX/UI/click1.mp3" id="5_mrfpk"]
+
+[sub_resource type="Animation" id="Animation_5wsvm"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Black:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Buttons:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_i2xx2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Black:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Buttons:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i2xx2"]
+_data = {
+&"RESET": SubResource("Animation_i2xx2"),
+&"fade_out": SubResource("Animation_5wsvm")
+}
+
+[sub_resource type="FontVariation" id="FontVariation_i2xx2"]
+base_font = ExtResource("1_5wsvm")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5wsvm"]
+bg_color = Color(0.17103913, 0.17103916, 0.17103904, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+corner_detail = 16
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_o14dv")
+
+[node name="Backgrounds" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_i2xx2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_i2xx2")
+}
+autoplay = "fade_out"
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(500, 250)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -125.0
+offset_right = 250.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 30
+
+[node name="Start" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = SubResource("FontVariation_i2xx2")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_5wsvm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wsvm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5wsvm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_5wsvm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5wsvm")
+text = "Start"
+
+[node name="Exit" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = SubResource("FontVariation_i2xx2")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_5wsvm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wsvm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5wsvm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_5wsvm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5wsvm")
+text = "Exit"
+
+[node name="Black" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MusicSFX" type="Node" parent="."]
+
+[node name="BackgroundMusicMenu" type="AudioStreamPlayer" parent="MusicSFX"]
+stream = ExtResource("4_u7lva")
+autoplay = true
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="MusicSFX"]
+unique_name_in_owner = true
+stream = ExtResource("5_mrfpk")
+
+[connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]

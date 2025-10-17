@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ofv4hyosfvrm"]
+[gd_scene load_steps=8 format=3 uid="uid://ofv4hyosfvrm"]
 
 [ext_resource type="PackedScene" uid="uid://6fh58157bis1" path="res://Assets/Environment/Horror_trees.glb" id="1_o4iqp"]
 
@@ -21,6 +21,10 @@ radius = 0.123046875
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_gmho7"]
 height = 0.5212555
 radius = 0.0546875
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pt8et"]
+height = 0.47937775
+radius = 0.103027344
 
 [node name="HorrorTrees" instance=ExtResource("1_o4iqp")]
 
@@ -48,3 +52,11 @@ shape = SubResource("CylinderShape3D_wd8sp")
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="Collisions" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0879073, 0.25526392, 1.3630961)
 shape = SubResource("CylinderShape3D_gmho7")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Collisions" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5658892, 0.23432505, 1.5629319)
+shape = SubResource("CylinderShape3D_pt8et")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Collisions" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7871771, 0.23432505, -0.032467246)
+shape = SubResource("CylinderShape3D_pt8et")

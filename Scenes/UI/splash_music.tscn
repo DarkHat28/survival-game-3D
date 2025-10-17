@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://upmwmtalm3dd"]
+
+[ext_resource type="AudioStream" uid="uid://bnqnretgtbche" path="res://Assets/Audio/SFX/UI/SplashSFX.mp3" id="1_jgyiv"]
+
+[node name="SplashMusic" type="Node"]
+
+[node name="SplashStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_jgyiv")
+autoplay = true

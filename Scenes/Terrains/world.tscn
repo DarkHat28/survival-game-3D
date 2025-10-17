@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://x34e4v60vdmy"]
+[gd_scene load_steps=32 format=3 uid="uid://x34e4v60vdmy"]
 
 [ext_resource type="PackedScene" uid="uid://di5fovhcyd7re" path="res://Scenes/Terrains/models/components/Enemy.tscn" id="5_cs75k"]
 [ext_resource type="Terrain3DMaterial" uid="uid://b7hylufb32h02" path="res://Scenes/Terrains/TerrainsData/terrain_material.res" id="6_8egvv"]
@@ -16,6 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://crvrelpxw1s74" path="res://Scenes/Terrains/Props/Vehicles/broken_car_2.tscn" id="14_wuss4"]
 [ext_resource type="PackedScene" uid="uid://bqok7sgqvce4x" path="res://Scenes/Terrains/Props/Vehicles/broken_van.tscn" id="15_ay6ht"]
 [ext_resource type="PackedScene" uid="uid://ofv4hyosfvrm" path="res://Scenes/Terrains/Props/horror_trees.tscn" id="16_gx203"]
+[ext_resource type="AudioStream" uid="uid://by8vc8l44edh7" path="res://Assets/Audio/Music/cricket_background.mp3" id="17_c5dgy"]
+[ext_resource type="AudioStream" uid="uid://bii48e40ln1fx" path="res://Assets/Audio/Music/void_wind.mp3" id="17_vjxqu"]
+[ext_resource type="AudioStream" uid="uid://1yquy6ekcnsi" path="res://Assets/Audio/Music/game_background_music.mp3" id="17_ygaur"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_coh1d"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -50,6 +53,43 @@ size = Vector3(512, 5, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d8t5q"]
 size = Vector3(512, 5, 1)
+
+[sub_resource type="Animation" id="Animation_ygaur"]
+resource_name = "fade_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeOut:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wuss4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeOut:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ay6ht"]
+_data = {
+&"RESET": SubResource("Animation_wuss4"),
+&"fade_out": SubResource("Animation_ygaur")
+}
 
 [node name="World" type="Node"]
 
@@ -161,3 +201,36 @@ transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, -6.035, 0)
 
 [node name="HorrorTrees2" parent="PropsUnderThisNode" instance=ExtResource("16_gx203")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, -6, 0)
+
+[node name="Music" type="Node" parent="."]
+
+[node name="MainBackgroundMusic" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("17_ygaur")
+autoplay = true
+parameters/looping = true
+
+[node name="CricketBackgroundMusic" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("17_c5dgy")
+autoplay = true
+parameters/looping = true
+
+[node name="VoidBackgroundMusic" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("17_vjxqu")
+volume_db = 10.0
+autoplay = true
+parameters/looping = true
+
+[node name="FadeOut" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ay6ht")
+}
+autoplay = "fade_out"

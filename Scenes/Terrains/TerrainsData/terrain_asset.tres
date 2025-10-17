@@ -19,7 +19,7 @@ distance_fade_mode = 1
 distance_fade_min_distance = 128.0
 distance_fade_max_distance = 96.0
 
-[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_85dj7"]
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_1mtmi"]
 generated_type = 1
 height_offset = 0.5
 material_override = SubResource("StandardMaterial3D_q6fw5")
@@ -52,5 +52,5 @@ albedo_texture = ExtResource("7_q6fw5")
 normal_texture = ExtResource("8_jlnd7")
 
 [resource]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_85dj7")])
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_1mtmi")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_sb1cp"), SubResource("Terrain3DTextureAsset_7i6c2"), SubResource("Terrain3DTextureAsset_fdghi"), SubResource("Terrain3DTextureAsset_85dj7")])
