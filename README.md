@@ -1,7 +1,7 @@
 # survival-game-3D
 Survival Game 3D
 
-![GitHub Contributors](https://contrib.rocks/image?repo=DarkHat28/survival-game-3D)
+![👨‍💻GitHub Contributors](https://contrib.rocks/image?repo=DarkHat28/survival-game-3D)
 
 ## 📊 Project Statistics
 
