@@ -24,7 +24,7 @@ shadow_color = Color(0, 0, 0, 0.2)
 shadow_size = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hubk"]
-bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0.75000006)
+bg_color = Color(0.5068635, 0.9464187, 0.99999994, 0.47843137)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -109,7 +109,7 @@ offset_right = -68.0
 offset_bottom = -84.0
 grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(0.75, 0.75)
+scale = Vector2(0.8, 0.8)
 
 [node name="Container" type="PanelContainer" parent="Control"]
 unique_name_in_owner = true

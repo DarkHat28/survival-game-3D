@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://c1q5a2i3bd2lc"]
+[gd_scene load_steps=18 format=4 uid="uid://c1q5a2i3bd2lc"]
 
 [ext_resource type="Script" uid="uid://navncg56etdy" path="res://Scripts/Props/flame_thrower.gd" id="1_d6ubk"]
 [ext_resource type="Texture2D" uid="uid://bmkqw3hve8uy4" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_0.jpg" id="1_dr3ls"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c3wys0ghf6t1j" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_4.png" id="4_v6ekg"]
 [ext_resource type="Texture2D" uid="uid://4yslsdb1ers" path="res://Assets/3D Model/Weapons/FlameThrowers/flamethrower_5.png" id="5_wrqp8"]
 [ext_resource type="PackedScene" uid="uid://b7q5hpstbv336" path="res://Scenes/Weapons/gun_flame.tscn" id="6_u1bjp"]
+[ext_resource type="Texture2D" uid="uid://brlb0g6q7b77i" path="res://Assets/Icons/fuel-pump.png" id="8_v6ekg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_34fs1"]
 resource_name = "c_flamethrower.012"
@@ -102,7 +103,7 @@ shadow_mesh = SubResource("ArrayMesh_5smgo")
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_v6ekg"]
 height = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6ubk"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6ekg"]
 bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0.3)
 border_width_left = 4
 border_width_top = 4
@@ -111,8 +112,8 @@ border_width_bottom = 4
 border_color = Color(0, 0, 0, 1)
 border_blend = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6ekg"]
-bg_color = Color(0.76487833, 0.76487833, 0.76487833, 0.8)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrqp8"]
+bg_color = Color(0.8028113, 0.5180206, 3.85046e-07, 0.8)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -153,27 +154,38 @@ collision_mask = 4
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="FlameProgressBar" type="ProgressBar" parent="UI"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 35)
+[node name="GasBar" type="HBoxContainer" parent="UI"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -150.0
-offset_top = -63.0
-offset_right = 150.0
-offset_bottom = -28.0
+offset_left = -180.5
+offset_top = -75.0
+offset_right = 180.5
+offset_bottom = -33.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Logo" type="TextureRect" parent="UI/GasBar"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+texture = ExtResource("8_v6ekg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="UI/GasBar"]
+custom_minimum_size = Vector2(300, 35)
+layout_mode = 2
+mouse_filter = 2
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 24
-theme_override_styles/background = SubResource("StyleBoxFlat_d6ubk")
-theme_override_styles/fill = SubResource("StyleBoxFlat_v6ekg")
-value = 100.0
+theme_override_styles/background = SubResource("StyleBoxFlat_v6ekg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_wrqp8")
+value = 50.0
 rounded = true
-show_percentage = false
 
 [node name="FlamePosition" type="Marker3D" parent="."]
 unique_name_in_owner = true

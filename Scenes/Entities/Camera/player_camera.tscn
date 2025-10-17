@@ -39,9 +39,11 @@ visible = false
 
 [node name="SpringArm" type="SpringArm3D" parent="TPSPivot"]
 unique_name_in_owner = true
+visible = false
 shape = SubResource("SphereShape3D_o58j0")
 spring_length = 3.0
 
 [node name="TPSCamera" type="Camera3D" parent="TPSPivot/SpringArm"]
 unique_name_in_owner = true
+visible = false
 fov = 85.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cjn5x2ke8mg3g"]
+[gd_scene load_steps=18 format=3 uid="uid://cjn5x2ke8mg3g"]
 
 [ext_resource type="Script" uid="uid://bl8veb4p711jg" path="res://Scripts/Characters/Player/StateMachineChart/player_chart.gd" id="1_e35kc"]
 [ext_resource type="PackedScene" uid="uid://bcwkugn6v3oy7" path="res://addons/godot_state_charts/utilities/state_chart_debugger.tscn" id="2_cinok"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://jk2jm1g6q853" path="res://addons/godot_state_charts/compound_state.gd" id="6_24s2i"]
 [ext_resource type="Script" uid="uid://cytafq8i1y8qm" path="res://addons/godot_state_charts/atomic_state.gd" id="7_2y2ob"]
 [ext_resource type="Script" uid="uid://cf1nsco3w0mf6" path="res://addons/godot_state_charts/transition.gd" id="8_iod2j"]
+[ext_resource type="Texture2D" uid="uid://ce27hfwpvtbhd" path="res://Assets/Icons/health-care (1).png" id="10_0yfgq"]
 [ext_resource type="Script" uid="uid://b2v62a5tqtvgu" path="res://Scripts/Characters/Player/UI/reticle.gd" id="10_2y2ob"]
 [ext_resource type="PackedScene" uid="uid://sv77v1ax2yuj" path="res://Scenes/UI/throwable_ui.tscn" id="10_ykqp4"]
 
@@ -50,7 +51,7 @@ border_color = Color(0, 0, 0, 1)
 border_blend = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0yfgq"]
-bg_color = Color(0.76487833, 0.76487833, 0.76487833, 0.8)
+bg_color = Color(0, 0.7088488, 0.23271024, 0.8)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -354,34 +355,32 @@ width = 2.0
 
 [node name="ThrowableUI" parent="PlayerUI" instance=ExtResource("10_ykqp4")]
 
-[node name="HealthBar" type="Control" parent="PlayerUI"]
-layout_mode = 3
+[node name="HealthBar" type="HBoxContainer" parent="PlayerUI"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -68.0
-offset_right = 20.0
-offset_bottom = -28.0
+offset_left = -185.0
+offset_top = -125.0
+offset_right = 185.0
+offset_bottom = -83.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Logo" type="TextureRect" parent="PlayerUI/HealthBar"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+texture = ExtResource("10_0yfgq")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="ProgressBar" type="ProgressBar" parent="PlayerUI/HealthBar"]
 custom_minimum_size = Vector2(300, 35)
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -150.0
-offset_top = -94.0
-offset_right = 150.0
-offset_bottom = -52.0
-grow_horizontal = 2
-grow_vertical = 0
+layout_mode = 2
+mouse_filter = 2
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 24
 theme_override_styles/background = SubResource("StyleBoxFlat_q8fdp")

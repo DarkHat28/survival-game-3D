@@ -101,6 +101,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_rt0c5")
 
 [node name="tree1" type="Node3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
 [node name="branch" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -303.69916, 961.55743, -342.41272)
