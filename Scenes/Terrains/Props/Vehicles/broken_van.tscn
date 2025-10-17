@@ -82,3 +82,8 @@ draw_pass_1 = SubResource("QuadMesh_ip38q")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011962891, 0.003982544, 0.0102882385)
 shape = SubResource("BoxShape3D_norjc")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92309, 0)
+light_color = Color(0.76738054, 0.7559757, 0, 1)
+light_energy = 10.0

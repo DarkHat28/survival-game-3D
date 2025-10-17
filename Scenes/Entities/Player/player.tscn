@@ -67,6 +67,7 @@ collision_mask = 3
 floor_stop_on_slope = false
 script = ExtResource("1_e35kc")
 state_chart = NodePath("StateChart")
+walk_speed = 4.0
 garvity_off = true
 
 [node name="StandingCollisionShape" type="CollisionShape3D" parent="."]
@@ -390,7 +391,6 @@ rounded = true
 [node name="Raycasts" type="Node3D" parent="."]
 
 [node name="UIAndDebug" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="StateChartDebugger" parent="UIAndDebug" instance=ExtResource("2_cinok")]
 anchors_preset = 1

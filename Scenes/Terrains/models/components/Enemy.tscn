@@ -12,6 +12,7 @@ albedo_color = Color(1, 0, 0, 1)
 [node name="Enemy" type="CharacterBody3D"]
 collision_layer = 2
 script = ExtResource("1_yudyn")
+MOVE_SPEED = 4.5
 
 [node name="CollisionShapeBody" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
