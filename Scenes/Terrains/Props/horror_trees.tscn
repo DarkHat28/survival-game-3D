@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://ofv4hyosfvrm"]
+
+[ext_resource type="PackedScene" uid="uid://6fh58157bis1" path="res://Assets/Environment/Horror_trees.glb" id="1_o4iqp"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_u4wcn"]
+height = 1.3911133
+radius = 0.2626953
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_o4iqp"]
+height = 0.9824219
+radius = 0.17138672
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7chh0"]
+height = 0.97180176
+radius = 0.109375
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_wd8sp"]
+height = 1.116272
+radius = 0.123046875
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_gmho7"]
+height = 0.5212555
+radius = 0.0546875
+
+[node name="HorrorTrees" instance=ExtResource("1_o4iqp")]
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform3D(0.001, 0, 0, 0, -4.3711396e-11, 0.0010000002, 0, -0.0010000002, -4.3711396e-11, 0, 0, 0)
+
+[node name="Collisions" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09227991, 0.6704174, 0)
+shape = SubResource("CylinderShape3D_u4wcn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Collisions" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5611834, 0.47632563, 2.3350072)
+shape = SubResource("CylinderShape3D_o4iqp")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Collisions" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3044276, 0.43781245, 0.7860403)
+shape = SubResource("CylinderShape3D_7chh0")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Collisions" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5667176, 0.55277216, 1.2709708)
+shape = SubResource("CylinderShape3D_wd8sp")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Collisions" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0879073, 0.25526392, 1.3630961)
+shape = SubResource("CylinderShape3D_gmho7")

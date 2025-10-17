@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://x34e4v60vdmy"]
+[gd_scene load_steps=26 format=3 uid="uid://x34e4v60vdmy"]
 
 [ext_resource type="PackedScene" uid="uid://di5fovhcyd7re" path="res://Scenes/Terrains/models/components/Enemy.tscn" id="5_cs75k"]
 [ext_resource type="Terrain3DMaterial" uid="uid://b7hylufb32h02" path="res://Scenes/Terrains/TerrainsData/terrain_material.res" id="6_8egvv"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://l1a5yff88bnt" path="res://Scenes/Terrains/Props/Vehicles/broken_car_1.tscn" id="13_ygaur"]
 [ext_resource type="PackedScene" uid="uid://crvrelpxw1s74" path="res://Scenes/Terrains/Props/Vehicles/broken_car_2.tscn" id="14_wuss4"]
 [ext_resource type="PackedScene" uid="uid://bqok7sgqvce4x" path="res://Scenes/Terrains/Props/Vehicles/broken_van.tscn" id="15_ay6ht"]
+[ext_resource type="PackedScene" uid="uid://ofv4hyosfvrm" path="res://Scenes/Terrains/Props/horror_trees.tscn" id="16_gx203"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_coh1d"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -154,3 +155,9 @@ transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 
 [node name="BrokenVan" parent="PropsUnderThisNode" instance=ExtResource("15_ay6ht")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+
+[node name="HorrorTrees" parent="PropsUnderThisNode" instance=ExtResource("16_gx203")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, -6.035, 0)
+
+[node name="HorrorTrees2" parent="PropsUnderThisNode" instance=ExtResource("16_gx203")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, -6, 0)
