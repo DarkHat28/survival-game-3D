@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://x34e4v60vdmy"]
+[gd_scene load_steps=25 format=3 uid="uid://x34e4v60vdmy"]
 
 [ext_resource type="PackedScene" uid="uid://di5fovhcyd7re" path="res://Scenes/Terrains/models/components/Enemy.tscn" id="5_cs75k"]
 [ext_resource type="Terrain3DMaterial" uid="uid://b7hylufb32h02" path="res://Scenes/Terrains/TerrainsData/terrain_material.res" id="6_8egvv"]
@@ -8,6 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://c4bjnl55tgqqf" path="res://Assets/Textures/BoundaryWallTexture/brick_floor_002_diffuse_1k.jpg" id="7_cs75k"]
 [ext_resource type="Texture2D" uid="uid://s4veu2aleloh" path="res://Assets/Textures/BoundaryWallTexture/brick_floor_002_displacement_1k.png" id="8_ybvgm"]
 [ext_resource type="PackedScene" uid="uid://cjn5x2ke8mg3g" path="res://Scenes/Entities/Player/player.tscn" id="9_cs75k"]
+[ext_resource type="Script" uid="uid://bu0bunuq1764h" path="res://addons/terrain_3d/utils/terrain_3d_objects.gd" id="9_vt4cg"]
+[ext_resource type="PackedScene" uid="uid://be6nrf0b8j4l0" path="res://Scenes/Terrains/models/RockA.tscn" id="10_gx203"]
+[ext_resource type="PackedScene" uid="uid://bwvtgwartxt0g" path="res://Scenes/Terrains/models/RockB.tscn" id="11_vjxqu"]
+[ext_resource type="PackedScene" uid="uid://lsvs8a7urkca" path="res://Scenes/Terrains/models/RockC.tscn" id="12_c5dgy"]
+[ext_resource type="PackedScene" uid="uid://l1a5yff88bnt" path="res://Scenes/Terrains/Props/Vehicles/broken_car_1.tscn" id="13_ygaur"]
+[ext_resource type="PackedScene" uid="uid://crvrelpxw1s74" path="res://Scenes/Terrains/Props/Vehicles/broken_car_2.tscn" id="14_wuss4"]
+[ext_resource type="PackedScene" uid="uid://bqok7sgqvce4x" path="res://Scenes/Terrains/Props/Vehicles/broken_van.tscn" id="15_ay6ht"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_coh1d"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -53,7 +60,7 @@ shadow_enabled = true
 environment = SubResource("Environment_ybvgm")
 
 [node name="Enemy" parent="." instance=ExtResource("5_cs75k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.965204, 1.5297451, -45.882233)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 226.77403, 9.053038, -213.45961)
 
 [node name="Props" type="Node" parent="."]
 
@@ -124,4 +131,21 @@ collision_mask = 0
 shape = SubResource("BoxShape3D_d8t5q")
 
 [node name="Player" parent="." instance=ExtResource("9_cs75k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 147.58488, 63.79935, -115.95951)
 camera_sensitivity = 10000
+
+[node name="Terrain3DObjects" type="Node3D" parent="."]
+script = ExtResource("9_vt4cg")
+metadata/_custom_type_script = "uid://bu0bunuq1764h"
+
+[node name="RockA" parent="Terrain3DObjects" instance=ExtResource("10_gx203")]
+
+[node name="RockB" parent="Terrain3DObjects" instance=ExtResource("11_vjxqu")]
+
+[node name="RockC" parent="Terrain3DObjects" instance=ExtResource("12_c5dgy")]
+
+[node name="BrokenCar1" parent="Terrain3DObjects" instance=ExtResource("13_ygaur")]
+
+[node name="BrokenCar2" parent="Terrain3DObjects" instance=ExtResource("14_wuss4")]
+
+[node name="BrokenVan" parent="Terrain3DObjects" instance=ExtResource("15_ay6ht")]

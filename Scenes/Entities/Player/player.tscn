@@ -63,6 +63,7 @@ corner_radius_bottom_right = 8
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("state_chart")]
 collision_layer = 2
 collision_mask = 3
+floor_stop_on_slope = false
 script = ExtResource("1_e35kc")
 state_chart = NodePath("StateChart")
 walk_speed = 3.0

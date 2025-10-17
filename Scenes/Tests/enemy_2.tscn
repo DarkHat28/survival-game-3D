@@ -1,14 +1,16 @@
 [gd_scene load_steps=7 format=3 uid="uid://bfquxlg1pphjq"]
 
-[ext_resource type="Script" uid="uid://d2e5a3qruclbu" path="res://Scripts/Characters/Player/enemy_2.gd" id="1_wodrg"]
-[ext_resource type="Texture2D" uid="uid://bo0g1pwmng50m" path="res://Assets/3D Model/TerrainProps/houses3d/Texture/House_texture_atlas.png" id="2_eqonc"]
+[ext_resource type="Script" path="res://Scripts/Characters/Player/enemy_2.gd" id="1_wodrg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eqonc"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5flw"]
-albedo_texture = ExtResource("2_eqonc")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wodrg"]
+albedo_color = Color(1, 0.49803922, 1, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_u5flw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqonc"]
+albedo_color = Color(1, 0, 1, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_eqonc"]
 radius = 0.2
@@ -29,11 +31,12 @@ debug_path_custom_color = Color(0.9999997, 0.47652853, 0.20784721, 1)
 shape = SubResource("CapsuleShape3D_eqonc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-material_override = SubResource("StandardMaterial3D_u5flw")
+material_override = SubResource("StandardMaterial3D_wodrg")
 mesh = SubResource("CapsuleMesh_u5flw")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6572129, 0.467152)
+material_override = SubResource("StandardMaterial3D_eqonc")
 mesh = SubResource("CapsuleMesh_eqonc")
 
 [node name="Timer" type="Timer" parent="."]

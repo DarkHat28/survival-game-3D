@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dula54famu1wg" path="res://Assets/Textures/concrete_tile_facade_1k/concrete_tile_facade_disp_1k.png" id="1_mjkmo"]
 [ext_resource type="Material" uid="uid://dlf4gyitrd3mw" path="res://Assets/3D Model/TerrainProps/Mashrooms.material" id="2_jakeb"]
 [ext_resource type="PackedScene" uid="uid://6fh58157bis1" path="res://Assets/Environment/Horror_trees.glb" id="4_jakeb"]
-[ext_resource type="PackedScene" uid="uid://c2xrg7efborpf" path="res://Scenes/Entities/Player/player_2.tscn" id="4_mxiy0"]
+[ext_resource type="PackedScene" uid="uid://bfquxlg1pphjq" path="res://Scenes/Tests/enemy_2.tscn" id="4_mxiy0"]
+
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jakeb"]
 albedo_color = Color(0.753984, 0.753984, 0.753984, 1)
