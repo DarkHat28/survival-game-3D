@@ -97,6 +97,7 @@ func _physics_process(delta: float) -> void:
 		if(is_on_floor()):
 			look_at(global_position + direct, Vector3.UP, true)
 
+
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 

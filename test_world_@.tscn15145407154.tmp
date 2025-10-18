@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://nsvskxsn4lfk"]
+
+[ext_resource type="PackedScene" uid="uid://op7of08mhx80" path="res://Scenes/Entities/Player/player_2.tscn" id="1_r4osd"]
+[ext_resource type="PackedScene" uid="uid://cge0ttvbrwrad" path="res://Scenes/Zombies/zombie_1.tscn" id="2_r4osd"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_r4osd"]
+vertices = PackedVector3Array(-49.5, 0.4, -49.5, -49.5, 0.4, 49.5, 49.5, 0.4, 49.5, 49.5, 0.4, -49.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hcbxy"]
+size = Vector2(100, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a7mxe"]
+size = Vector3(100, 0.2, 100)
+
+[node name="StaticBody3D" type="Node3D"]
+
+[node name="Player2" parent="." instance=ExtResource("1_r4osd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.618404, 2.7199483, 0)
+
+[node name="Zombie1" parent="." instance=ExtResource("2_r4osd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0251694, 40.143635)
+damage = null
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_r4osd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/StaticBody3D"]
+mesh = SubResource("PlaneMesh_hcbxy")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_a7mxe")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.07062694, 0.9975028, 0, -0.9975028, -0.07062694, 0, 0, 0)
