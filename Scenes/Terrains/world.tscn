@@ -1,10 +1,12 @@
-[gd_scene load_steps=30 format=3 uid="uid://x34e4v60vdmy"]
+[gd_scene load_steps=35 format=3 uid="uid://x34e4v60vdmy"]
 
 [ext_resource type="PackedScene" uid="uid://di5fovhcyd7re" path="res://Scenes/Terrains/models/components/Enemy.tscn" id="5_cs75k"]
 [ext_resource type="Terrain3DMaterial" uid="uid://b7hylufb32h02" path="res://Scenes/Terrains/TerrainsData/terrain_material.res" id="6_8egvv"]
 [ext_resource type="PackedScene" uid="uid://dcpxv8d7ociku" path="res://Scenes/Others/diya.tscn" id="6_coh1d"]
 [ext_resource type="PackedScene" uid="uid://di1bq8glbmex5" path="res://Scenes/Terrains/Props/graveyard.tscn" id="7_8egvv"]
 [ext_resource type="Terrain3DAssets" uid="uid://4rsqvby3vuc2" path="res://Scenes/Terrains/TerrainsData/terrain_asset.tres" id="7_coh1d"]
+[ext_resource type="Texture2D" uid="uid://c4bjnl55tgqqf" path="res://Assets/Textures/BoundaryWallTexture/brick_floor_002_diffuse_1k.jpg" id="7_cs75k"]
+[ext_resource type="Texture2D" uid="uid://s4veu2aleloh" path="res://Assets/Textures/BoundaryWallTexture/brick_floor_002_displacement_1k.png" id="8_ybvgm"]
 [ext_resource type="PackedScene" uid="uid://cjn5x2ke8mg3g" path="res://Scenes/Entities/Player/player.tscn" id="9_cs75k"]
 [ext_resource type="Script" uid="uid://bu0bunuq1764h" path="res://addons/terrain_3d/utils/terrain_3d_objects.gd" id="9_vt4cg"]
 [ext_resource type="PackedScene" uid="uid://be6nrf0b8j4l0" path="res://Scenes/Terrains/models/RockA.tscn" id="10_gx203"]
@@ -38,8 +40,21 @@ tonemap_mode = 2
 [sub_resource type="BoxShape3D" id="BoxShape3D_coh1d"]
 size = Vector3(512, 15, 1)
 
+[sub_resource type="QuadMesh" id="QuadMesh_c5dgy"]
+size = Vector2(515, 16)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wuss4"]
+albedo_texture = ExtResource("7_cs75k")
+normal_enabled = true
+normal_texture = ExtResource("8_ybvgm")
+uv1_scale = Vector3(0.4, 0.4, 0.4)
+uv1_triplanar = true
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_ybvgm"]
 size = Vector3(512, 15, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ygaur"]
+size = Vector2(515, 16)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cs75k"]
 size = Vector3(512, 15, 1)
@@ -93,8 +108,9 @@ navigation_mesh = SubResource("NavigationMesh_wuss4")
 data_directory = "res://Scenes/Terrains/TerrainsData"
 material = ExtResource("6_8egvv")
 assets = ExtResource("7_coh1d")
-collision_mask = 3
+collision_mask = 15
 mesh_size = 32
+gi_mode = 0
 top_level = true
 metadata/_edit_lock_ = true
 
@@ -118,39 +134,55 @@ camera_sensitivity = 5000
 
 [node name="Boundry" type="Node3D" parent="."]
 
-[node name="StaticBody3D1" type="StaticBody3D" parent="Boundry"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.024639, 255.79837)
+[node name="StaticBody1" type="StaticBody3D" parent="Boundry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3809586, 255.79837)
 collision_mask = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry/StaticBody3D1"]
+[node name="Collision" type="CollisionShape3D" parent="Boundry/StaticBody1"]
 shape = SubResource("BoxShape3D_coh1d")
 debug_color = Color(0.99432176, 0, 0.23119748, 0.41960785)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="Boundry"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.108467, -255.68057)
+[node name="Mesh" type="MeshInstance3D" parent="Boundry/StaticBody1"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_c5dgy")
+surface_material_override/0 = SubResource("StandardMaterial3D_wuss4")
+
+[node name="StaticBody2" type="StaticBody3D" parent="Boundry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.987362, -255.68057)
 collision_mask = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry/StaticBody3D2"]
+[node name="Collision" type="CollisionShape3D" parent="Boundry/StaticBody2"]
 shape = SubResource("BoxShape3D_ybvgm")
 debug_color = Color(0.99846023, 0, 0.1529592, 0.41960785)
 
-[node name="StaticBody3D3" type="StaticBody3D" parent="Boundry"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 255.76918, 2.5642624, 0)
+[node name="Mesh" type="MeshInstance3D" parent="Boundry/StaticBody2"]
+mesh = SubResource("QuadMesh_ygaur")
+surface_material_override/0 = SubResource("StandardMaterial3D_wuss4")
+
+[node name="StaticBody3" type="StaticBody3D" parent="Boundry"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 255.76918, 7.4548645, 0)
 collision_mask = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry/StaticBody3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.0039673, 0)
+[node name="Collision" type="CollisionShape3D" parent="Boundry/StaticBody3"]
 shape = SubResource("BoxShape3D_cs75k")
 debug_color = Color(0.9999998, 0.008258418, 0.10244394, 0.41960785)
 
-[node name="StaticBody3D4" type="StaticBody3D" parent="Boundry"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -255.81023, 3.968296, 0)
+[node name="Mesh" type="MeshInstance3D" parent="Boundry/StaticBody3"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_c5dgy")
+surface_material_override/0 = SubResource("StandardMaterial3D_wuss4")
+
+[node name="StaticBody4" type="StaticBody3D" parent="Boundry"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -255.81023, 10.742897, 0)
 collision_mask = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry/StaticBody3D4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.6158676, 0)
+[node name="Collision" type="CollisionShape3D" parent="Boundry/StaticBody4"]
 shape = SubResource("BoxShape3D_d8t5q")
 debug_color = Color(0.9999997, 0.011275206, 0.055339284, 0.41960785)
+
+[node name="Mesh" type="MeshInstance3D" parent="Boundry/StaticBody4"]
+mesh = SubResource("QuadMesh_c5dgy")
+surface_material_override/0 = SubResource("StandardMaterial3D_wuss4")
 
 [node name="PropsUnderThisNode" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.881924, 0)
