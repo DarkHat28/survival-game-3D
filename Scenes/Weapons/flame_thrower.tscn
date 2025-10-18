@@ -185,7 +185,7 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 24
 theme_override_styles/background = SubResource("StyleBoxFlat_v6ekg")
 theme_override_styles/fill = SubResource("StyleBoxFlat_wrqp8")
-value = 50.0
+value = 100.0
 rounded = true
 
 [node name="FlamePosition" type="Marker3D" parent="."]

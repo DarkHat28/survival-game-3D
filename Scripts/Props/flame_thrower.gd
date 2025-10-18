@@ -8,7 +8,7 @@ extends Node3D
 #@onready var player: Player = Global.player
 
 var firing: bool = false
-var firing_cost: float = 5.0
+@export var firing_cost: float = 2.0
 
 
 func _unhandled_input(_event):

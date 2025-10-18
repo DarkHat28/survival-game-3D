@@ -3,20 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://6fh58157bis1" path="res://Assets/Environment/Horror_trees.glb" id="1_o4iqp"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_u4wcn"]
-height = 1.9758301
-radius = 0.2626953
+height = 2.6158447
+radius = 0.38720703
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_o4iqp"]
-height = 1.3027344
-radius = 0.17138672
+height = 1.9169922
+radius = 0.3071289
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7chh0"]
 height = 1.3208618
-radius = 0.109375
+radius = 0.1977539
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_wd8sp"]
-height = 1.116272
-radius = 0.123046875
+height = 1.7949524
+radius = 0.18457031
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_gmho7"]
 height = 1.3278236
@@ -38,11 +38,11 @@ transform = Transform3D(0.001, 0, 0, 0, -4.3711396e-11, 0.0010000002, 0, -0.0010
 [node name="Collisions" type="StaticBody3D" parent="." index="1"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09227991, 0.9627758, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09227991, 1.2827832, 0)
 shape = SubResource("CylinderShape3D_u4wcn")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Collisions" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5611834, 0.6364819, 2.3350072)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5611834, 0.9436108, 2.3350072)
 shape = SubResource("CylinderShape3D_o4iqp")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Collisions" index="2"]
@@ -50,7 +50,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3044276, 0.6123425, 0.7860
 shape = SubResource("CylinderShape3D_7chh0")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="Collisions" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5667176, 0.55277216, 1.2709708)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6583166, 0.8921124, 1.2709708)
 shape = SubResource("CylinderShape3D_wd8sp")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="Collisions" index="4"]
