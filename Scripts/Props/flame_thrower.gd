@@ -9,6 +9,7 @@ extends Node3D
 
 var firing: bool = false
 @export var firing_cost: float = 2.0
+@export var dps:float = 40
 
 
 func _unhandled_input(_event):
@@ -31,6 +32,12 @@ func _process(delta):
 		shape_cast.enabled = false
 	
 	flame_progress_bar.value = Global.ammo
+	if(%ShapeCast.is_colliding()):
+		for i in %ShapeCast.get_collision_count():
+			var col :Node3D= %ShapeCast.get_collider(i) as Node3D
+			if col:
+				if col is Enemy:
+					col.health -= dps * delta
 
 
 func _physics_process(_delta: float) -> void:
