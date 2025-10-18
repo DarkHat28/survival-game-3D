@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bfquxlg1pphjq"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/Player/enemy_2.gd" id="1_wodrg"]
+[ext_resource type="Script" uid="uid://d2e5a3qruclbu" path="res://Scripts/Characters/Player/enemy_2.gd" id="1_wodrg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eqonc"]
 
@@ -17,9 +17,6 @@ radius = 0.2
 height = 0.4
 
 [node name="Enemy2" type="CharacterBody3D"]
-axis_lock_linear_y = true
-axis_lock_angular_x = true
-axis_lock_angular_z = true
 script = ExtResource("1_wodrg")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
@@ -40,6 +37,7 @@ material_override = SubResource("StandardMaterial3D_eqonc")
 mesh = SubResource("CapsuleMesh_eqonc")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
