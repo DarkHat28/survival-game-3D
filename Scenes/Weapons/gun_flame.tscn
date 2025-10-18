@@ -1,74 +1,17 @@
-[gd_scene load_steps=11 format=3 uid="uid://b7q5hpstbv336"]
+[gd_scene load_steps=3 format=3 uid="uid://b7q5hpstbv336"]
 
-[ext_resource type="Texture2D" uid="uid://cweb0t7ekh7xk" path="res://Assets/Textures/Flames/flame_flipbook.png" id="1_pym1x"]
+[ext_resource type="Script" uid="uid://u8pddsukmgmt" path="res://Scripts/Characters/Player/player_2.gd" id="1_pym1x"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rv6jk"]
-transparency = 1
-shading_mode = 0
-vertex_color_use_as_albedo = true
-vertex_color_is_srgb = true
-albedo_color = Color(18.892157, 18.892157, 18.892157, 1)
-albedo_texture = ExtResource("1_pym1x")
-billboard_mode = 3
-billboard_keep_scale = true
-particles_anim_h_frames = 8
-particles_anim_v_frames = 8
-particles_anim_loop = true
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7y687"]
+radius = 0.2
 
-[sub_resource type="Curve" id="Curve_pym1x"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.75757575, 0.27058828), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 3
+[node name="Player2" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 33
+script = ExtResource("1_pym1x")
 
-[sub_resource type="CurveTexture" id="CurveTexture_ejfo6"]
-curve = SubResource("Curve_pym1x")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_7y687")
 
-[sub_resource type="Gradient" id="Gradient_ejfo6"]
-offsets = PackedFloat32Array(0, 0.004385965, 0.21818182, 0.58181816, 0.7090909)
-colors = PackedColorArray(1, 0.89855075, 0, 1, 1, 0.8204159, 0, 1, 1, 0.35086948, 0, 1, 0.41996893, 5.4147097e-07, 2.1658838e-07, 1, 0.4195712, 0, 0, 0)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_0ihuv"]
-gradient = SubResource("Gradient_ejfo6")
-use_hdr = true
-
-[sub_resource type="Curve" id="Curve_ejfo6"]
-_data = [Vector2(0, 0.5252174), 0.0, 0.0, 0, 0, Vector2(0.28000003, 0.9886957), 0.0, 0.0, 0, 0, Vector2(1, 0.8417392), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_0ihuv"]
-curve = SubResource("Curve_ejfo6")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pym1x"]
-lifetime_randomness = 0.1
-angle_min = -44.99999
-angle_max = 45.00001
-direction = Vector3(0, 0, -1)
-spread = 0.0
-initial_velocity_min = 6.0
-initial_velocity_max = 20.0
-angular_velocity_min = -100.000015
-angular_velocity_max = 99.999985
-radial_velocity_min = -2.2351742e-05
-radial_velocity_max = 4.9999776
-gravity = Vector3(0, 0, 0)
-attractor_interaction_enabled = false
-scale_max = 2.0
-scale_curve = SubResource("CurveTexture_0ihuv")
-color_ramp = SubResource("GradientTexture1D_0ihuv")
-alpha_curve = SubResource("CurveTexture_ejfo6")
-anim_speed_min = 2.0
-anim_speed_max = 5.0
-collision_mode = 2
-collision_use_scale = true
-
-[sub_resource type="QuadMesh" id="QuadMesh_pym1x"]
-
-[node name="GunFlame" type="GPUParticles3D"]
-transform = Transform3D(0.9437142, 0.024608344, 0.32984516, 0.0090841735, 0.99492407, -0.100217625, -0.33063704, 0.09757318, 0.9387005, 0, 0, 0)
-layers = 5
-material_override = SubResource("StandardMaterial3D_rv6jk")
-amount = 20
-fixed_fps = 60
-local_coords = true
-draw_order = 1
-process_material = SubResource("ParticleProcessMaterial_pym1x")
-draw_pass_1 = SubResource("QuadMesh_pym1x")
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.712551, 0.04161936)

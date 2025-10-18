@@ -33,7 +33,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_state_charts/plugin.cfg", "res://addons/mixamo_animation_retargeter/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_state_charts/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
 [input]
 
@@ -132,6 +132,7 @@ fire={
 3d_physics/layer_3="Enemies"
 3d_physics/layer_4="Projectiles"
 3d_physics/layer_5="AreasAndZones"
+3d_physics/layer_6="enemy attack"
 
 [physics]
 
