@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://kiqqeb1d3rps"]
+
+[ext_resource type="ArrayMesh" uid="uid://bxu8vwgdp4ugf" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Object117_Bats_0.res" id="1_6t8h5"]
+
+[node name="Object117" type="Node3D"]
+
+[node name="Object_165" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34979057, -4.948189, -0.10297394)
+
+[node name="Object117_Bats_0" type="MeshInstance3D" parent="Object_165"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8146973e-05, -7.6293945e-06)
+mesh = ExtResource("1_6t8h5")
+skeleton = NodePath("")

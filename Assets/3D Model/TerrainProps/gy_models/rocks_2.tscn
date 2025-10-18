@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cetx3awv8r25a"]
+
+[ext_resource type="ArrayMesh" uid="uid://xgtx5ox3sc5k" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Rocks2_Stone_0.res" id="1_b6ykg"]
+
+[node name="Rocks2" type="Node3D"]
+
+[node name="Rocks2_Stone_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4619296e-05, 1.0633735e-05, 3.5404414e-06)
+mesh = ExtResource("1_b6ykg")
+skeleton = NodePath("")

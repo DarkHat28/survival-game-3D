@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://3q6qxgrg3a4b"]
+
+[ext_resource type="ArrayMesh" uid="uid://d0fbckpqnj6j0" path="res://Assets/3D Model/TerrainProps/gy/graveyard_DeadTree3_Treese_0.res" id="1_8ar2t"]
+
+[node name="DeadTree3" type="Node3D"]
+
+[node name="DeadTree3_Treese_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.081338e-05, -2.5489992e-06, 0)
+mesh = ExtResource("1_8ar2t")
+skeleton = NodePath("")

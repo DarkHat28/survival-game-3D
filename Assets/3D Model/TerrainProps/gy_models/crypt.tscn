@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://iomoj77ueq2y"]
+
+[ext_resource type="ArrayMesh" uid="uid://b8n7m3f0qntyf" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Crypt_Stone_0.res" id="1_ac7a4"]
+
+[node name="Crypt" type="Node3D"]
+visible = false
+
+[node name="Crypt_Stone_0" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("1_ac7a4")
+skeleton = NodePath("")

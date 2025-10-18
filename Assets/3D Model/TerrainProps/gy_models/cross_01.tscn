@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5xrs8gdcmo3t"]
+
+[ext_resource type="ArrayMesh" uid="uid://bklex3cej36gf" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Cross_01_Stone_0.res" id="1_xvbbo"]
+
+[node name="Cross_01" type="Node3D"]
+
+[node name="Cross_01_Stone_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5452323e-06, 1.5952513e-05, 0)
+mesh = ExtResource("1_xvbbo")
+skeleton = NodePath("")

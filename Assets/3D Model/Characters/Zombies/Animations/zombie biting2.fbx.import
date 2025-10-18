@@ -1,15 +1,15 @@
 [remap]
 
-importer="scene"
+importer="animation_library"
 importer_version=1
-type="PackedScene"
+type="AnimationLibrary"
 uid="uid://cactpt5ya82c3"
-path="res://.godot/imported/zombie biting2.fbx-a9e34b7926b7da04d03c6205538376ee.scn"
+path="res://.godot/imported/zombie biting2.fbx-a9e34b7926b7da04d03c6205538376ee.res"
 
 [deps]
 
 source_file="res://Assets/3D Model/Characters/Zombies/Animations/zombie biting2.fbx"
-dest_files=["res://.godot/imported/zombie biting2.fbx-a9e34b7926b7da04d03c6205538376ee.scn"]
+dest_files=["res://.godot/imported/zombie biting2.fbx-a9e34b7926b7da04d03c6205538376ee.res"]
 
 [params]
 

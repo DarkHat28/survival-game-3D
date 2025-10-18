@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://xofj1xs7s42n"]
+
+[ext_resource type="ArrayMesh" uid="uid://bfmwtoeiljisy" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Object115_Mashrooms_0.res" id="1_kcbct"]
+
+[node name="Object115" type="Node3D"]
+
+[node name="Object115_Mashrooms_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.392415e-06, -1.2638648e-05, 0)
+mesh = ExtResource("1_kcbct")
+skeleton = NodePath("")

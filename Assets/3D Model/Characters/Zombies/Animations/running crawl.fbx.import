@@ -1,15 +1,15 @@
 [remap]
 
-importer="scene"
+importer="animation_library"
 importer_version=1
-type="PackedScene"
+type="AnimationLibrary"
 uid="uid://d1xgpdwg8w25p"
-path="res://.godot/imported/running crawl.fbx-6ded55e97a7c04e82780571c51f74ffe.scn"
+path="res://.godot/imported/running crawl.fbx-6ded55e97a7c04e82780571c51f74ffe.res"
 
 [deps]
 
 source_file="res://Assets/3D Model/Characters/Zombies/Animations/running crawl.fbx"
-dest_files=["res://.godot/imported/running crawl.fbx-6ded55e97a7c04e82780571c51f74ffe.scn"]
+dest_files=["res://.godot/imported/running crawl.fbx-6ded55e97a7c04e82780571c51f74ffe.res"]
 
 [params]
 
@@ -32,7 +32,7 @@ animation/import=true
 animation/fps=30
 animation/trimming=true
 animation/remove_immutable_tracks=true
-animation/import_rest_as_RESET=false
+animation/import_rest_as_RESET=true
 import_script/path=""
 materials/extract=0
 materials/extract_format=0

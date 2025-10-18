@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c60dfnxt1m5at"]
+
+[ext_resource type="ArrayMesh" uid="uid://cgrvkujugl38q" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Pumpkin001_Grass1_0.res" id="1_xtrk6"]
+[ext_resource type="ArrayMesh" uid="uid://h4t6v6acl87s" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Pumpkin001_Pumplkin_0.res" id="2_us5wj"]
+
+[node name="Pumpkin001" type="Node3D"]
+
+[node name="Pumpkin001_Grass1_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.251265e-05, 0, 0)
+mesh = ExtResource("1_xtrk6")
+skeleton = NodePath("")
+
+[node name="Pumpkin001_Pumplkin_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.251265e-05, 0, 0)
+mesh = ExtResource("2_us5wj")
+skeleton = NodePath("")

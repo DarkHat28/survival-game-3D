@@ -1,35 +1,289 @@
-[gd_scene load_steps=2 format=3 uid="uid://biavh5rqk7kxx"]
+[gd_scene load_steps=69 format=3 uid="uid://biavh5rqk7kxx"]
 
-[ext_resource type="PackedScene" uid="uid://da274hpw3lo75" path="res://Assets/3D Model/TerrainProps/graveyard.glb" id="1_ufpx5"]
+[ext_resource type="PackedScene" uid="uid://cdo8q0pwougdh" path="res://Assets/3D Model/TerrainProps/gy_models/box_013.tscn" id="1_rw408"]
+[ext_resource type="PackedScene" uid="uid://dnitnx1cr6ord" path="res://Assets/3D Model/TerrainProps/gy_models/coffin.tscn" id="2_3e4or"]
+[ext_resource type="PackedScene" uid="uid://cpamr8uyekrky" path="res://Assets/3D Model/TerrainProps/gy_models/coffin_2.tscn" id="3_h7cff"]
+[ext_resource type="PackedScene" uid="uid://k3qf63i8n2oi" path="res://Assets/3D Model/TerrainProps/gy_models/column.tscn" id="4_m7ovt"]
+[ext_resource type="PackedScene" uid="uid://c7wa3pktwagsg" path="res://Assets/3D Model/TerrainProps/gy_models/column_001.tscn" id="5_cx2e1"]
+[ext_resource type="PackedScene" uid="uid://db628goi1p673" path="res://Assets/3D Model/TerrainProps/column_001.tscn" id="6_eni66"]
+[ext_resource type="PackedScene" uid="uid://bh5hildac4cvn" path="res://Assets/3D Model/TerrainProps/gy_models/column_002.tscn" id="7_qg052"]
+[ext_resource type="PackedScene" uid="uid://71gkje0o734k" path="res://Assets/3D Model/TerrainProps/gy_models/column_010.tscn" id="8_am2m8"]
+[ext_resource type="PackedScene" uid="uid://bapcsridfs3fy" path="res://Assets/3D Model/TerrainProps/gy_models/column_011.tscn" id="9_awvrs"]
+[ext_resource type="PackedScene" uid="uid://08ct0h3lpmsb" path="res://Assets/3D Model/TerrainProps/gy_models/column_012.tscn" id="10_rpt2u"]
+[ext_resource type="PackedScene" uid="uid://l6c65rh7av7y" path="res://Assets/3D Model/TerrainProps/gy_models/column_015.tscn" id="11_jn05k"]
+[ext_resource type="PackedScene" uid="uid://dyu4jenn2t1o4" path="res://Assets/3D Model/TerrainProps/gy_models/column_016.tscn" id="12_02xb3"]
+[ext_resource type="PackedScene" uid="uid://bse04yy27h7a8" path="res://Assets/3D Model/TerrainProps/gy_models/column_019.tscn" id="13_5dejb"]
+[ext_resource type="PackedScene" uid="uid://ch7nkoavvkwf2" path="res://Assets/3D Model/TerrainProps/gy_models/column_020.tscn" id="14_svw3c"]
+[ext_resource type="PackedScene" uid="uid://dxtyp3f7p8dww" path="res://Assets/3D Model/TerrainProps/gy_models/column_021.tscn" id="15_q7515"]
+[ext_resource type="PackedScene" uid="uid://dcakxvr0w1bh3" path="res://Assets/3D Model/TerrainProps/gy_models/cross_1.tscn" id="16_a0ug8"]
+[ext_resource type="PackedScene" uid="uid://c5xrs8gdcmo3t" path="res://Assets/3D Model/TerrainProps/gy_models/cross_01.tscn" id="17_ibcp8"]
+[ext_resource type="PackedScene" uid="uid://cvwdo41xjs6nh" path="res://Assets/3D Model/TerrainProps/gy_models/cross_015.tscn" id="18_nsv3v"]
+[ext_resource type="PackedScene" uid="uid://bs8hw2keh8b2r" path="res://Assets/3D Model/TerrainProps/gy_models/cross_016.tscn" id="19_hacjn"]
+[ext_resource type="PackedScene" uid="uid://uh14f8owtmes" path="res://Assets/3D Model/TerrainProps/gy_models/cross_017.tscn" id="20_v0sfx"]
+[ext_resource type="PackedScene" uid="uid://de5o4yxlnkwgl" path="res://Assets/3D Model/TerrainProps/gy_models/cross_019.tscn" id="21_vfbiw"]
+[ext_resource type="PackedScene" uid="uid://iomoj77ueq2y" path="res://Assets/3D Model/TerrainProps/gy_models/crypt.tscn" id="22_q4nyx"]
+[ext_resource type="PackedScene" uid="uid://boq75pgw7c1ic" path="res://Assets/3D Model/TerrainProps/gy_models/dead_tree.tscn" id="23_t7lg6"]
+[ext_resource type="PackedScene" uid="uid://d18e6dkh5y24m" path="res://Assets/3D Model/TerrainProps/gy_models/dead_tree_2.tscn" id="24_nby0r"]
+[ext_resource type="PackedScene" uid="uid://3q6qxgrg3a4b" path="res://Assets/3D Model/TerrainProps/gy_models/dead_tree_3.tscn" id="25_ty5bw"]
+[ext_resource type="PackedScene" uid="uid://cbcq6vpbwtx8k" path="res://Assets/3D Model/TerrainProps/gy_models/fence_section.tscn" id="26_ioxwi"]
+[ext_resource type="PackedScene" uid="uid://105qtek3gg1m" path="res://Assets/3D Model/TerrainProps/gy_models/fence_section_002.tscn" id="27_01pjq"]
+[ext_resource type="PackedScene" uid="uid://nyir7cd3y7g1" path="res://Assets/3D Model/TerrainProps/gy_models/fence_section_009.tscn" id="28_ec5qp"]
+[ext_resource type="PackedScene" uid="uid://b012m7xd5thq2" path="res://Assets/3D Model/TerrainProps/gy_models/fence_section_010.tscn" id="29_ugsbj"]
+[ext_resource type="PackedScene" uid="uid://bj723nm8eq60u" path="res://Assets/3D Model/TerrainProps/gy_models/fence_section_011.tscn" id="30_a0jhb"]
+[ext_resource type="PackedScene" uid="uid://cxj5gbge1tsps" path="res://Assets/3D Model/TerrainProps/gy_models/fence_section_013.tscn" id="31_ko8tj"]
+[ext_resource type="PackedScene" uid="uid://ciy1xtlklwrlj" path="res://Assets/3D Model/TerrainProps/gy_models/fence_section_014.tscn" id="32_euy4s"]
+[ext_resource type="PackedScene" uid="uid://4ha4x8ybg15v" path="res://Assets/3D Model/TerrainProps/gy_models/fence_section_015.tscn" id="33_iwo4s"]
+[ext_resource type="PackedScene" uid="uid://ds3wg717mwgle" path="res://Assets/3D Model/TerrainProps/gy_models/fence_section_017.tscn" id="34_rvvs2"]
+[ext_resource type="PackedScene" uid="uid://begsn2ytg58dj" path="res://Assets/3D Model/TerrainProps/gy_models/fence_section_018.tscn" id="35_v1p7f"]
+[ext_resource type="PackedScene" uid="uid://dunwshyo68dud" path="res://Assets/3D Model/TerrainProps/gy_models/fence_section_019.tscn" id="36_bbgfi"]
+[ext_resource type="PackedScene" uid="uid://y1fplrdnxivi" path="res://Assets/3D Model/TerrainProps/gy_models/fly_agaric_001.tscn" id="37_7ayjf"]
+[ext_resource type="PackedScene" uid="uid://10myoxwn5se0" path="res://Assets/3D Model/TerrainProps/gy_models/grass_003.tscn" id="38_adbdm"]
+[ext_resource type="PackedScene" uid="uid://wqygg8xs2r7a" path="res://Assets/3D Model/TerrainProps/gy_models/grass_004.tscn" id="39_a7p60"]
+[ext_resource type="PackedScene" uid="uid://df5k3hls233sd" path="res://Assets/3D Model/TerrainProps/gy_models/grass_005.tscn" id="40_pbfnj"]
+[ext_resource type="PackedScene" uid="uid://c8sxpv88ld5rg" path="res://Assets/3D Model/TerrainProps/gy_models/grass_006.tscn" id="41_ttaoe"]
+[ext_resource type="PackedScene" uid="uid://dwywpqio37xba" path="res://Assets/3D Model/TerrainProps/gy_models/grave_2.tscn" id="42_4fa6v"]
+[ext_resource type="PackedScene" uid="uid://c6lxmw4d0gt2l" path="res://Assets/3D Model/TerrainProps/gy_models/grave_002.tscn" id="43_x1uk6"]
+[ext_resource type="PackedScene" uid="uid://dhuegxd1hc8an" path="res://Assets/3D Model/TerrainProps/gy_models/grave_003.tscn" id="44_xqxkl"]
+[ext_resource type="PackedScene" uid="uid://ol2mg32cn8a3" path="res://Assets/3D Model/TerrainProps/gy_models/grave_1.tscn" id="45_wd1kf"]
+[ext_resource type="PackedScene" uid="uid://dl8eaac6f3er5" path="res://Assets/3D Model/TerrainProps/gy_models/grave_stone_008.tscn" id="46_nbgfe"]
+[ext_resource type="PackedScene" uid="uid://ba0kch2jt61cb" path="res://Assets/3D Model/TerrainProps/gy_models/grave_stone_009.tscn" id="47_vvm2k"]
+[ext_resource type="PackedScene" uid="uid://d3ph1jvjecc0y" path="res://Assets/3D Model/TerrainProps/gy_models/grave_stone_010.tscn" id="48_4fdw2"]
+[ext_resource type="PackedScene" uid="uid://da2334tko6wfn" path="res://Assets/3D Model/TerrainProps/gy_models/grave_stone_02.tscn" id="49_c1iq7"]
+[ext_resource type="PackedScene" uid="uid://bw2vrvhhlb23f" path="res://Assets/3D Model/TerrainProps/gy_models/light.tscn" id="50_v0n85"]
+[ext_resource type="PackedScene" uid="uid://c3s7wh8q4vjx3" path="res://Assets/3D Model/TerrainProps/gy_models/object_113.tscn" id="51_pnfg7"]
+[ext_resource type="PackedScene" uid="uid://dxmqk4x25qool" path="res://Assets/3D Model/TerrainProps/gy_models/object_114.tscn" id="52_ect34"]
+[ext_resource type="PackedScene" uid="uid://xofj1xs7s42n" path="res://Assets/3D Model/TerrainProps/gy_models/object_115.tscn" id="53_opm7y"]
+[ext_resource type="PackedScene" uid="uid://pgg1dtl3rtib" path="res://Assets/3D Model/TerrainProps/gy_models/object_116.tscn" id="54_vmdgu"]
+[ext_resource type="PackedScene" uid="uid://kiqqeb1d3rps" path="res://Assets/3D Model/TerrainProps/gy_models/object_117.tscn" id="55_61j2j"]
+[ext_resource type="PackedScene" uid="uid://c21vm5g667xck" path="res://Assets/3D Model/TerrainProps/plane_001.tscn" id="56_xss5e"]
+[ext_resource type="PackedScene" uid="uid://cfg2vjot6sqa6" path="res://Assets/3D Model/TerrainProps/gy_models/pumpkin.tscn" id="57_oexw8"]
+[ext_resource type="PackedScene" uid="uid://c60dfnxt1m5at" path="res://Assets/3D Model/TerrainProps/gy_models/pumpkin_001.tscn" id="58_k2o1u"]
+[ext_resource type="PackedScene" uid="uid://b0xu0gxb7hypk" path="res://Assets/3D Model/TerrainProps/gy_models/rocks_003.tscn" id="59_wy0tc"]
+[ext_resource type="PackedScene" uid="uid://cetx3awv8r25a" path="res://Assets/3D Model/TerrainProps/gy_models/rocks_2.tscn" id="60_cpn13"]
+[ext_resource type="PackedScene" uid="uid://fd35r10htbtu" path="res://Assets/3D Model/TerrainProps/gy_models/skull_001.tscn" id="61_mq44n"]
+[ext_resource type="PackedScene" uid="uid://chbl7blnmp2ot" path="res://Assets/3D Model/TerrainProps/gy_models/skull_002.tscn" id="62_yshes"]
+[ext_resource type="PackedScene" uid="uid://co5wbivvm78tf" path="res://Assets/3D Model/TerrainProps/gy_models/stones.tscn" id="63_3sb4m"]
+[ext_resource type="PackedScene" uid="uid://3rrk2ei0id0y" path="res://Assets/3D Model/TerrainProps/gy_models/stones_001.tscn" id="64_16c6g"]
+[ext_resource type="PackedScene" uid="uid://1ipvai8taooj" path="res://Assets/3D Model/TerrainProps/gy_models/stones_003.tscn" id="65_7beof"]
+[ext_resource type="PackedScene" uid="uid://bbke2j1bvq4sv" path="res://Assets/3D Model/TerrainProps/gy_models/tiles_001.tscn" id="66_kfa7m"]
 
-[node name="graveyard" instance=ExtResource("1_ufpx5")]
+[sub_resource type="Animation" id="Animation_k0g81"]
 
-[node name="Column002" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="6"]
-visible = false
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wbyju"]
+_data = {
+&"RESET": SubResource("Animation_k0g81")
+}
 
-[node name="Column010" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="7"]
-visible = false
+[node name="graveyard" type="Node3D"]
 
-[node name="Column011" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="8"]
-visible = false
+[node name="Sketchfab_model" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -3.5762787e-07, 0.99999994, 0, -0.99999994, -3.5762787e-07, -0.33114317, -0.1662683, -65.49859)
 
-[node name="Column012" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="9"]
-visible = false
+[node name="59eaeb0f852e494285bd67ea8f850a42_fbx" type="Node3D" parent="Sketchfab_model"]
+transform = Transform3D(0.01, 0, 0, 0, -3.5762793e-09, -0.010000001, 0, 0.010000001, -3.5762793e-09, 0, 0, 0)
 
-[node name="Crypt" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="21"]
-visible = false
+[node name="RootNode" type="Node3D" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8146973e-06, 0, 0)
 
-[node name="Crypt_Stone_0" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode/Crypt" index="0"]
-visible = false
+[node name="Box013" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("1_rw408")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 324.77628, 0, 6919.7144)
 
-[node name="FenceSection009" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="27"]
-visible = false
+[node name="Coffin" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("2_3e4or")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 433.9123, 0, 6290.7944)
 
-[node name="FenceSection010" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="28"]
-visible = false
+[node name="Coffin2" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("3_h7cff")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -200.07948, 0, 6973.6284)
 
-[node name="FenceSection011" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="29"]
-visible = false
+[node name="Column" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("4_m7ovt")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -463.28238, 0, 7150.8003)
 
-[node name="Light" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" index="49"]
-visible = false
+[node name="Column_001" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("5_cx2e1")]
+transform = Transform3D(-1, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.509958e-07, 1, 4.371139e-08, -157.68863, 0, 7150.8003)
+
+[node name="Column001" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("6_eni66")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 174.47739, 0, 7150.8003)
+
+[node name="Column002" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("7_qg052")]
+transform = Transform3D(-1, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.509958e-07, 1, 4.371139e-08, 480.0711, 0, 7150.8003)
+
+[node name="Column010" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("8_am2m8")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 484.88962, 0, 6240.0234)
+
+[node name="Column011" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("9_awvrs")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 484.8896, 0, 6543.04)
+
+[node name="Column012" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("10_rpt2u")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 484.88953, 0, 6844.363)
+
+[node name="Column015" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("11_jn05k")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 167.56152, 0, 6240.019)
+
+[node name="Column016" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("12_02xb3")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -138.55565, 0, 6240.019)
+
+[node name="Column019" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("13_5dejb")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -457.98923, 0, 6240.0234)
+
+[node name="Column020" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("14_svw3c")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -457.9893, 0, 6543.04)
+
+[node name="Column021" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("15_q7515")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -457.98938, 0, 6844.363)
+
+[node name="Cross1" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("16_a0ug8")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 425.79193, 0, 6797.214)
+
+[node name="Cross_01" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("17_ibcp8")]
+transform = Transform3D(-0.48569533, 7.3337944e-08, 3.2057033e-15, 0, -2.1230413e-08, 0.48569524, 7.333796e-08, 0.48569524, 2.1230413e-08, -191.79808, 0, 6705.2637)
+
+[node name="Cross_015" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("18_nsv3v")]
+transform = Transform3D(-1, 3.8941437e-07, 1.7021842e-14, 0, -4.371139e-08, 1, 3.8941437e-07, 1, 4.371139e-08, -368.92874, 0, 6545.0786)
+
+[node name="Cross_016" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("19_hacjn")]
+transform = Transform3D(-1, 3.8941437e-07, 1.7021842e-14, 0, -4.371139e-08, 1, 3.8941437e-07, 1, 4.371139e-08, -278.4802, 0, 6626.5757)
+
+[node name="Cross_017" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("20_v0sfx")]
+transform = Transform3D(-1, 3.8941437e-07, 1.7021842e-14, 0, -4.371139e-08, 1, 3.8941437e-07, 1, 4.371139e-08, -191.26491, 0, 6626.5977)
+
+[node name="Cross_019" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("21_vfbiw")]
+transform = Transform3D(-1, 3.8941437e-07, 1.7021842e-14, 0, -4.371139e-08, 1, 3.8941437e-07, 1, 4.371139e-08, -368.92877, 0, 6702.3276)
+
+[node name="Crypt" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("22_q4nyx")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 11.299759, 0, 6572.7197)
+
+[node name="DeadTree" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("23_t7lg6")]
+transform = Transform3D(-0.9396925, -0.34202018, -1.4950176e-08, 0, -4.3711385e-08, 0.99999994, -0.34202018, 0.93969256, 4.1075264e-08, -326.1573, 0, 6395.4663)
+
+[node name="DeadTree2" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("24_nby0r")]
+transform = Transform3D(-1, 3.8941437e-07, 1.7021842e-14, 0, -4.371139e-08, 1, 3.8941437e-07, 1, 4.371139e-08, 409.1824, 0, 7093.6523)
+
+[node name="DeadTree3" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("25_ty5bw")]
+transform = Transform3D(-1, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.509958e-07, 1, 4.371139e-08, 298.5283, 0, 6438.8545)
+
+[node name="FenceSection" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("26_ioxwi")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -310.44647, 0, 7150.6714)
+
+[node name="FenceSection002" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("27_01pjq")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 330.31525, 0, 7150.6714)
+
+[node name="FenceSection009" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("28_ec5qp")]
+transform = Transform3D(-1, 3.8941437e-07, 1.7021842e-14, 0, -4.371139e-08, 1, 3.8941437e-07, 1, 4.371139e-08, 486.34662, 0, 6391.8193)
+
+[node name="FenceSection010" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("29_ugsbj")]
+transform = Transform3D(-1, 3.8941437e-07, 1.7021842e-14, 0, -4.371139e-08, 1, 3.8941437e-07, 1, 4.371139e-08, 486.34662, 0, 6693.142)
+
+[node name="FenceSection011" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("30_a0jhb")]
+transform = Transform3D(-1, 3.8941437e-07, 1.7021842e-14, 0, -4.371139e-08, 1, 3.8941437e-07, 1, 4.371139e-08, 486.34656, 0, 6998.066)
+
+[node name="FenceSection013" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("31_ko8tj")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 318.78418, 0, 6241.474)
+
+[node name="FenceSection014" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("32_euy4s")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 11.28809, 0, 6241.474)
+
+[node name="FenceSection015" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("33_iwo4s")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -301.71774, 0, 6241.474)
+
+[node name="FenceSection017" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("34_rvvs2")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -456.53427, 0, 6391.8193)
+
+[node name="FenceSection018" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("35_v1p7f")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -456.53427, 0, 6693.142)
+
+[node name="FenceSection019" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("36_bbgfi")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -456.53427, 0, 6998.066)
+
+[node name="fly agaric001" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("37_7ayjf")]
+transform = Transform3D(0.086590715, 0.08497783, -0.017713813, 0.010938662, 0.014138741, 0.12129875, 0.08611245, -0.0872458, 0.002403899, 441.1881, 0, 7110.856)
+
+[node name="Grass003" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("38_adbdm")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -191.51663, 0, 6422.1147)
+
+[node name="Grass004" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("39_a7p60")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -309.01044, 0, 6783.6235)
+
+[node name="Grass005" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("40_pbfnj")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 303.03152, 0, 6992.942)
+
+[node name="Grass006" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("41_ttaoe")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 382.70657, 0, 6431.1816)
+
+[node name="Grave2" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("42_4fa6v")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 318.87396, 0, 6668.8516)
+
+[node name="Grave_002" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("43_x1uk6")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 322.51266, 0, 6544.697)
+
+[node name="Grave_003" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("44_xqxkl")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -327.87607, 0, 6974.1875)
+
+[node name="Grave_1" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("45_wd1kf")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 322.51263, 0, 6799.0244)
+
+[node name="GraveStone_008" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("46_nbgfe")]
+transform = Transform3D(-0.9538573, 3.7144568e-07, 1.6236407e-14, 0, -4.169442e-08, 0.9538572, 3.7144574e-07, 0.9538572, 4.169442e-08, -279.9526, 0, 6545.8794)
+
+[node name="GraveStone_009" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("47_vvm2k")]
+transform = Transform3D(-1, 3.8941437e-07, 1.7021842e-14, 0, -4.371139e-08, 1, 3.8941437e-07, 1, 4.371139e-08, -191.36234, 0, 6544.082)
+
+[node name="GraveStone_010" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("48_4fdw2")]
+transform = Transform3D(-1, 3.8941437e-07, 1.7021842e-14, 0, -4.371139e-08, 1, 3.8941437e-07, 1, 4.371139e-08, -368.92874, 0, 6626.5757)
+
+[node name="GraveStone_02" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("49_c1iq7")]
+transform = Transform3D(0.55086964, 0, 0, 0, -4.490002e-09, 0.19311391, 0, -0.10271928, -8.441277e-09, -282.53613, 0, 6703.1616)
+
+[node name="Light" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("50_v0n85")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 110.78412, 145.12144, 6731.502)
+
+[node name="Object113" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("51_pnfg7")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 386.6513, 0, 6317.951)
+
+[node name="Object114" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("52_ect34")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 318.87396, 0, 6668.8516)
+
+[node name="Object115" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("53_opm7y")]
+transform = Transform3D(-0.5735764, 0.81915194, 3.580627e-08, 0, -4.3711385e-08, 1, 0.8191519, 0.5735764, 2.5071824e-08, -347.57324, 0, 6472.95)
+
+[node name="Object116" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("54_vmdgu")]
+transform = Transform3D(0.66906315, -0.36602288, 0.64682436, 0.3457642, 0.92369235, 0.16504405, -0.6578766, 0.113223776, 0.74456614, -165.70331, 400.96628, 6568.6357)
+
+[node name="Object117" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("55_61j2j")]
+transform = Transform3D(0.68721265, 0.3568418, -0.45075232, 0.12915494, 0.58870614, 0.66296226, 0.56020784, -0.5734666, 0.4000977, -456.68314, 208.14511, 6346.4614)
+
+[node name="Plane001" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("56_xss5e")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 16.495054, 0, 6695.5)
+
+[node name="Pumpkin" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("57_oexw8")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 350.01263, 0, 6312.642)
+
+[node name="Pumpkin001" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("58_k2o1u")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 427.77042, 0, 6343.905)
+
+[node name="Rocks003" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("59_wy0tc")]
+transform = Transform3D(0.35088512, 0.93641853, 1.7032521e-08, 0, -4.371139e-08, 0.4161159, 0.93641853, -0.35088512, -6.382251e-09, -216.95425, 0, 6848.8784)
+
+[node name="Rocks2" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("60_cpn13")]
+transform = Transform3D(-1, 1.509958e-07, 2.7464639e-15, 0, -4.371139e-08, 0.416116, 1.509958e-07, 1, 1.8189008e-08, 180.30362, 0, 6891.623)
+
+[node name="Skull001" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("61_mq44n")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 363.00287, 9.184937, 6668.8516)
+
+[node name="Skull002" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("62_yshes")]
+transform = Transform3D(-0.6209863, 0.4395855, -0.6489535, -0.61179554, 0.24572846, 0.75188017, 0.48998207, 0.86393404, 0.11634245, -243.25827, 95.44273, 7148.4917)
+
+[node name="Stones" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("63_3sb4m")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, -145.89554, 0, 6342.339)
+
+[node name="Stones001" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("64_16c6g")]
+transform = Transform3D(-1.0290252, 4.007171e-07, 1.7515901e-14, 0, -4.498011e-08, 1.029025, 4.007172e-07, 1.029025, 4.498011e-08, 345.4403, 0, 7064.5454)
+
+[node name="Stones003" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("65_7beof")]
+transform = Transform3D(-1, 3.8941437e-07, 1.7021842e-14, 0, -4.371139e-08, 1, 3.8941437e-07, 1, 4.371139e-08, 353.17865, 0, 6342.339)
+
+[node name="Tiles001" parent="Sketchfab_model/59eaeb0f852e494285bd67ea8f850a42_fbx/RootNode" instance=ExtResource("66_kfa7m")]
+transform = Transform3D(-1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, 1, 4.371139e-08, 10.471565, 0, 7006.6216)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_wbyju")
+}

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6lxmw4d0gt2l"]
+
+[ext_resource type="ArrayMesh" uid="uid://cq8idbyikt72u" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Grave_002_Stone_0.res" id="1_0yq5j"]
+
+[node name="Grave_002" type="Node3D"]
+
+[node name="Grave_002_Stone_0" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_0yq5j")
+skeleton = NodePath("")

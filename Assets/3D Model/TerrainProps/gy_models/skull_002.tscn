@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://chbl7blnmp2ot"]
+
+[ext_resource type="ArrayMesh" uid="uid://bbuwqk7pwiuoo" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Skull002_Skull_0.res" id="1_kl5pi"]
+
+[node name="Skull002" type="Node3D"]
+
+[node name="Skull002_Skull_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1444092e-05, -3.6239624e-05, -7.6293945e-06)
+mesh = ExtResource("1_kl5pi")
+skeleton = NodePath("")

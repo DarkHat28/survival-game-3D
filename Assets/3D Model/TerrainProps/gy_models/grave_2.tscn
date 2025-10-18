@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwywpqio37xba"]
+
+[ext_resource type="ArrayMesh" uid="uid://cjvk86vait4o6" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Grave2_Stone_0.res" id="1_2cpue"]
+[ext_resource type="ArrayMesh" uid="uid://nko3yb1aqeum" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Grave2_Wood_0.res" id="2_aivnw"]
+
+[node name="Grave2" type="Node3D"]
+
+[node name="Grave2_Stone_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0402794e-05, -7.769642e-06, 0)
+mesh = ExtResource("1_2cpue")
+skeleton = NodePath("")
+
+[node name="Grave2_Wood_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0402794e-05, -7.769642e-06, 0)
+mesh = ExtResource("2_aivnw")
+skeleton = NodePath("")

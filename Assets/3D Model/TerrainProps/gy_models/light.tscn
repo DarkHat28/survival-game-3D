@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw2vrvhhlb23f"]
+
+[ext_resource type="ArrayMesh" uid="uid://drjw1d76fux4q" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Light_12 - Default_0.res" id="1_kk8th"]
+[ext_resource type="ArrayMesh" uid="uid://blqa8sf510s2" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Light_Light_0.res" id="2_xjvh6"]
+[ext_resource type="ArrayMesh" uid="uid://cr4c1edimfmsu" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Light_Metall_0.res" id="3_1cdr6"]
+[ext_resource type="ArrayMesh" uid="uid://dx25wp41cr321" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Light_Wood_0.res" id="4_y6gjj"]
+
+[node name="Light" type="Node3D"]
+visible = false
+
+[node name="Light_12 - Default_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.250461e-06, 8.795706e-06, -6.1120472e-06)
+mesh = ExtResource("1_kk8th")
+skeleton = NodePath("")
+
+[node name="Light_Light_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.250461e-06, 8.795706e-06, -6.1120472e-06)
+mesh = ExtResource("2_xjvh6")
+skeleton = NodePath("")
+
+[node name="Light_Metall_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.250461e-06, 8.795706e-06, -6.1120472e-06)
+mesh = ExtResource("3_1cdr6")
+skeleton = NodePath("")
+
+[node name="Light_Wood_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.250461e-06, 8.795706e-06, -6.1120472e-06)
+mesh = ExtResource("4_y6gjj")
+skeleton = NodePath("")

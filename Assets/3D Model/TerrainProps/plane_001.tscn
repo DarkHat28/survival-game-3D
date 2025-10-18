@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c21vm5g667xck"]
+
+[ext_resource type="ArrayMesh" uid="uid://whyujhc2dc0j" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Plane001_Ground_0.res" id="1_tf1bu"]
+
+[node name="Plane001" type="Node3D"]
+
+[node name="Plane001_Ground_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8945651e-05, 0)
+mesh = ExtResource("1_tf1bu")
+skeleton = NodePath("")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b012m7xd5thq2"]
+
+[ext_resource type="ArrayMesh" uid="uid://bjjj0vgsjmq74" path="res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection010_Metall_0.res" id="1_rwd2j"]
+[ext_resource type="ArrayMesh" uid="uid://bifjcnuyqpvjq" path="res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection010_Stone_0.res" id="2_21c6d"]
+
+[node name="FenceSection010" type="Node3D"]
+visible = false
+
+[node name="FenceSection010_Metall_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0332157e-05, -5.892576e-06, 0)
+mesh = ExtResource("1_rwd2j")
+skeleton = NodePath("")
+
+[node name="FenceSection010_Stone_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0332157e-05, -5.892576e-06, 0)
+mesh = ExtResource("2_21c6d")
+skeleton = NodePath("")

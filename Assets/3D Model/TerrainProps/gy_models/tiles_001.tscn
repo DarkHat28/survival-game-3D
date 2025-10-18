@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbke2j1bvq4sv"]
+
+[ext_resource type="ArrayMesh" uid="uid://op3musxqtx53" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Tiles001_Stone_0.res" id="1_5aim8"]
+
+[node name="Tiles001" type="Node3D"]
+
+[node name="Tiles001_Stone_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.473103e-05, 0)
+mesh = ExtResource("1_5aim8")
+skeleton = NodePath("")

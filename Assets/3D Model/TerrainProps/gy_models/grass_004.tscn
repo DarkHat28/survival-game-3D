@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://wqygg8xs2r7a"]
+
+[ext_resource type="ArrayMesh" uid="uid://brfwwq2qwd8u2" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Grass004_Grass1_0.res" id="1_jyyfw"]
+[ext_resource type="ArrayMesh" uid="uid://o78vkalip4i0" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Grass004_Grass2_0.res" id="2_a7wxg"]
+
+[node name="Grass004" type="Node3D"]
+
+[node name="Grass004_Grass1_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.111626e-05, 0, 0)
+mesh = ExtResource("1_jyyfw")
+skeleton = NodePath("")
+
+[node name="Grass004_Grass2_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.111626e-05, 0, 0)
+mesh = ExtResource("2_a7wxg")
+skeleton = NodePath("")

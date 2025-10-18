@@ -37,6 +37,837 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=2
 materials/extract_path=""
-_subresources={}
+_subresources={
+"meshes": {
+"graveyard_Box013_CoffinCross_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Box013_CoffinCross_0.res",
+"save_to_file/path": "uid://clncyj2ur8yju"
+},
+"graveyard_Box013_Wood_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Box013_Wood_0.res",
+"save_to_file/path": "uid://cim5ap12ylonc"
+},
+"graveyard_Coffin2_CoffinCross_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Coffin2_CoffinCross_0.res",
+"save_to_file/path": "uid://cbesuhlgxjj35"
+},
+"graveyard_Coffin2_Wood_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Coffin2_Wood_0.res",
+"save_to_file/path": "uid://dexnbjkv44llu"
+},
+"graveyard_Coffin_CoffinCross_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Coffin_CoffinCross_0.res",
+"save_to_file/path": "uid://bi8s8j86672tn"
+},
+"graveyard_Coffin_Wood_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Coffin_Wood_0.res",
+"save_to_file/path": "uid://bwsaly2fhe8tl"
+},
+"graveyard_Column001_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Column001_Stone_0.res",
+"save_to_file/path": "uid://dfy0yli3myr60"
+},
+"graveyard_Column002_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Column002_Stone_0.res",
+"save_to_file/path": "uid://dujlt7dyuiia5"
+},
+"graveyard_Column010_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Column010_Stone_0.res",
+"save_to_file/path": "uid://b4wp3368yri2l"
+},
+"graveyard_Column011_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Column011_Stone_0.res",
+"save_to_file/path": "uid://bhc1nf2s3f6yn"
+},
+"graveyard_Column012_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Column012_Stone_0.res",
+"save_to_file/path": "uid://48hc30j7kfyu"
+},
+"graveyard_Column015_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Column015_Stone_0.res",
+"save_to_file/path": "uid://supmvpjy3fku"
+},
+"graveyard_Column016_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Column016_Stone_0.res",
+"save_to_file/path": "uid://bi7t5gtdbxrd4"
+},
+"graveyard_Column019_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Column019_Stone_0.res",
+"save_to_file/path": "uid://mydlc13l1v45"
+},
+"graveyard_Column020_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Column020_Stone_0.res",
+"save_to_file/path": "uid://bff8c3kci8mkk"
+},
+"graveyard_Column021_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Column021_Stone_0.res",
+"save_to_file/path": "uid://c6wqdfup38qop"
+},
+"graveyard_Column_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Column_Stone_0.res",
+"save_to_file/path": "uid://plkfc3mlkoi3"
+},
+"graveyard_Column_Stone_0_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Column_Stone_0_001.res",
+"save_to_file/path": "uid://bcb1wst4tl0sw"
+},
+"graveyard_Cross1_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Cross1_Stone_0.res",
+"save_to_file/path": "uid://cnqhcyvrwvksl"
+},
+"graveyard_Cross_015_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Cross_015_Stone_0.res",
+"save_to_file/path": "uid://spqgctuqmvfc"
+},
+"graveyard_Cross_016_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Cross_016_Stone_0.res",
+"save_to_file/path": "uid://dv5rts28j680g"
+},
+"graveyard_Cross_017_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Cross_017_Stone_0.res",
+"save_to_file/path": "uid://6rj7ohgmd5it"
+},
+"graveyard_Cross_019_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Cross_019_Stone_0.res",
+"save_to_file/path": "uid://bpkfobrnermse"
+},
+"graveyard_Cross_01_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Cross_01_Stone_0.res",
+"save_to_file/path": "uid://b2vk0oft7infu"
+},
+"graveyard_Crypt_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Crypt_Stone_0.res",
+"save_to_file/path": "uid://b4yd8q4n4h333"
+},
+"graveyard_DeadTree2_Treese_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_DeadTree2_Treese_0.res",
+"save_to_file/path": "uid://dnlya3sflmoqp"
+},
+"graveyard_DeadTree3_Treese_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_DeadTree3_Treese_0.res",
+"save_to_file/path": "uid://bfdfyyo63e12x"
+},
+"graveyard_DeadTree_Treese_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_DeadTree_Treese_0.res",
+"save_to_file/path": "uid://bi2uk2voybxut"
+},
+"graveyard_FenceSection002_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection002_Metall_0.res",
+"save_to_file/path": "uid://e8c7hex0lilu"
+},
+"graveyard_FenceSection002_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection002_Stone_0.res",
+"save_to_file/path": "uid://dqtn282ncab5q"
+},
+"graveyard_FenceSection009_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection009_Metall_0.res",
+"save_to_file/path": "uid://cxotauag4fx3p"
+},
+"graveyard_FenceSection009_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection009_Stone_0.res",
+"save_to_file/path": "uid://cxj3vxp11d1qy"
+},
+"graveyard_FenceSection010_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection010_Metall_0.res",
+"save_to_file/path": "uid://bjjj0vgsjmq74"
+},
+"graveyard_FenceSection010_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection010_Stone_0.res",
+"save_to_file/path": "uid://tl36ceca5xna"
+},
+"graveyard_FenceSection011_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection011_Metall_0.res",
+"save_to_file/path": "uid://e2445ifd6pcf"
+},
+"graveyard_FenceSection011_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection011_Stone_0.res",
+"save_to_file/path": "uid://bvp4yx6v21si8"
+},
+"graveyard_FenceSection013_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection013_Metall_0.res",
+"save_to_file/path": "uid://dyki82cwmf2nx"
+},
+"graveyard_FenceSection013_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection013_Stone_0.res",
+"save_to_file/path": "uid://tba0wgrwudwd"
+},
+"graveyard_FenceSection014_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection014_Metall_0.res",
+"save_to_file/path": "uid://bfgikwdpwsg7j"
+},
+"graveyard_FenceSection014_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection014_Stone_0.res",
+"save_to_file/path": "uid://6xatwf8gj3s8"
+},
+"graveyard_FenceSection015_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection015_Metall_0.res",
+"save_to_file/path": "uid://3k4uaoaq1xrq"
+},
+"graveyard_FenceSection015_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection015_Stone_0.res",
+"save_to_file/path": "uid://dytpjglwjbaho"
+},
+"graveyard_FenceSection017_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection017_Metall_0.res",
+"save_to_file/path": "uid://dt8rgrknj46ep"
+},
+"graveyard_FenceSection017_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection017_Stone_0.res",
+"save_to_file/path": "uid://b3iofvs0iwi15"
+},
+"graveyard_FenceSection018_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection018_Metall_0.res",
+"save_to_file/path": "uid://bgx7blwf4yi67"
+},
+"graveyard_FenceSection018_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection018_Stone_0.res",
+"save_to_file/path": "uid://dr5xmyyx4x16x"
+},
+"graveyard_FenceSection019_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection019_Metall_0.res",
+"save_to_file/path": "uid://2c0vgjhwe3kt"
+},
+"graveyard_FenceSection019_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection019_Stone_0.res",
+"save_to_file/path": "uid://c27rfdxw5mhon"
+},
+"graveyard_FenceSection_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection_Metall_0.res",
+"save_to_file/path": "uid://cdwwrkjj2x2qh"
+},
+"graveyard_FenceSection_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_FenceSection_Stone_0.res",
+"save_to_file/path": "uid://3fs7u0yatski"
+},
+"graveyard_Grass003_Grass1_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grass003_Grass1_0.res",
+"save_to_file/path": "uid://bx30lag3dpndr"
+},
+"graveyard_Grass003_Grass2_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grass003_Grass2_0.res",
+"save_to_file/path": "uid://danmexey00wdy"
+},
+"graveyard_Grass004_Grass1_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grass004_Grass1_0.res",
+"save_to_file/path": "uid://dmey1vrnb30d1"
+},
+"graveyard_Grass004_Grass2_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grass004_Grass2_0.res",
+"save_to_file/path": "uid://dgqvmvy7p13b3"
+},
+"graveyard_Grass005_Grass1_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grass005_Grass1_0.res",
+"save_to_file/path": "uid://1pr3rujmgfhn"
+},
+"graveyard_Grass005_Grass2_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grass005_Grass2_0.res",
+"save_to_file/path": "uid://lcxmcgvejxpy"
+},
+"graveyard_Grass006_Grass1_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grass006_Grass1_0.res",
+"save_to_file/path": "uid://scdevxyqllww"
+},
+"graveyard_Grass006_Grass2_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grass006_Grass2_0.res",
+"save_to_file/path": "uid://dgteytqgawjrs"
+},
+"graveyard_Grave2_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grave2_Stone_0.res",
+"save_to_file/path": "uid://dslquccoccrhf"
+},
+"graveyard_Grave2_Wood_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grave2_Wood_0.res",
+"save_to_file/path": "uid://djhi7t0dhpsgr"
+},
+"graveyard_GraveStone_008_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_GraveStone_008_Stone_0.res",
+"save_to_file/path": "uid://duwcd1b3xaqeo"
+},
+"graveyard_GraveStone_009_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_GraveStone_009_Stone_0.res",
+"save_to_file/path": "uid://bf5p0t0xcun0l"
+},
+"graveyard_GraveStone_010_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_GraveStone_010_Stone_0.res",
+"save_to_file/path": "uid://cllbtdx6ht3ii"
+},
+"graveyard_GraveStone_02_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_GraveStone_02_Stone_0.res",
+"save_to_file/path": "uid://dvwj3wdootx1r"
+},
+"graveyard_Grave_002_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grave_002_Stone_0.res",
+"save_to_file/path": "uid://bk6t17kxyr8h4"
+},
+"graveyard_Grave_003_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grave_003_Stone_0.res",
+"save_to_file/path": "uid://cn8y3tlot28h1"
+},
+"graveyard_Grave_1_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Grave_1_Stone_0.res",
+"save_to_file/path": "uid://bbk5n14kemvs3"
+},
+"graveyard_Light_12 - Default_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Light_12 - Default_0.res",
+"save_to_file/path": "uid://c1rfc2jq2aqpy"
+},
+"graveyard_Light_Light_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Light_Light_0.res",
+"save_to_file/path": "uid://blqa8sf510s2"
+},
+"graveyard_Light_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Light_Metall_0.res",
+"save_to_file/path": "uid://fnaavq0l1fed"
+},
+"graveyard_Light_Wood_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Light_Wood_0.res",
+"save_to_file/path": "uid://bp5anyre5h7te"
+},
+"graveyard_Object113_Mashrooms_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Object113_Mashrooms_0.res",
+"save_to_file/path": "uid://bwyvhbmgtehiv"
+},
+"graveyard_Object114_Metall_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Object114_Metall_0.res",
+"save_to_file/path": "uid://dc82qr4g047nd"
+},
+"graveyard_Object114_Wood_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Object114_Wood_0.res",
+"save_to_file/path": "uid://b24d0qtvl5dio"
+},
+"graveyard_Object115_Mashrooms_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Object115_Mashrooms_0.res",
+"save_to_file/path": "uid://cos6rnw240tt5"
+},
+"graveyard_Object116_Bats_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Object116_Bats_0.res",
+"save_to_file/path": "uid://dmxoua4tt7x1y"
+},
+"graveyard_Object117_Bats_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Object117_Bats_0.res",
+"save_to_file/path": "uid://dmts4qve8inji"
+},
+"graveyard_Plane001_Ground_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Plane001_Ground_0.res",
+"save_to_file/path": "uid://bkikg168sx236"
+},
+"graveyard_Pumpkin001_Grass1_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Pumpkin001_Grass1_0.res",
+"save_to_file/path": "uid://pn7vc0168ah"
+},
+"graveyard_Pumpkin001_Pumplkin_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Pumpkin001_Pumplkin_0.res",
+"save_to_file/path": "uid://cs3ekf7t0wu4k"
+},
+"graveyard_Pumpkin_Grass1_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Pumpkin_Grass1_0.res",
+"save_to_file/path": "uid://c7nts8guyl0ef"
+},
+"graveyard_Pumpkin_Pumplkin_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Pumpkin_Pumplkin_0.res",
+"save_to_file/path": "uid://dv05ptujfrw8b"
+},
+"graveyard_Rocks003_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Rocks003_Stone_0.res",
+"save_to_file/path": "uid://dt7o3yk6eqrhy"
+},
+"graveyard_Rocks2_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Rocks2_Stone_0.res",
+"save_to_file/path": "uid://0ibl3ibvdi3h"
+},
+"graveyard_Skull001_Skull_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Skull001_Skull_0.res",
+"save_to_file/path": "uid://dqnqggqr0t6th"
+},
+"graveyard_Skull002_Skull_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Skull002_Skull_0.res",
+"save_to_file/path": "uid://c3o15fxj2uvxg"
+},
+"graveyard_Stones001_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Stones001_Stone_0.res",
+"save_to_file/path": "uid://2huebi0kdwdm"
+},
+"graveyard_Stones003_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Stones003_Stone_0.res",
+"save_to_file/path": "uid://nj5lbsf4107q"
+},
+"graveyard_Stones_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Stones_Stone_0.res",
+"save_to_file/path": "uid://k5mwvuvmmfk"
+},
+"graveyard_Tiles001_Stone_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_Tiles001_Stone_0.res",
+"save_to_file/path": "uid://ggci8rgodysd"
+},
+"graveyard_fly agaric001_c_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_fly agaric001_c_0.res",
+"save_to_file/path": "uid://mdxrpudepad7"
+},
+"graveyard_fly agaric001_fly agaric white_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/3D Model/TerrainProps/gy/graveyard_fly agaric001_fly agaric white_0.res",
+"save_to_file/path": "uid://bc2rc35wr10yw"
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

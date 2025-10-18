@@ -1,15 +1,15 @@
 [remap]
 
-importer="scene"
+importer="animation_library"
 importer_version=1
-type="PackedScene"
+type="AnimationLibrary"
 uid="uid://dsr2h7fcm8rpw"
-path="res://.godot/imported/zombie run.fbx-0f4e20838d4c2784f7eefaac2a3750f8.scn"
+path="res://.godot/imported/zombie run.fbx-0f4e20838d4c2784f7eefaac2a3750f8.res"
 
 [deps]
 
 source_file="res://Assets/3D Model/Characters/Zombies/Animations/zombie run.fbx"
-dest_files=["res://.godot/imported/zombie run.fbx-0f4e20838d4c2784f7eefaac2a3750f8.scn"]
+dest_files=["res://.godot/imported/zombie run.fbx-0f4e20838d4c2784f7eefaac2a3750f8.res"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://ZombieRetargetedAnimations/zombie_run.res",
+"save_to_file/fallback_path": "res://ZombieRetargetedAnimations/zombie_biting2.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://kv6h4g6ul8x3",
+"save_to_file/path": "uid://d0nitx8f8kiyw",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

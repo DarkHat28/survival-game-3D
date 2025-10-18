@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxtyp3f7p8dww"]
+
+[ext_resource type="ArrayMesh" uid="uid://fxnvcp1c8p15" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Column021_Stone_0.res" id="1_8ftny"]
+
+[node name="Column021" type="Node3D"]
+
+[node name="Column021_Stone_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7711164e-06, -4.5167602e-05, 0)
+mesh = ExtResource("1_8ftny")
+skeleton = NodePath("")

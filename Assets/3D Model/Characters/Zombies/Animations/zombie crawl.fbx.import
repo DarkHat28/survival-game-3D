@@ -1,15 +1,15 @@
 [remap]
 
-importer="scene"
+importer="animation_library"
 importer_version=1
-type="PackedScene"
+type="AnimationLibrary"
 uid="uid://cg6l77pgldu62"
-path="res://.godot/imported/zombie crawl.fbx-215220eef66a01a75b8b49b9538ecb72.scn"
+path="res://.godot/imported/zombie crawl.fbx-215220eef66a01a75b8b49b9538ecb72.res"
 
 [deps]
 
 source_file="res://Assets/3D Model/Characters/Zombies/Animations/zombie crawl.fbx"
-dest_files=["res://.godot/imported/zombie crawl.fbx-215220eef66a01a75b8b49b9538ecb72.scn"]
+dest_files=["res://.godot/imported/zombie crawl.fbx-215220eef66a01a75b8b49b9538ecb72.res"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://ZombieRetargetedAnimations/zombie_crawl.res",
+"save_to_file/fallback_path": "res://ZombieRetargetedAnimations/zombie_biting2.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://cma1fty1v1tsi",
+"save_to_file/path": "uid://d0nitx8f8kiyw",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

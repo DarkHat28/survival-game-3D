@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://y1fplrdnxivi"]
+
+[ext_resource type="ArrayMesh" uid="uid://cnt0v7k6rt1ey" path="res://Assets/3D Model/TerrainProps/gy/graveyard_fly agaric001_c_0.res" id="1_sebgk"]
+[ext_resource type="ArrayMesh" uid="uid://dlajejh5jj20n" path="res://Assets/3D Model/TerrainProps/gy/graveyard_fly agaric001_fly agaric white_0.res" id="2_r258e"]
+
+[node name="fly agaric001" type="Node3D"]
+
+[node name="Object_8" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.79828, -35.735638, 194.61145)
+
+[node name="fly agaric001_c_0" type="MeshInstance3D" parent="Object_8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9127808e-05, -0.0002861023, 3.8146973e-06)
+mesh = ExtResource("1_sebgk")
+skeleton = NodePath("")
+
+[node name="fly agaric001_fly agaric white_0" type="MeshInstance3D" parent="Object_8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9127808e-05, -0.0002861023, 3.8146973e-06)
+mesh = ExtResource("2_r258e")
+skeleton = NodePath("")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxmqk4x25qool"]
+
+[ext_resource type="ArrayMesh" uid="uid://dcbwdlm35hw83" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Object114_Metall_0.res" id="1_n4jua"]
+[ext_resource type="ArrayMesh" uid="uid://draonbmtuh5u7" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Object114_Wood_0.res" id="2_3q2pk"]
+
+[node name="Object114" type="Node3D"]
+
+[node name="Object114_Metall_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0402794e-05, -7.769642e-06, 0)
+mesh = ExtResource("1_n4jua")
+skeleton = NodePath("")
+
+[node name="Object114_Wood_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0402794e-05, -7.769642e-06, 0)
+mesh = ExtResource("2_3q2pk")
+skeleton = NodePath("")

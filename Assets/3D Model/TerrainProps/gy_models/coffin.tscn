@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnitnx1cr6ord"]
+
+[ext_resource type="ArrayMesh" uid="uid://cf4nodkeqcmi6" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Coffin_CoffinCross_0.res" id="1_54ttc"]
+[ext_resource type="ArrayMesh" uid="uid://bk6aasxrdii0o" path="res://Assets/3D Model/TerrainProps/gy/graveyard_Coffin_Wood_0.res" id="2_knhre"]
+
+[node name="Coffin" type="Node3D"]
+
+[node name="Coffin_CoffinCross_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.890474e-05, 3.2804903e-05, 0)
+mesh = ExtResource("1_54ttc")
+skeleton = NodePath("")
+
+[node name="Coffin_Wood_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.890474e-05, 3.2804903e-05, 0)
+mesh = ExtResource("2_knhre")
+skeleton = NodePath("")
