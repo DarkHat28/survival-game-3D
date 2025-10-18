@@ -1,7 +1,11 @@
+
 extends ProgressBar
 
 var health :int= 0 : set = _set_health
 var speed : float = 40
+
+func _ready():
+	Global.connect("change_health",_change_health)
 
 func _init_health(_health : int):
 	health = _health
@@ -30,8 +34,5 @@ func _on_timer_timeout():
 	var tween = get_tree().create_tween()
 	tween.tween_property($DamageBar,"value",health,($DamageBar.value-value)/speed)
 
-func _unhandled_input(_event):
-	if(Input.is_action_just_pressed("move_left")):
-		health -= 5
-	if(Input.is_action_just_pressed("move_right")):
-		health += 5
+func _change_health(new_health):
+	_set_health(new_health)

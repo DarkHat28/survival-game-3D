@@ -1,4 +1,4 @@
-
+class_name mainplayer
 extends CharacterBody3D
 
 #@onready var walking_sound = $walking
@@ -16,6 +16,8 @@ const Sprint_speed = 400
 var dir : Vector2
 var holding_sprint = false
 var breathein = true
+var MaxHealth := 100
+var health :float= MaxHealth 
 
 @export var camera_sensitivity :int= 50 #1 to 100 only,baaki v ho skte hai wese...
 
@@ -79,6 +81,9 @@ func _unhandled_input(event):
 	
 
 func _physics_process(delta):
+	print(health)
+	if(health<=0):
+		die()
 	Global.player_pos = global_position
 	dir = Input.get_vector("move_left","move_right","move_forward","move_backward").normalized()
 	update_cam_movement(delta)
@@ -103,3 +108,7 @@ func _physics_process(delta):
 	#if Global.hiddeninsidebush or dir==Vector2.ZERO or Global.in_lock_screen:
 		#running_sound.stop()
 		#walking_sound.stop()
+
+
+func die():
+	get_tree().quit()
