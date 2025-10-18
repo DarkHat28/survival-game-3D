@@ -12,7 +12,7 @@ config_version=5
 
 config/name="GIC4"
 config/tags=PackedStringArray("editing...", "local", "p_c", "survival")
-run/main_scene="uid://x34e4v60vdmy"
+run/main_scene="uid://dhrol0bxg6qs0"
 config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/show_image=false
 config/icon="uid://csilyj3m83c3a"

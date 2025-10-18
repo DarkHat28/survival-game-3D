@@ -14,7 +14,7 @@ var gas: int = 100
 
 var player_pos :Vector3 = Vector3.ZERO
 var dir :Vector2 = Vector2.ZERO
-var targets :Array= [] #diya pos
+var targets :Array= [] # diya pos
 var killed :int = 0
 
 
