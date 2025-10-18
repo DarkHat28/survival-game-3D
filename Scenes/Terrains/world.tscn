@@ -895,7 +895,7 @@ transform = Transform3D(0.5506997, 0, -14.98989, 0, 15.000001, 0, 14.98989, 0, 0
 transform = Transform3D(0.5506997, 0, -14.98989, 0, 15.000001, 0, 14.98989, 0, 0.5506997, 244.65857, -10.016089, -58.727715)
 
 [node name="HorrorTrees151" parent="PropsUnderThisNode" instance=ExtResource("16_gx203")]
-transform = Transform3D(0.5506997, 0, -14.98989, 0, 15.000001, 0, 14.98989, 0, 0.5506997, 227.208, -18.062037, -131.32913)
+transform = Transform3D(0.5506997, 0, -14.98989, 0, 15.000001, 0, 14.98989, 0, 0.5506997, 227.208, -2.533947, -131.32913)
 
 [node name="tree1" parent="PropsUnderThisNode" instance=ExtResource("17_wuss4")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 245.45773, -4.482647, -180.51865)
